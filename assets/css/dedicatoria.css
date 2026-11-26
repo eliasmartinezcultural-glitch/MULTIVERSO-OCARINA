@@ -53,3 +53,39 @@
  .dedication-kicker{font-size:.55rem;letter-spacing:.12em}
 }
 @media(prefers-reduced-motion:reduce){.dedication-portrait:after{transform:none}}
+
+
+/* Presentación centrada en la dedicatoria, sin biografía del fundador */
+.dedication-only .dedication-only-copy{
+  width:min(100%,820px);
+  margin-inline:auto;
+}
+.dedication-only .origin-dedication h2{
+  margin:32px 0 8px;
+  color:var(--ink,#34463c);
+  font:clamp(2rem,5vw,3.2rem)/1.05 "DM Serif Display",Georgia,serif;
+  font-weight:400;
+}
+.dedication-signature{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  margin-top:28px;
+  color:var(--forest,#395b4b);
+  font-weight:700;
+  letter-spacing:.025em;
+}
+.dedication-signature small{
+  display:block;
+  font:600 .68rem/1.2 "DM Sans",sans-serif;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+  color:#8c8271;
+}
+@media(max-width:700px){
+  .dedication-only .origin-dedication h2{font-size:2.2rem}
+}
+.night-mode .dedication-only .origin-dedication h2{color:#f4eee2}
+.night-mode .dedication-signature{color:#e4eadc}
+.night-mode .dedication-signature small{color:#d8d0bb}
