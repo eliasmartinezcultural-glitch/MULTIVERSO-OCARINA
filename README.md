@@ -1,7 +1,7 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.47**  
-*Un mundo de muchos mundos. Raíces locales. Ideas sin fronteras.*
+**Versión vigente: 3.48**  
+*Raíces locales. Tecnología para explorar un territorio vivo.*
 
 Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, Neuquén. Reúne nueve mundos en una experiencia integrada: cultura, memoria, naturaleza, audiovisual, comunidad y herramientas.
 
@@ -20,6 +20,10 @@ Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, 
 | OCARINA SOCIAL | Compartir |
 
 Cada sala ofrece una muestra dentro del portal y un único acceso a la experiencia completa. Los proyectos originales se mantienen en sus propios repositorios y no se modifican desde aquí.
+
+## Dirección de diseño
+
+La portada combina paisaje patagónico, cultivos, agua y montaña con cartografía, señal satelital, coordenadas visuales y patrones de datos. La paleta usa verde monte, tierra, arena, agua y crema; evita la estética tecnológica genérica y mantiene los mundos reconocibles.
 
 ## Criterios de producto
 
@@ -40,6 +44,7 @@ Sitio estático publicado con GitHub Pages. No requiere servidor propio ni base 
 - `index.html`: portada, nueve accesos, metadatos y dedicatoria.
 - `assets/js/proyectos.js`: datos y destinos de los nueve mundos.
 - `assets/js/experiencia.js`: compartir el portal y controles de accesibilidad.
+- `assets/js/version.js`: versión visible y metadatos.
 - `assets/js/salas.js`: salas, contenido integrado, navegación y reproductores.
 - `assets/css/`: identidad general, paletas de los mundos, salas y adaptación móvil.
 - `assets/img/`: ilustraciones vectoriales y recursos visuales.
@@ -51,12 +56,13 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - Portal: https://eliasmartinezcultural-glitch.github.io/MULTIVERSO-OCARINA/
 - Repositorio: https://github.com/eliasmartinezcultural-glitch/MULTIVERSO-OCARINA
 
-## Cambios 3.47
+## Cambios 3.48
 
-- Se incorporan controles de accesibilidad visibles y simples: aumentar o disminuir el tamaño de lectura, activar alto contraste y restablecer.
-- Los controles anuncian su estado y se pueden usar con teclado.
-- Se optimiza la carga de las ilustraciones de las nueve puertas con carga diferida.
-- Se actualiza esta documentación para reflejar la arquitectura real: el portal ya no ofrece instalación como aplicación ni utiliza service worker.
+- Nueva paleta rural-tech: verde monte, tierra, arena, agua y crema.
+- Nueva ilustración vectorial de portada: paisaje agrícola patagónico, canales de riego, montañas y satélite.
+- Hero renovado con composición editorial, cartografía y contraste mejorado.
+- Puertas reorganizadas con tarjetas de identidad territorial y paletas por mundo.
+- Se actualiza la descripción de portada y se sincroniza el archivo de versión.
 - No se modifican los repositorios originales de los mundos.
 
 **Universo Ocarina** · Elías Martínez · San Patricio del Chañar, Neuquén.
