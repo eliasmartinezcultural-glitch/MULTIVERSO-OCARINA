@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.27**  
+**Versión vigente: 3.28**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -46,7 +46,7 @@ Sitio estático para GitHub Pages. No requiere registro ni base de datos.
 - `assets/css/dedicatoria.css`: presentación de la dedicatoria.
 - `sw.js` y `manifest.webmanifest`: caché y configuración instalable.
 
-Los datos de presentación no utilizados se eliminaron de la configuración de salas para mantener una sola fuente de contenido. La sala LIBRITO muestra un corte fechado del catálogo: 176 registros, 205 noticias y 71 recursos (26-11-2026). OCARINA TV integra 47 episodios y ¿SABÍAS QUE? dispone de 8 preguntas en su banco actual. `assets/js/version.js` se conserva por compatibilidad histórica, pero no se carga desde la portada.
+Los datos de presentación no utilizados se eliminaron de la configuración de salas para mantener una sola fuente de contenido. La sala LIBRITO muestra un corte fechado del catálogo: 176 registros, 205 noticias y 71 recursos (26-11-2026). OCARINA TV integra 47 episodios y ¿SABÍAS QUE? dispone de 8 preguntas en su banco actual. RADIO ONLINE incorpora un reproductor persistente con volumen y modo compacto; la reproducción continúa al cerrar la sala dentro de la misma página, y puede ofrecer controles de pantalla bloqueada en navegadores compatibles. `assets/js/version.js` se conserva por compatibilidad histórica, pero no se carga desde la portada.
 
 ## Publicación
 
