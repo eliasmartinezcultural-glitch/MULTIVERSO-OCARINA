@@ -143,3 +143,13 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - Se incorpora una presentación visual propia para la pantalla, el título y los controles de selección, adaptada a celulares.
 - Se conservan las nueve experiencias diferenciadas y los accesos a los proyectos originales.
 - No se modifican los repositorios originales de los mundos.
+
+
+## Cambios 3.58
+
+- La sala YOUTUBE ahora obtiene su selección de videos del catálogo audiovisual ya existente en Ocarina TV; no agrega videos externos ni identificadores nuevos.
+- Cada video muestra miniatura, título y categoría, y se reproduce en una única pantalla. Los controles indican cuál está seleccionado.
+- Se refuerza la identidad visual funcional de las nueve salas: biblioteca, cine, atlas natural, gabinete de curiosidades, guía local, señalética práctica, canal, cabina de radio y mural social.
+- Se mejoran jerarquías, superficies, fichas, controles, marcos de contenido, foco de teclado y adaptación móvil.
+- Se mantienen los accesos a las experiencias completas y los repositorios originales sin modificaciones.
+- No se inventan nuevos datos de catálogo ni se cambian las funciones principales de cada mundo.
