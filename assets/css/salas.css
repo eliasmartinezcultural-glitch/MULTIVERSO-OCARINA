@@ -545,3 +545,21 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 /* 3.21 · Wild: entrar al atlas, sin introducciones intermedias */
 .wild-direct{padding:clamp(12px,2.5vw,22px);border-radius:22px;background:#07140d;color:#f1f7ed}.wild-direct-heading{padding:5px 4px 15px}.wild-direct-heading h3{margin:7px 0;color:#e7f5dc;font:clamp(1.55rem,3vw,2.3rem)/1.05 "DM Serif Display",Georgia,serif}.wild-direct-heading p{max-width:620px;color:#a8bda9;font-size:.78rem;line-height:1.55}.wild-direct-groups{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.wild-direct-groups span{padding:6px 9px;border:1px solid #baf28a44;border-radius:20px;background:#baf28a0d;color:#c6e8ad;font-size:.57rem;font-weight:900;letter-spacing:.08em}.wild-atlas-frame{height:clamp(560px,78vh,900px);min-height:560px;border:1px solid #baf28a44;border-radius:17px;background:#050b08;overflow:hidden}.wild-atlas-frame iframe{width:100%;height:100%;border:0}.wild-direct .experience-foot{color:#a8bda9}.wild-direct .experience-foot a{color:#c7eaa9}
 @media(max-width:680px){.wild-atlas-frame{height:78vh;min-height:520px}.wild-direct{padding:11px}.wild-direct-groups{gap:5px}}
+
+
+/* 3.23 · Territorio, cartografía y acceso completo a cada mundo */
+.room-hero{position:relative;isolation:isolate;overflow:hidden}
+.room-hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.72;background-image:repeating-radial-gradient(ellipse at 12% 88%,transparent 0 25px,color-mix(in srgb,var(--room-accent),transparent 88%) 26px 27px,transparent 28px 43px),linear-gradient(90deg,transparent 0 72%,color-mix(in srgb,var(--room-accent),transparent 92%) 72.1% 72.25%,transparent 72.35%)}
+.room-art{box-shadow:inset 0 0 0 8px color-mix(in srgb,var(--room-paper),transparent 80%),0 18px 42px color-mix(in srgb,var(--room-deep),transparent 88%)}
+.room-art-coordinate{position:absolute;top:12px;left:14px;z-index:2;padding:5px 8px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 55%);border-radius:5px;background:color-mix(in srgb,var(--room-paper),transparent 14%);color:var(--room-deep);font:800 .53rem/1 var(--sans);letter-spacing:.13em}
+.room-complete{position:relative;isolation:isolate;display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:15px;margin:22px 0 26px;padding:18px 19px;overflow:hidden;border:1px solid color-mix(in srgb,var(--room-accent),transparent 62%);border-radius:18px;background:linear-gradient(115deg,color-mix(in srgb,var(--room-accent),var(--room-paper) 90%),var(--room-paper));box-shadow:0 12px 30px color-mix(in srgb,var(--room-deep),transparent 94%)}
+.room-complete:after{content:"";position:absolute;z-index:-1;right:-30px;top:-75px;width:190px;height:190px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 76%);border-radius:50%;box-shadow:0 0 0 16px color-mix(in srgb,var(--room-accent),transparent 94%),0 0 0 34px color-mix(in srgb,var(--room-accent),transparent 96%)}
+.room-complete-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--room-deep);color:white;font-size:1.5rem}
+.room-complete-copy>span{display:block;color:var(--room-accent);font-size:.56rem;font-weight:900;letter-spacing:.15em}
+.room-complete-copy h3{margin:4px 0;color:var(--room-deep);font:1.2rem/1.1 "DM Serif Display",Georgia,serif}
+.room-complete-copy p{margin:4px 0 0;color:var(--room-muted);font-size:.7rem;line-height:1.45}
+.room-complete-link{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:48px;padding:11px 16px;border:1px solid var(--room-deep);border-radius:11px;background:var(--room-deep);color:#fff;font-size:.72rem;font-weight:850;white-space:nowrap;transition:transform .2s,filter .2s}
+.room-complete-link:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.room-complete-link:focus-visible{outline:3px solid var(--room-accent);outline-offset:4px}
+@media(max-width:680px){.room-complete{grid-template-columns:42px 1fr;gap:11px;padding:14px}.room-complete-mark{width:40px;height:40px;border-radius:12px}.room-complete-copy h3{font-size:1.08rem}.room-complete-link{grid-column:1/-1;width:100%;min-height:50px}.room-art-coordinate{top:9px;left:10px}}
+@media(prefers-reduced-motion:reduce){.room-complete-link{transition:none}}
