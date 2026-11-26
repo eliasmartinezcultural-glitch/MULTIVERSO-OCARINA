@@ -1,0 +1,78 @@
+/* MULTIVERSO OCARINA 3.72 · Tender puentes: simple de entender, completo al usar */
+.simple-header{display:flex;align-items:center;gap:12px;min-height:64px}
+.header-actions{display:flex;align-items:center;gap:10px}
+.portal-share-button,.portal-share-status{display:none!important}
+.simple-brand{font-size:.88rem;letter-spacing:.04em}
+.portal-whatsapp-button,.simple-about{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:999px;font-size:.88rem;font-weight:800}
+.simple-hero{min-height:clamp(300px,42vw,480px)}
+.simple-hero-content{max-width:650px}
+.simple-hero h1{max-width:12ch}
+.territory-ribbon{display:none!important}
+.simple-doors{padding-top:clamp(24px,4vw,42px)}
+.doors-intro{margin-bottom:16px}
+.doors-intro h2{margin:0 0 6px}
+.doors-intro p{font-size:1rem}
+.door-finder{margin-top:14px}
+.door-finder label{font-size:.78rem}
+.door-search-line input{min-height:52px;font-size:1rem}
+#doorSearchStatus{font-size:.88rem}
+.simple-doors #projectGrid.doors-grid{gap:16px}
+.simple-doors #projectGrid .project-card{grid-template-rows:clamp(130px,18vw,190px) auto!important;border-radius:18px;box-shadow:0 7px 22px #173d3515}
+.simple-doors #projectGrid .project-art:before{background:linear-gradient(180deg,transparent 55%,rgba(12,35,28,.12))}
+.simple-doors #projectGrid .project-content{gap:8px;padding:16px 22px 18px!important;border-top-width:3px}
+.simple-doors #projectGrid .project-content small{font-size:.72rem;letter-spacing:.1em}
+.simple-doors #projectGrid .project-content b{font-size:clamp(1.55rem,3vw,2.15rem)}
+.simple-doors #projectGrid .project-descriptor{font-size:1rem;font-weight:650}
+.simple-doors #projectGrid .project-story{display:block;max-width:60ch;font-size:.96rem;line-height:1.45;color:#344f43}
+.simple-doors #projectGrid .project-highlights,.simple-doors #projectGrid .project-tag{display:none!important}
+.simple-doors #projectGrid .project-link{align-self:flex-start;min-width:150px;min-height:48px;margin-top:2px;padding:10px 22px;border-radius:12px;font-size:.95rem;letter-spacing:0;text-transform:none;box-shadow:none}
+.simple-doors #projectGrid .project-card:hover{transform:none;box-shadow:0 10px 26px #173d3520}
+.simple-doors #projectGrid .project-card:hover .door-art-image{transform:none}
+.doors-footnote{font-size:.9rem}
+.world-room .room-universe{display:none}
+.world-room .room-hero{gap:14px}
+.world-room .room-kicker{font-size:.78rem;letter-spacing:.08em}
+.world-room .room-heading h2{margin:.2em 0}
+.world-room .room-headline{font-size:1.05rem;line-height:1.45}
+.world-room .room-complete-copy>span{display:none}
+.world-room .room-complete-copy h3{font-size:1.05rem}
+.world-room .room-share{display:none!important}
+.world-room .room-actions{justify-content:stretch}
+.world-room .room-back{min-height:50px;flex:1;font-size:1rem}
+.world-room .room-complete-link{min-height:50px;font-size:1rem}
+.world-room .room-close{min-width:48px;min-height:48px;font-size:1rem}
+@media(max-width:680px){
+ .simple-header{padding:8px 10px;gap:8px}
+ .simple-brand{font-size:.68rem}
+ .header-actions{gap:6px}
+ .portal-whatsapp-button,.simple-about{min-height:42px;padding:9px 11px;font-size:.78rem}
+ .simple-hero{min-height:clamp(285px,44svh,380px);padding:14px 12px 22px}
+ .simple-hero-content{padding:18px 15px}
+ .simple-hero h1{font-size:clamp(2.1rem,9vw,3.1rem)}
+ .simple-hero-content p{font-size:.96rem}
+ .simple-doors{padding:24px 11px 30px}
+ .doors-intro h2{font-size:1.85rem}
+ .doors-intro p{font-size:.98rem}
+ .door-finder{padding:12px;margin-bottom:14px}
+ .simple-doors #projectGrid.doors-grid{gap:12px}
+ .simple-doors #projectGrid .project-card{grid-template-rows:clamp(125px,38vw,170px) auto!important;border-radius:15px}
+ .simple-doors #projectGrid .project-content{gap:6px;padding:13px 15px 15px!important}
+ .simple-doors #projectGrid .project-content small{font-size:.67rem}
+ .simple-doors #projectGrid .project-content b{font-size:1.55rem}
+ .simple-doors #projectGrid .project-descriptor{font-size:.92rem}
+ .simple-doors #projectGrid .project-story{font-size:.9rem;line-height:1.4}
+ .simple-doors #projectGrid .project-link{align-self:stretch;min-height:50px;min-width:0;font-size:1rem}
+ .world-room .room-hero{grid-template-columns:66px 1fr;padding:14px 12px}
+ .world-room .room-world-image{max-height:62px}
+ .world-room .room-heading h2{font-size:1.45rem}
+ .world-room .room-body{padding:0 10px 12px}
+ .world-room .room-actions{gap:8px}
+}
+@media(max-width:370px){
+ .simple-about{display:none}
+ .simple-doors #projectGrid .project-card{grid-template-rows:116px auto!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .simple-doors #projectGrid .project-card,.simple-doors #projectGrid .door-art-image{transition:none}
+}
