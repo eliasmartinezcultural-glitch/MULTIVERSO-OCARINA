@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.32**  
+**Versión vigente: 3.34**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -30,7 +30,9 @@ Cada puerta ofrece una experiencia breve dentro del portal y un acceso **Experie
 - Ocarina TV usa un único reproductor de video; Radio Online, un único reproductor de audio.
 - Si un servicio externo no permite integrarse, se ofrece un enlace alternativo claro.
 - La portada conserva nueve enlaces HTML estáticos: si JavaScript falla, las puertas siguen visibles y navegables.
-- Diseño adaptable, navegación por teclado, movimiento reducido y controles táctiles amplios.
+- Mobile-first para teléfonos, controles táctiles amplios, navegación por teclado y movimiento reducido.
+- Compartir el portal desde el menú nativo del teléfono o copiar el enlace como alternativa.
+- Las salas relacionadas reinician su desplazamiento al cambiar de mundo.
 - No inventar datos, fuentes, contactos, estadísticas ni disponibilidad.
 
 ## Arquitectura
@@ -43,11 +45,12 @@ Sitio estático para GitHub Pages. No requiere registro ni base de datos.
 - `assets/js/salas.js`: contenido y comportamiento de las salas.
 - `assets/css/estilo.css`: identidad general y portada.
 - `assets/css/salas.css`: puertas, salas y experiencias.
-- `assets/css/mundos.css`: identidad visual por mundo y adaptación móvil-first.
+- `assets/css/mundos.css`: identidad visual por mundo.
+- `assets/css/mobile.css`: experiencia móvil-first y áreas seguras.
 - `assets/css/dedicatoria.css`: presentación de la dedicatoria.
 - `sw.js` y `manifest.webmanifest`: caché y configuración instalable.
 
-Los datos de presentación no utilizados se eliminaron de la configuración de salas para mantener una sola fuente de contenido. Las nueve puertas cuentan con ilustraciones vectoriales originales de mayor detalle, diseñadas para su función y paleta. La portada y las salas comparten el mismo lenguaje visual. La sala LIBRITO muestra un corte fechado del catálogo: 176 registros, 205 noticias y 71 recursos (26-11-2026). OCARINA TV integra 47 episodios y ¿SABÍAS QUE? dispone de 8 preguntas en su banco actual. RADIO ONLINE incorpora un reproductor persistente con volumen y modo compacto; la reproducción continúa al cerrar la sala dentro de la misma página, y puede ofrecer controles de pantalla bloqueada en navegadores compatibles. `assets/js/version.js` se conserva por compatibilidad histórica, pero no se carga desde la portada.
+La versión móvil prioriza una portada compacta, puertas táctiles, salas a pantalla completa y navegación simple. Los datos de presentación no utilizados se eliminaron de la configuración de salas para mantener una sola fuente de contenido. Las nueve puertas cuentan con ilustraciones vectoriales originales de mayor detalle, diseñadas para su función y paleta. La portada y las salas comparten el mismo lenguaje visual. La sala LIBRITO muestra un corte fechado del catálogo: 176 registros, 205 noticias y 71 recursos (26-11-2026). OCARINA TV integra 47 episodios y ¿SABÍAS QUE? dispone de 8 preguntas en su banco actual. RADIO ONLINE incorpora un reproductor persistente con volumen y modo compacto; la reproducción continúa al cerrar la sala dentro de la misma página, y puede ofrecer controles de pantalla bloqueada en navegadores compatibles. `assets/js/version.js` se conserva por compatibilidad histórica, pero no se carga desde la portada.
 
 ## Publicación
 

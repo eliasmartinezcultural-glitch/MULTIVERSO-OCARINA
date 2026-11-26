@@ -1,8 +1,8 @@
-const CACHE="multiverso-ocarina-3.33-mobile";
+const CACHE="multiverso-ocarina-3.34-mobile";
 const CORE=[
  "./","./index.html","./manifest.webmanifest",
- "./assets/css/estilo.css?v=3.33","./assets/css/dedicatoria.css?v=3.33","./assets/css/salas.css?v=3.33","./assets/css/mundos.css?v=3.33","./assets/css/mobile.css?v=3.33",
- "./assets/js/proyectos.js?v=3.33","./assets/js/experiencia.js?v=3.33","./assets/js/salas.js?v=3.33",
+ "./assets/css/estilo.css?v=3.34","./assets/css/dedicatoria.css?v=3.34","./assets/css/salas.css?v=3.34","./assets/css/mundos.css?v=3.34","./assets/css/mobile.css?v=3.34",
+ "./assets/js/proyectos.js?v=3.34","./assets/js/experiencia.js?v=3.34","./assets/js/salas.js?v=3.34",
  "./assets/img/mundos/librito.svg","./assets/img/mundos/ocarina-tv.svg","./assets/img/mundos/wild.svg",
  "./assets/img/mundos/sabias.svg","./assets/img/mundos/chanar-hub.svg","./assets/img/mundos/codigo-cero.svg",
  "./assets/img/mundos/youtube.svg","./assets/img/mundos/radio.svg","./assets/img/mundos/social.svg",

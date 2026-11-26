@@ -240,3 +240,26 @@ button,a,[role="button"]{touch-action:manipulation}
   html{scroll-behavior:auto}
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
+
+/* 3.34 · ajustes de navegación y jerarquía táctil */
+.sr-only{
+ position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
+ margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;
+ white-space:nowrap!important;border:0!important;
+}
+.portal-share-button{
+ display:inline-grid;place-items:center;flex:0 0 42px;width:42px;height:42px;min-height:42px;
+ padding:0;border:1px solid #cbd9cb;border-radius:14px;background:#ffffffbd;
+ color:#385744;font:700 1.15rem/1 var(--sans);cursor:pointer;
+ box-shadow:0 3px 12px #263d3208;
+}
+.portal-share-button:active{transform:scale(.96)}
+@media(max-width:680px){
+ .portal-share-button{flex-basis:40px;width:40px;height:40px;min-height:40px;border-radius:12px}
+ .room-actions .room-home-link{grid-column:1/-1}
+ .room-actions .room-share-status{grid-column:1/-1}
+ .room-actions{row-gap:7px}
+}
+@media(max-width:390px){
+ .portal-share-button{flex-basis:36px;width:36px;height:36px;min-height:36px}
+}
