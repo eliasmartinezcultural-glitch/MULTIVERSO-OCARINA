@@ -1,154 +1,143 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#294331">
-<meta name="description" content="Universo Ocarina: un encuentro entre las raíces rurales y las ideas digitales. Creado por Elías Martínez en San Patricio del Chañar.">
-<meta property="og:title" content="Universo Ocarina">
-<meta property="og:description" content="Raíces rurales. Ideas que viajan lejos. Un universo para descubrir.">
-<meta property="og:type" content="website">
-<title>Universo Ocarina | Raíces rurales, ideas digitales</title>
-<style>
-:root{--forest:#294331;--forest2:#385a40;--cream:#f5f0e4;--paper:#fffdf7;--earth:#b78355;--sage:#dce6d6;--ink:#29382d;--muted:#657264;--line:#dce1d5;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:82px}
-body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
-.top{position:sticky;top:0;z-index:20;background:rgba(41,67,49,.97);color:white;box-shadow:0 3px 18px #18291b22}
-.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{display:flex;align-items:center;gap:11px;font-size:.9rem;font-weight:850;letter-spacing:.08em}
-.mark{width:39px;height:39px;border:1px solid #d7c39d;border-radius:50%;display:grid;place-items:center;color:#e7d2aa;font:1.5rem Georgia,serif}
-.navlinks{display:flex;gap:24px;align-items:center;font-size:.92rem}
-.navlinks a{padding:10px 0}
-.navlinks a:hover{color:#d7e6cf}
-.menu{display:none;color:white;background:transparent;border:1px solid #ffffff66;border-radius:12px;padding:9px 13px}
-.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--forest);color:white;min-height:590px;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#203a29f2 0%,#294331d9 48%,#29433155 100%),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1900&q=85") center/cover}
-.hero:after{content:"";position:absolute;z-index:-1;width:500px;height:500px;right:-130px;top:65px;border:1px solid #e1ead955;border-radius:50%;box-shadow:0 0 0 35px #e1ead911,0 0 0 85px #e1ead90b}
-.hero-content{padding:90px 0 85px;max-width:760px}
-.kicker{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffffff66;border-radius:30px;padding:7px 13px;font-size:.8rem;letter-spacing:.08em}
-.kicker span{width:8px;height:8px;border-radius:50%;background:#b9d2ad}
-h1,h2,h3,p{margin-top:0}
-h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:500}
-h1{font-size:clamp(3.3rem,8vw,6.5rem);line-height:.98;letter-spacing:-.045em;margin:26px 0}
-h1 em{color:#d9e6d0}
-.hero p{max-width:570px;font-size:clamp(1.05rem,2vw,1.25rem);color:#f0f2e9}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 21px;border-radius:999px;background:#e0c39a;color:#26392b;font-weight:800}
-.btn:hover{filter:brightness(1.05);transform:translateY(-2px)}
-.btn.light{background:#ffffff16;border:1px solid #ffffff9c;color:white}
-.intro{padding:66px 0 58px;text-align:center}
-.overline{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:#648067;font-weight:850}
-.intro h2,.section-title{font-size:clamp(2.35rem,5vw,4rem);line-height:1.08;margin:12px 0}
-.intro p{max-width:650px;margin:0 auto;color:var(--muted);font-size:1.08rem}
-.worlds{background:#e4eadf;padding:64px 0}
-.world-heading{text-align:center;max-width:650px;margin:0 auto 32px}
-.world-heading p{color:var(--muted);margin-bottom:0}
-.world-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
-.world{overflow:hidden;border-radius:22px;background:var(--paper);box-shadow:0 10px 28px #263b2810}
-.world-photo{height:230px;position:relative;background-size:cover;background-position:center}
-.rural-photo{background-image:linear-gradient(0deg,#17291b88,transparent 65%),url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85")}
-.tech-photo{background-image:linear-gradient(0deg,#17291b88,transparent 65%),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85")}
-.photo-label{position:absolute;bottom:17px;left:21px;color:white;font-weight:850;letter-spacing:.1em;font-size:.8rem}
-.world-copy{padding:22px 25px 25px}
-.world-copy h3{font:2rem Georgia,serif;margin:0 0 5px}
-.world-copy p{color:var(--muted);margin:0}
-.plus{width:54px;height:54px;border-radius:50%;background:#d2dfcc;border:5px solid #e4eadf;display:grid;place-items:center;font-size:1.8rem;color:var(--forest);margin:-27px auto;position:relative;z-index:2}
-.bridge-note{text-align:center;margin:42px 0 0;color:#526650}
-.bridge-note strong{color:var(--forest)}
-.section{padding:72px 0}
-.section-heading{text-align:center;max-width:690px;margin:0 auto 34px}
-.section-heading p{color:var(--muted);margin:0}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.project{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;min-height:245px;box-shadow:0 5px 18px #263b2808}
-.project-symbol{width:46px;height:46px;border-radius:14px;background:var(--sage);display:grid;place-items:center;font-size:1.4rem;color:var(--forest)}
-.project h3{font:1.55rem Georgia,serif;margin:18px 0 7px}
-.project p{font-size:.95rem;color:var(--muted);margin-bottom:20px}
-.enter{margin-top:auto;display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 15px;border-radius:999px;background:var(--forest);color:white;font-weight:800;font-size:.9rem;align-self:flex-start}
-.enter:hover{background:var(--forest2)}
-.listen{background:var(--forest);color:white;padding:68px 0}
-.listen .overline{color:#c8d9bd}
-.listen .section-heading p{color:#e0e8dc}
-.listen-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.listen-card{border:1px solid #ffffff3b;background:#ffffff0c;border-radius:20px;padding:26px}
-.listen-icon{font-size:1.8rem}
-.listen-card h3{font:1.8rem Georgia,serif;margin:12px 0 6px}
-.listen-card p{color:#e0e8dc}
-.listen-card .btn{margin-top:5px}
-.about{padding:70px 0}
-.about-box{background:#e3e9dc;border-radius:24px;padding:clamp(25px,5vw,48px);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
-.about-box h2{font-size:clamp(2.5rem,5vw,4rem);line-height:1;margin:10px 0}
-.about-box p{max-width:650px;color:#526251;margin-bottom:10px}
-.stamp{width:170px;height:170px;border:1px solid #9baa94;border-radius:50%;display:grid;place-items:center;text-align:center;padding:20px;color:var(--forest);font:1.25rem/1.2 Georgia,serif;transform:rotate(-8deg)}
-.contact{background:#f9f6ed;padding:52px 0;text-align:center}
-.contact p{color:var(--muted);max-width:580px;margin:0 auto 22px}
-.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.contact-links a{border:1px solid #cbd5c5;border-radius:999px;padding:10px 16px;font-weight:750}
-.contact-links a:hover{background:var(--sage)}
-footer{background:#22392a;color:#e8eee4;padding:25px 0;text-align:center;font-size:.88rem}
-footer p{margin:0}
-.backtop{position:fixed;right:16px;bottom:16px;z-index:10;width:50px;height:50px;border-radius:50%;border:0;background:#e0c39a;color:#26392b;font-size:1.3rem;font-weight:900;box-shadow:0 4px 18px #0002;cursor:pointer}
-:focus-visible{outline:3px solid #b78355;outline-offset:4px}
-@media(max-width:760px){.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:var(--forest);padding:14px 22px 22px;flex-direction:column;align-items:stretch;gap:4px}.navlinks.open{display:flex}.navlinks a{padding:12px 4px;border-bottom:1px solid #ffffff22}.menu{display:block}.hero{min-height:560px}.hero-content{padding:75px 0}.world-grid,.listen-grid{grid-template-columns:1fr;gap:16px}.world-photo{height:200px}.plus{margin:-27px auto}.projects{grid-template-columns:1fr 1fr}.project{min-height:255px}.about-box{grid-template-columns:1fr}.stamp{width:130px;height:130px;font-size:1rem;margin:auto}.section{padding:58px 0}}
-@media(max-width:480px){body{font-size:16px}.wrap{width:calc(100% - 28px)}.logo{font-size:.78rem}.hero{min-height:570px}.hero:after{width:280px;height:280px;right:-190px;top:220px}h1{font-size:3.25rem}.actions{display:grid}.btn{width:100%}.intro{padding:52px 0 45px}.worlds{padding:52px 0}.projects{grid-template-columns:1fr}.project{min-height:0;padding:21px}.project p{margin-bottom:14px}.listen{padding:55px 0}.listen-card{padding:22px}.about{padding:52px 0}.backtop{width:46px;height:46px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203b2b">
+  <meta name="description" content="Universo Ocarina: raíces rurales e ideas digitales. Un lugar para descubrir historias, naturaleza, cultura y creatividad.">
+  <meta property="og:title" content="Universo Ocarina">
+  <meta property="og:description" content="Raíces rurales. Ideas sin fronteras. Un universo para descubrir.">
+  <meta property="og:type" content="website">
+  <title>Universo Ocarina — Raíces rurales, ideas digitales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <script src="assets/js/proyectos.js" defer></script>
+  <script src="assets/js/experiencia.js" defer></script>
 </head>
 <body>
-<header class="top"><div class="wrap nav">
-<a class="logo" href="#inicio" aria-label="Universo Ocarina, ir al inicio"><span class="mark">O</span><span>UNIVERSO OCARINA</span></a>
-<nav class="navlinks" id="navlinks" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#proyectos">Explorar</a><a href="#escuchar">Escuchar y mirar</a><a href="#elias">Quiénes somos</a></nav>
-<button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="navlinks">Menú ☰</button>
-</div></header>
-<main>
-<section class="hero" id="inicio"><div class="wrap"><div class="hero-content">
-<div class="kicker"><span></span> UN UNIVERSO PARA DESCUBRIR</div>
-<h1>Raíces en la tierra.<br><em>Ideas sin fronteras.</em></h1>
-<p>Un lugar donde el mundo rural y la tecnología se encuentran. Historias, naturaleza, creatividad y nuevas formas de aprender y explorar.</p>
-<div class="actions"><a class="btn" href="#proyectos">Conocer los proyectos ↓</a><a class="btn light" href="#dos-mundos">Descubrir este universo</a></div>
-</div></div></section>
-<section class="intro"><div class="wrap"><div class="overline">Bienvenidos</div><h2>Pasá, mirá y descubrí.</h2><p>Este espacio reúne pequeñas puertas a otros mundos. Elegí lo que te interese y entrá. No necesitás saber de tecnología: alcanza con tener ganas de descubrir.</p></div></section>
-<section class="worlds" id="dos-mundos"><div class="wrap">
-<div class="world-heading"><div class="overline">Nuestra esencia</div><h2 class="section-title">Dos mundos que se encuentran</h2><p>Las raíces nos recuerdan de dónde venimos. La tecnología nos ayuda a imaginar nuevos caminos.</p></div>
-<div class="world-grid">
-<article class="world"><div class="world-photo rural-photo"><span class="photo-label">EL MUNDO RURAL</span></div><div class="world-copy"><h3>La tierra</h3><p>Los paisajes, las personas, los oficios, la naturaleza y las historias de cada lugar.</p></div></article>
-<article class="world"><div class="world-photo tech-photo"><span class="photo-label">EL MUNDO DIGITAL</span></div><div class="world-copy"><h3>Las ideas</h3><p>Las pantallas, el diseño, los mapas, las herramientas y las ganas de crear.</p></div></article>
-</div><div class="plus" aria-hidden="true">+</div><p class="bridge-note">No hace falta elegir. <strong>El futuro también puede tener raíces.</strong></p>
-</div></section>
-<section class="section" id="proyectos"><div class="wrap">
-<div class="section-heading"><div class="overline">Elegí una puerta</div><h2 class="section-title">¿Qué te gustaría visitar?</h2><p>Seis espacios diferentes. Tocá el botón para entrar y disfrutar.</p></div>
-<div class="projects">
-<article class="project"><div class="project-symbol">▤</div><h3>LIBRITO</h3><p>Libros, documentos e historias para conocer mejor San Patricio del Chañar.</p><a class="enter" href="https://eliasmartinezcultural-glitch.github.io/LIBRITO/" target="_blank" rel="noopener">Entrar a la biblioteca ↗</a></article>
-<article class="project"><div class="project-symbol">▶</div><h3>OCARINA TV</h3><p>Videos, imágenes y relatos de nuestra gente y nuestro territorio.</p><a class="enter" href="https://eliasmartinezcultural-glitch.github.io/OCARINA-TV/" target="_blank" rel="noopener">Ver los videos ↗</a></article>
-<article class="project"><div class="project-symbol">♧</div><h3>OCARINA WILD</h3><p>Animales, plantas, río y paisajes naturales de nuestra región.</p><a class="enter" href="https://eliasmartinezcultural-glitch.github.io/OCARINA-WILD/" target="_blank" rel="noopener">Explorar la naturaleza ↗</a></article>
-<article class="project"><div class="project-symbol">✳</div><h3>¿SABÍAS QUE?</h3><p>Un juego para descubrir curiosidades e historias de San Patricio del Chañar.</p><a class="enter" href="https://eliasmartinezcultural-glitch.github.io/SABIAS-QUE/" target="_blank" rel="noopener">Jugar y aprender ↗</a></article>
-<article class="project"><div class="project-symbol">⌖</div><h3>CHAÑAR HUB</h3><p>Una guía para encontrar información, lugares y servicios de nuestra localidad.</p><a class="enter" href="https://eliasmartinezcultural-glitch.github.io/chanar-hub/" target="_blank" rel="noopener">Consultar la guía ↗</a></article>
-<article class="project"><div class="project-symbol">♡</div><h3>CÓDIGO CERO</h3><p>Una guía de orientación ante emergencias. Verificá siempre los datos con los servicios oficiales.</p><a class="enter" href="https://eliasmartinezcultural-glitch.github.io/C-DIGO-CERO/" target="_blank" rel="noopener">Abrir la guía ↗</a></article>
-</div>
-</div></section>
-<section class="listen" id="escuchar"><div class="wrap">
-<div class="section-heading"><div class="overline">Un momento para escuchar y mirar</div><h2 class="section-title">También estamos en el aire.</h2><p>Entrá a la radio o visitá el canal de videos.</p></div>
-<div class="listen-grid">
-<article class="listen-card"><div class="listen-icon">♫</div><h3>Radiando Ando</h3><p>Una radio para escuchar, compartir voces y acompañar el día.</p><a class="btn" href="https://zeno.fm/radio/radiando-ando/" target="_blank" rel="noopener">Escuchar la radio ↗</a></article>
-<article class="listen-card"><div class="listen-icon">▶</div><h3>El canal de Elías</h3><p>Videos, historias y producciones para mirar cuando quieras.</p><a class="btn" href="https://www.youtube.com/@EliasM-creator" target="_blank" rel="noopener">Ver videos en YouTube ↗</a></article>
-</div>
-</div></section>
-<section class="about" id="elias"><div class="wrap"><div class="about-box">
-<div><div class="overline">Detrás de este universo</div><h2>Hola, soy Elías.</h2><p>Vivo en San Patricio del Chañar, Neuquén. Me gustan la vida rural, las historias de las personas y la tecnología. Creé Universo Ocarina para unir esas pasiones y compartir todo lo que se puede imaginar y construir.</p><p><strong>Ocarina Producciones · Historias, personas y territorio.</strong></p></div>
-<div class="stamp">Raíces rurales<br>Ideas creativas<br>Futuro digital</div>
-</div></div></section>
-<section class="contact"><div class="wrap"><div class="overline">Seguimos en contacto</div><h2 class="section-title">¿Nos volvemos a encontrar?</h2><p>Gracias por visitar este universo. Podés volver cuando quieras o seguir descubriendo nuestras novedades.</p><div class="contact-links"><a href="https://www.instagram.com/ocarina_producciones.spch/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/@EliasM-creator" target="_blank" rel="noopener">YouTube ↗</a><a href="https://zeno.fm/radio/radiando-ando/" target="_blank" rel="noopener">Radio ↗</a></div></div></section>
-</main>
-<footer><div class="wrap"><p><strong>UNIVERSO OCARINA</strong> · Una creación de Elías Martínez · San Patricio del Chañar, Neuquén</p></div></footer>
-<button class="backtop" type="button" aria-label="Volver al inicio" title="Volver al inicio" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script>
-const menu=document.getElementById('menu');
-const nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
-nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
-</script>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><span id="readingProgress"></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Universo Ocarina, inicio">
+        <span class="brand-symbol" aria-hidden="true">O</span>
+        <span>UNIVERSO OCARINA</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">Menú ☰</button>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Explorar</a>
+        <a href="#escuchar">Radio y videos</a>
+        <a class="nav-visit" href="#proyectos">Entrar al universo ↓</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div class="hero-content">
+          <span class="eyebrow">Un universo para descubrir</span>
+          <h1>Raíces en la tierra.<br><em>Ideas sin fronteras.</em></h1>
+          <p class="hero-copy">Un lugar donde el mundo rural y la tecnología se encuentran. Historias, naturaleza y creatividad para explorar a tu manera.</p>
+          <div class="hero-actions">
+            <a class="button" href="#proyectos">Entrar al universo <span aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="#dos-mundos">Conocer los dos mundos</a>
+          </div>
+          <div class="hero-note"><span class="seed" aria-hidden="true">✳</span> Desde San Patricio del Chañar hacia donde quieras llegar.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="worlds" id="dos-mundos">
+      <div class="wrap">
+        <div class="section-intro reveal">
+          <span class="eyebrow">Nuestra esencia</span>
+          <h2>Dos mundos.<br>Un mismo horizonte.</h2>
+          <p>La tierra nos da raíces. La tecnología abre caminos. Acá se encuentran.</p>
+        </div>
+        <div class="world-pair">
+          <article class="world-card reveal">
+            <div class="world-photo world-rural">
+              <span class="world-label">EL MUNDO RURAL</span>
+            </div>
+            <div class="world-copy">
+              <h3>La tierra</h3>
+              <p>Los paisajes, las personas, los oficios, la naturaleza y las historias que nos inspiran.</p>
+            </div>
+          </article>
+          <div class="world-join" aria-label="Se encuentran">+</div>
+          <article class="world-card reveal">
+            <div class="world-photo world-digital">
+              <span class="world-label">EL MUNDO DIGITAL</span>
+            </div>
+            <div class="world-copy">
+              <h3>Las ideas</h3>
+              <p>El diseño, las herramientas, los mapas y las ganas de imaginar algo nuevo.</p>
+            </div>
+          </article>
+        </div>
+        <p class="worlds-note">No hace falta elegir. <strong>El futuro también puede tener raíces.</strong></p>
+      </div>
+    </section>
+
+    <section class="section explore" id="proyectos">
+      <div class="wrap">
+        <div class="section-intro reveal">
+          <span class="eyebrow">Elegí una puerta</span>
+          <h2>¿Qué te gustaría descubrir?</h2>
+          <p>Seis espacios distintos. Tocá una tarjeta para entrar.</p>
+        </div>
+        <div class="project-grid" id="projectGrid" aria-live="polite">
+          <p>Preparando los espacios para explorar…</p>
+        </div>
+        <p class="more-hint">Podés entrar, recorrer y volver cuando quieras.</p>
+      </div>
+    </section>
+
+    <section class="listen" id="escuchar">
+      <div class="wrap">
+        <div class="section-intro reveal">
+          <span class="eyebrow">Un momento para escuchar y mirar</span>
+          <h2>También estamos en el aire.</h2>
+          <p>La radio y los videos te esperan en sus propios espacios.</p>
+        </div>
+        <div class="media-grid">
+          <article class="media-card reveal">
+            <span class="media-icon" aria-hidden="true">♫</span>
+            <h3>Radiando Ando</h3>
+            <p>Una radio para escuchar, compartir voces y acompañar el día.</p>
+            <a class="button" href="https://zeno.fm/radio/radiando-ando/" target="_blank" rel="noopener noreferrer">Escuchar la radio <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="media-card reveal">
+            <span class="media-icon" aria-hidden="true">▶</span>
+            <h3>El canal de Elías</h3>
+            <p>Videos, historias y producciones para mirar cuando quieras.</p>
+            <a class="button" href="https://www.youtube.com/@EliasM-creator" target="_blank" rel="noopener noreferrer">Ver videos <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-line">
+      <div class="wrap about-inner">
+        <p>Un universo creado desde San Patricio del Chañar, Neuquén.</p>
+        <strong>Elías Martínez · Ocarina Producciones</strong>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span class="footer-brand">UNIVERSO OCARINA</span>
+      <span class="footer-small">Raíces rurales. Ideas sin fronteras.</span>
+      <span class="footer-small">© <span id="currentYear"></span> · Hecho con curiosidad y creatividad.</span>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Volver al inicio" title="Volver al inicio">↑</button>
+  <button class="back-top" id="shareButton" type="button" aria-label="Compartir Universo Ocarina" title="Compartir" style="right:78px;opacity:1;pointer-events:auto;transform:none;font-size:.78rem;width:auto;padding:0 17px">Compartir</button>
 </body>
 </html>
