@@ -1,8 +1,8 @@
-const CACHE="multiverso-ocarina-3.24-experiencias";
+const CACHE="multiverso-ocarina-3.25-experiencias";
 const CORE=[
  "./","./index.html","./manifest.webmanifest",
- "./assets/css/estilo.css?v=3.24","./assets/css/dedicatoria.css?v=3.24","./assets/css/salas.css?v=3.24",
- "./assets/js/version.js?v=3.24","./assets/js/proyectos.js?v=3.24","./assets/js/experiencia.js?v=3.24","./assets/js/salas.js?v=3.24",
+ "./assets/css/estilo.css?v=3.25","./assets/css/dedicatoria.css?v=3.25","./assets/css/salas.css?v=3.25",
+ "./assets/js/proyectos.js?v=3.25","./assets/js/experiencia.js?v=3.25","./assets/js/salas.js?v=3.25",
  "./assets/img/mundos/librito.svg","./assets/img/mundos/ocarina-tv.svg","./assets/img/mundos/wild.svg",
  "./assets/img/mundos/sabias.svg","./assets/img/mundos/chanar-hub.svg","./assets/img/mundos/codigo-cero.svg",
  "./assets/img/mundos/youtube.svg","./assets/img/mundos/radio.svg","./assets/img/mundos/social.svg",
