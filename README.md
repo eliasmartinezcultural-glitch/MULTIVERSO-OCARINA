@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.61**  
+**Versión vigente: 3.62**  
 *Raíces locales. Tecnología para explorar un territorio vivo.*
 
 Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, Neuquén. Reúne nueve mundos en una experiencia integrada: cultura, memoria, naturaleza, audiovisual, comunidad y herramientas.
@@ -42,6 +42,14 @@ La portada combina paisaje patagónico, cultivos, agua y montaña con cartograf�
 - Buscador instantáneo de las nueve puertas por nombre, función y descripción, con contador de resultados y botón para limpiar.
 - Texturas visuales de papel, cartografía, trama de impresión y materiales cálidos en portada, tarjetas y dedicatoria.
 - Se conserva la navegación directa, los accesos a cada mundo y los controles de lectura.
+
+## Novedades 3.62
+
+- Ocarina TV queda como videoteca documental curada con reproductor único; YouTube pasa a ser la sala del canal y sus publicaciones públicas, sin duplicar el catálogo.
+- ¿Sabías que? integra el juego completo dentro de la sala del Multiverso mediante una ventana de altura adaptable.
+- Chañar HUB y Código Cero muestran sus herramientas originales integradas y con mayor espacio de lectura; se explicitan límites y verificación de información.
+- Ocarina Social presenta Instagram y Facebook en dos paneles diferenciados, con accesos directos a los perfiles oficiales y vista integrada cuando la plataforma lo permite.
+- Radio Online refuerza la jerarquía del reproductor y la lectura de controles.
 
 ## Novedades 3.61
 
