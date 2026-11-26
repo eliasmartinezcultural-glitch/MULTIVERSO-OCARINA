@@ -1,5 +1,6 @@
-# Universo Ocarina
+# Multiverso Ocarina
 
+**Versión vigente: 3.14**  
 **Dos mundos. Un universo.**  
 *Raíces rurales. Mente creativa. Futuro digital.*
 
@@ -52,7 +53,7 @@ La existencia de un repositorio no garantiza por sí sola que su sitio esté pub
 
 - [YouTube · Elías Martínez](https://www.youtube.com/@EliasM-creator)
 - [Instagram · Ocarina Producciones](https://www.instagram.com/ocarina_producciones.spch/)
-- [Radio online · Radiando Ando](https://zeno.fm/radio/radiando-ando/)
+- [Radio online · transmisión Ocarina](https://stream.zeno.fm/amfjjcz4tlgtv)
 
 ## Arquitectura técnica
 
@@ -62,9 +63,13 @@ Sitio estático, sin registro de usuarios, sin base de datos y sin dependencias 
 /
 ├── index.html
 ├── README.md
+├── manifest.webmanifest
+├── sw.js
 └── assets/
     ├── css/
-    │   └── estilo.css
+    │   ├── estilo.css
+    │   ├── dedicatoria.css
+    │   └── salas.css
     └── js/
         ├── proyectos.js
         └── experiencia.js
@@ -99,3 +104,10 @@ Sitio estático, sin registro de usuarios, sin base de datos y sin dependencias 
 ---
 
 **Universo Ocarina** · Creado por Elías Martínez · San Patricio del Chañar, Neuquén.
+
+
+## Control de versión 3.14
+
+La etiqueta **3.14** visible en la cabecera identifica la versión publicada del portal. El mismo identificador se mantiene en el archivo central `assets/js/version.js`, los metadatos de la página y del manifiesto, este documento y el nombre de caché del service worker (`multiverso-ocarina-3.14`). Al cambiar de versión se renueva la caché para evitar que el navegador mezcle recursos anteriores con los actuales.
+
+La portada, las nueve salas, sus reproductores y la navegación interna pertenecen a este portal. Los proyectos enlazados conservan sus repositorios y publicaciones independientes: este portal no los modifica.

@@ -307,3 +307,9 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 .night-mode .room-fullscreen{background:#26362d;color:#e4ecdf;border-color:#526c58}
 @media(max-width:560px){.room-launcher-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.room-launcher-item{min-height:44px;padding:7px 8px}.room-launcher-item b{font-size:.61rem}}
 @media(prefers-reduced-motion:reduce){.room-launcher-item{transition:none}}
+
+
+/* IDENTIFICADOR DE VERSIÓN · control visual de publicación */
+.version-stamp{display:inline-flex;align-items:center;justify-content:center;flex:none;margin-left:9px;padding:5px 8px;border:1px solid #9eae9c;border-radius:999px;background:#e8efe3;color:#38513f;font:800 .62rem/1 'DM Sans',sans-serif;letter-spacing:.06em;white-space:nowrap;box-shadow:0 2px 8px #243b2510}
+.night-mode .version-stamp{background:#304534;color:#edf4e8;border-color:#789076}
+@media(max-width:390px){.version-stamp{margin-left:5px;padding:4px 6px;font-size:.58rem}}
