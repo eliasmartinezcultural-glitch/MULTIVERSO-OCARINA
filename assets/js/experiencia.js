@@ -12,7 +12,7 @@ const contrastButton=document.querySelector("[data-reader-contrast]");
 const applyReaderSize=()=>{
  root.classList.toggle("reader-large",readerLevel===1);
  root.classList.toggle("reader-extra-large",readerLevel===2);
- readerButtons.forEach(button=>button.setAttribute("aria-pressed",String((button.dataset.readerSize==="up"&&readerLevel>0)||(button.dataset.readerSize==="down"&&readerLevel===0))));
+ const status=document.getElementById("readerStatus");if(status)status.textContent=readerLevel===0?"Tamaño de lectura normal.":readerLevel===1?"Texto ampliado.":"Texto muy ampliado.";
 };
 readerButtons.forEach(button=>button.addEventListener("click",()=>{
  readerLevel=button.dataset.readerSize==="up"?Math.min(2,readerLevel+1):Math.max(0,readerLevel-1);
