@@ -387,3 +387,24 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 .room-world-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .room-art:before,.room-art:after,.room-art-orbit,.room-art-symbol,.room-art-stars{display:none}
 @media(max-width:680px){.room-art{height:150px;border-radius:18px}.room-world-image{object-position:center}}
+
+/* 3.18 · planetas ilustrados e identidad constante */
+.doors-grid .world-card{min-width:0;overflow:hidden;border:1px solid #dfe6db;border-radius:23px;background:#fffdf8;box-shadow:0 10px 28px #2a3f3014;transition:transform .28s,box-shadow .28s}
+.doors-grid .world-card:hover{transform:translateY(-5px);box-shadow:0 20px 42px #2a3f3024}
+.doors-grid .world-entry{display:flex;width:100%;height:100%;flex-direction:column;padding:0;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer}
+.doors-grid .world-illustration{position:relative;display:block;aspect-ratio:1.5/1;overflow:hidden;background:#dce8dc}
+.doors-grid .world-illustration:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,#17231e44)}
+.doors-grid .world-illustration img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .65s}
+.doors-grid .world-card:hover .world-illustration img{transform:scale(1.055)}
+.doors-grid .world-number{position:absolute;z-index:2;top:12px;left:13px;display:grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border:1px solid #ffffff9c;border-radius:50%;background:#fffdf0df;color:#405548;font-size:.7rem;font-weight:900}
+.doors-grid .world-brand{position:absolute;z-index:2;right:12px;bottom:11px;color:#fff;font-size:.55rem;font-weight:900;letter-spacing:.16em;text-shadow:0 2px 8px #16231e}
+.doors-grid .world-card-copy{display:grid;gap:7px;padding:16px 18px 18px}
+.doors-grid .world-card-copy>b{font:1.5rem/1.05 "DM Serif Display",Georgia,serif;color:#344b3d}
+.doors-grid .world-card-copy>small{min-height:2.6em;color:#718077;font-size:.8rem;line-height:1.5}
+.doors-grid .world-enter{display:flex;justify-content:space-between;margin-top:3px;padding-top:11px;border-top:1px solid #e6e9e0;color:#4c6a54;font-size:.7rem;font-weight:900;letter-spacing:.08em}
+.world-universe{display:block;margin:0 0 9px;color:var(--room-muted);font-size:.55rem;font-weight:900;letter-spacing:.17em}
+.room-hero{position:relative;isolation:isolate}
+.room-hero:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 14% 18%,color-mix(in srgb,var(--room-accent),transparent 76%),transparent 38%),radial-gradient(circle at 88% 76%,color-mix(in srgb,var(--room-accent),transparent 85%),transparent 42%)}
+.room-art{box-shadow:0 18px 45px color-mix(in srgb,var(--room-deep),transparent 88%)}
+.theme-library .room-art{border-radius:22px 48px 22px 48px}.theme-cinema .room-art{border-radius:16px;background:#171b20}.theme-wild .room-art{border-radius:48% 48% 28px 28px}.theme-curiosity .room-art{border-radius:50% 50% 22px 22px}.theme-hub .room-art{border-radius:24px 52px 24px 52px}.theme-safety .room-art{border-radius:28px}.theme-channel .room-art{border-radius:50% 22px 50% 22px}.theme-radio .room-art{border-radius:50%}.theme-social .room-art{border-radius:28px 50% 28px 50px}
+@media(max-width:680px){.doors-grid .world-card{border-radius:17px}.doors-grid .world-illustration{aspect-ratio:1.08/1}.doors-grid .world-card-copy{padding:12px}.doors-grid .world-card-copy>b{font-size:1.1rem}.doors-grid .world-card-copy>small{font-size:.69rem;min-height:3em}.doors-grid .world-enter{font-size:.62rem}}
