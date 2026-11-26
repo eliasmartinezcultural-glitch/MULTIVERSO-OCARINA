@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="assets/css/estilo.css">
 <link rel="stylesheet" href="assets/css/dedicatoria.css">
 <link rel="stylesheet" href="assets/css/salas.css">
@@ -25,6 +26,7 @@
 <header class="simple-header" id="inicio">
   <a class="simple-brand" href="#inicio" aria-label="Multiverso Ocarina, inicio"><span class="simple-logo">o</span><span>MULTIVERSO OCARINA</span></a>
   <div class="header-actions">
+    <button class="utility-button install-app" id="installApp" type="button" hidden aria-label="Instalar Multiverso Ocarina">＋<span class="utility-label">Instalar</span></button>
     <button class="utility-button theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Activar modo nocturno"><span aria-hidden="true">☾</span><span class="utility-label">Modo noche</span></button>
     <a class="simple-about" href="#origen">Dedicatoria <span aria-hidden="true">↓</span></a>
   </div>
@@ -58,6 +60,7 @@
       <div class="world-tools"><label class="world-search"><span aria-hidden="true">⌕</span><input id="worldSearch" type="search" placeholder="Buscar un mundo…" aria-label="Buscar un mundo"></label><span class="world-count" id="worldCount" aria-live="polite">9 mundos</span></div>
       <div class="world-filters" id="worldFilters" aria-label="Filtrar mundos"><button type="button" data-filter="all" class="is-active" aria-pressed="true">Todos</button><button type="button" data-filter="cultura" aria-pressed="false">Cultura</button><button type="button" data-filter="audiovisual" aria-pressed="false">Audiovisual</button><button type="button" data-filter="naturaleza" aria-pressed="false">Naturaleza</button><button type="button" data-filter="comunidad" aria-pressed="false">Comunidad</button><button type="button" data-filter="herramientas" aria-pressed="false">Herramientas</button><button type="button" data-filter="redes" aria-pressed="false">Redes</button></div>
     </div>
+    <div class="world-shortcuts" id="worldShortcuts" aria-label="Tus mundos guardados"><button type="button" data-view="all" class="is-active" aria-pressed="true">Todos</button><button type="button" data-view="favorites" aria-pressed="false">♡ Guardados</button><button type="button" data-view="recent" aria-pressed="false">↺ Visitados</button></div>
     <div class="doors-grid" id="projectGrid" aria-live="polite">
       <p class="loading">Preparando las puertas…</p>
     </div>
@@ -92,5 +95,6 @@
   <span class="footer-tagline">Raíces locales. Ideas sin fronteras.</span>
   <a href="#inicio" aria-label="Volver al inicio">↑</a>
 </footer>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}</script>
 </body>
 </html>
