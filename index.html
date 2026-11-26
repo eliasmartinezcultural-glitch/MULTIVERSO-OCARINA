@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f3f2e9">
-<meta name="description" content="Multiverso Ocarina. Ocho puertas para descubrir proyectos de cultura, territorio y creación digital.">
+<meta name="description" content="Multiverso Ocarina: cultura, historias, naturaleza, comunidad y creación digital. Un universo de puertas para explorar.">
 <meta property="og:title" content="Multiverso Ocarina">
-<meta property="og:description" content="Ocho puertas. Un mismo universo. Elegí una y entrá.">
+<meta property="og:description" content="Un multiverso. Muchas puertas. Elegí una y entrá.">
 <meta property="og:type" content="website">
+<meta name="color-scheme" content="light">
 <title>Multiverso Ocarina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,29 +21,45 @@
 <a class="skip-link" href="#puertas">Ir a las puertas</a>
 <header class="simple-header" id="inicio">
   <a class="simple-brand" href="#inicio" aria-label="Multiverso Ocarina, inicio"><span class="simple-logo">o</span><span>MULTIVERSO OCARINA</span></a>
-  <a class="simple-about" href="#origen">Quiénes somos <span aria-hidden="true">↓</span></a>
+  <div class="header-actions">
+    <button class="utility-button theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Activar modo nocturno"><span aria-hidden="true">☾</span><span class="utility-label">Modo noche</span></button>
+    <a class="simple-about" href="#origen">Quiénes somos <span aria-hidden="true">↓</span></a>
+  </div>
 </header>
 <main>
   <section class="simple-hero" aria-labelledby="main-title">
     <div class="background-sun" aria-hidden="true"></div>
     <div class="background-hill hill-one" aria-hidden="true"></div>
     <div class="background-hill hill-two" aria-hidden="true"></div>
+    <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+    <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+    <div class="hero-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     <div class="simple-hero-content">
       <span class="simple-eyebrow">CULTURA · IDEAS · TERRITORIO · TECNOLOGÍA</span>
       <h1 id="main-title">Un multiverso.<br><em>Muchas puertas.</em></h1>
       <p>Elegí una puerta y entrá.</p>
+      <button class="sound-button" id="soundButton" type="button" aria-label="Reproducir un sonido original del Multiverso Ocarina">
+        <span class="sound-icon" aria-hidden="true">♫</span><span id="soundLabel">Escuchar el universo</span><span class="sound-arrow" aria-hidden="true">↗</span>
+      </button>
+      <span class="sound-note" id="soundNote" aria-live="polite">Un pequeño paisaje sonoro. Solo cuando vos quieras.</span>
     </div>
+    <a class="hero-down" href="#puertas" aria-label="Descubrir las puertas">↓</a>
   </section>
 
   <section class="simple-doors" id="puertas" aria-labelledby="doors-title">
-    <h2 id="doors-title">Todos los mundos importan.</h2>
-    <div class="doors-grid" id="projectGrid" aria-live="polite">
-      <p class="loading">Cargando puertas…</p>
+    <div class="doors-intro">
+      <span class="simple-eyebrow">UN UNIVERSO PARA RECORRER</span>
+      <h2 id="doors-title">Todos los mundos importan.</h2>
+      <p>Ocho puertas. Distintas experiencias. Un mismo espíritu.</p>
     </div>
+    <div class="doors-grid" id="projectGrid" aria-live="polite">
+      <p class="loading">Preparando las puertas…</p>
+    </div>
+    <p class="doors-footnote"><span aria-hidden="true">✳</span> Entrá, explorá y descubrí algo nuevo.</p>
   </section>
 
   <section class="simple-origin" id="origen">
-    <div class="origin-emblem" aria-hidden="true">EM</div>
+    <div class="origin-emblem" aria-hidden="true"><span>EM</span><i></i></div>
     <div class="simple-origin-copy">
       <span class="simple-eyebrow">QUIÉN CREÓ ESTE UNIVERSO</span>
       <h2>Elías Martínez</h2>
@@ -55,8 +72,9 @@
   </section>
 </main>
 <footer class="simple-footer">
-  <span>o</span>
+  <span class="footer-mark">o</span>
   <p><b>MULTIVERSO OCARINA</b><br>Creado por Ocarina Producciones.</p>
+  <span class="footer-tagline">Raíces locales. Ideas sin fronteras.</span>
   <a href="#inicio" aria-label="Volver al inicio">↑</a>
 </footer>
 </body>
