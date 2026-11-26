@@ -282,3 +282,46 @@
  .room-complete-link{min-height:56px;font-size:.92rem}
 }
 @media(prefers-reduced-motion:reduce){.room-complete-link{transition:none!important}}
+
+
+/* 3.42 · sistema de salas: una identidad común, nueve acentos territoriales */
+.world-room{--room-radius:22px;border:1px solid rgba(94,119,91,.24)!important;background:#f7f5eb!important}
+.room-content{
+ background:radial-gradient(ellipse at 95% 4%,color-mix(in srgb,var(--room-accent,#718b6c),transparent 92%),transparent 38%),#f7f5eb!important;
+}
+.room-hero{
+ position:relative;overflow:hidden;
+ background:repeating-radial-gradient(ellipse at 5% 95%,transparent 0 25px,rgba(78,105,77,.055) 26px 27px,transparent 28px 50px),linear-gradient(120deg,color-mix(in srgb,var(--room-accent,#78916e),#f6f1e3 90%),#f7f5eb 70%);
+ border-bottom:1px solid rgba(68,91,70,.12);
+}
+.room-art{border:1px solid color-mix(in srgb,var(--room-accent,#78916e),white 48%);box-shadow:0 18px 42px rgba(34,53,39,.12)}
+.room-art-coordinate{padding:7px 10px;border:1px solid rgba(255,255,255,.35);border-radius:7px;background:rgba(31,57,46,.72);backdrop-filter:blur(6px);letter-spacing:.12em}
+.room-universe{color:var(--room-accent)!important;letter-spacing:.14em!important}
+.room-kicker{color:#6f776b!important}
+.room-heading h2{letter-spacing:-.045em}
+.room-context{border:1px solid color-mix(in srgb,var(--room-accent),white 68%);border-radius:15px;background:linear-gradient(120deg,color-mix(in srgb,var(--room-accent),#fff 94%),#fffdf7);box-shadow:0 6px 20px rgba(36,54,40,.035)}
+.room-context-head>span{letter-spacing:.14em}
+.room-experience{border:1px solid rgba(79,102,76,.16);border-radius:19px;background:#fffefa;box-shadow:0 10px 30px rgba(36,54,40,.055);overflow:hidden}
+.experience-topline{background:linear-gradient(90deg,rgba(91,121,86,.09),rgba(112,154,163,.08));border-bottom:1px solid rgba(79,102,76,.12)}
+.experience-foot{border-top:1px solid rgba(79,102,76,.12)}
+.room-complete{
+ display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px;padding:22px!important;
+ border:1px solid color-mix(in srgb,var(--room-accent),white 45%)!important;border-radius:18px!important;
+ background:linear-gradient(110deg,color-mix(in srgb,var(--room-accent),#fff 92%),#fffefa)!important;box-shadow:0 12px 30px rgba(37,57,41,.07);
+}
+.room-complete-copy p{max-width:650px;line-height:1.55}
+.room-complete-link{border-radius:12px!important;background:var(--room-deep,#294b3c)!important;color:#fff!important;font-weight:850!important;letter-spacing:.015em}
+.room-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:15px;border-top:1px solid rgba(73,97,75,.14)}
+.room-back,.room-share{min-height:52px!important;padding:12px 18px!important;border-radius:12px!important;font-weight:800!important}
+.room-back{background:#e8ede4!important;color:#294b3c!important}
+.room-share{background:#294b3c!important;color:#fff!important}
+@media(max-width:760px){
+ .room-hero{grid-template-columns:1fr!important;gap:18px!important;padding:18px 16px 20px!important}
+ .room-art{height:190px!important;min-height:190px!important}
+ .room-body{padding:16px!important}
+ .room-complete{grid-template-columns:1fr!important;gap:12px!important;padding:17px!important}
+ .room-complete-mark{display:none}
+ .room-complete-link{width:100%;min-height:56px!important}
+ .room-actions{gap:9px}
+ .room-back,.room-share{flex:1;min-width:0;padding:11px 10px!important;font-size:.84rem!important}
+}

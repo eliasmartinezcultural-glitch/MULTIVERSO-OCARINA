@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.41**  
+**Versión vigente: 3.42**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -119,3 +119,14 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - La explicación editorial aparece antes del contenido de muestra; la experiencia concreta sigue siendo protagonista.
 - Se conserva la identidad visual de cada mundo, los contenidos integrados y la navegación simple para celulares.
 - No se modifican los repositorios originales de los proyectos.
+
+
+## 3.42 · simplificación y sistema visual rural-tech
+
+- Se retira la navegación secundaria de mundos relacionados dentro de cada sala: las nueve puertas del portal siguen siendo el mapa principal.
+- Se unifica el acceso al proyecto original en una sola llamada por sala: «Ir a la versión completa».
+- Se eliminan enlaces alternativos duplicados dentro de las muestras cuando conducían al mismo proyecto.
+- Ocarina Social queda centrado en publicaciones de Instagram y Facebook; la selección audiovisual se consulta en Ocarina TV y YouTube.
+- Se refuerza la identidad rural-tech con cartografía sutil, tonos de tierra, agua y vegetación, y jerarquía visual común.
+- Se mantienen controles táctiles amplios, navegación accesible y contenidos particulares de cada mundo.
+- No se modifican repositorios originales.
