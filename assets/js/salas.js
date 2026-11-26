@@ -20,7 +20,7 @@ const rooms={
 };
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let dialog;
-function ensureDialog(){if(dialog)return dialog;dialog=document.createElement("dialog");dialog.className="world-room";dialog.setAttribute("aria-label","Sala de presentación del proyecto");dialog.setAttribute("aria-modal","true");dialog.innerHTML='<form method="dialog" class="room-close-form"><button class="room-close" aria-label="Cerrar sala">×</button></form><div class="room-content"></div>';document.body.append(dialog);dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();});return dialog;}
+function ensureDialog(){if(dialog)return dialog;dialog=document.createElement("dialog");dialog.className="world-room";dialog.id="worldDialog";dialog.setAttribute("aria-label","Sala de presentación del proyecto");dialog.setAttribute("aria-modal","true");dialog.innerHTML='<form method="dialog" class="room-close-form"><button class="room-close" aria-label="Cerrar sala">×</button></form><div class="room-content"></div>';document.body.append(dialog);dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();});return dialog;}
 function openRoom(project){const room=rooms[project.name];if(!room)return;window.OCARINA_VISIT?.(project.name);const d=ensureDialog(),content=d.querySelector(".room-content");d.className="world-room theme-"+room.theme;
 const points=room.sections.map((item,i)=>'<article><span class="room-point-number">0'+(i+1)+'</span><div><h3>'+esc(item[0])+'</h3><p>'+esc(item[1])+'</p></div></article>').join("");
 
