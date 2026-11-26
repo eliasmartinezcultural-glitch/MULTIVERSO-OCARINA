@@ -1,4 +1,4 @@
-/* MULTIVERSO OCARINA 3.30 · mundos visuales, táctiles y mobile-first */
+/* MULTIVERSO OCARINA 3.31 · mundos visuales, navegación y compartir */
 :root{--mo-ink:#263d32;--mo-muted:#718076;--mo-paper:#fbfaf4;--mo-line:#dce5d9}
 html{scroll-behavior:smooth}
 body{overflow-x:hidden}
@@ -237,4 +237,18 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #347f
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  .project-card,.door-art-image,.world-room[open]{animation:none!important;transition:none!important}
+}
+
+/* 3.31 · navegación profunda y compartir cada mundo */
+.room-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.room-share{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:46px;padding:0 15px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 60%);border-radius:12px;background:var(--room-paper);color:var(--room-deep);font:inherit;font-size:.75rem;font-weight:850;cursor:pointer}
+.room-share:hover,.room-share:focus-visible{background:var(--room-accent);color:white}
+.room-share.is-done{border-color:var(--room-accent)}
+.room-share-status{flex:1 1 auto;min-width:80px;color:var(--room-muted);font-size:.68rem}
+.room-back{cursor:pointer}
+@media(max-width:680px){
+ .room-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+ .room-back,.room-share,.room-home-link{width:100%;min-height:46px;justify-content:center}
+ .room-share-status{grid-column:1/-1;min-height:14px;text-align:center}
+ .room-home-link{display:flex;align-items:center}
 }
