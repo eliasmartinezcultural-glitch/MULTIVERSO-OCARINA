@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.43**  
+**Versión vigente: 3.44**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -138,4 +138,13 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - El recorrido se realiza desde el desplazamiento vertical de la sala, evitando que el usuario tenga que descubrir una segunda barra o zona de scroll dentro de la muestra.
 - La altura se recalcula cuando el contenido cambia, se cargan imágenes o se cambia de sección en LIBRITO.
 - Las plataformas externas que bloquean el acceso entre páginas (por ejemplo, redes sociales y reproductores de video) conservan su comportamiento independiente; no se fuerza una integración que el navegador no permite.
+- No se modifican los repositorios originales de los mundos.
+
+
+## Ajustes 3.44 · identidad visual y color
+
+- Se incorpora una capa visual cromática propia para portada, nueve puertas, salas y dedicatoria.
+- Paletas diferenciadas por mundo: biblioteca cálida, cine terracota, naturaleza verde, curiosidades lila, hub agua, orientación azul, canal coral, radio dorado y social violeta.
+- Se refuerzan profundidad, contraste, texturas cartográficas sutiles y estados de interacción sin sumar pasos ni controles.
+- La hoja nueva `assets/css/estetica-344.css` se carga al final para preservar las reglas estructurales y de accesibilidad existentes.
 - No se modifican los repositorios originales de los mundos.
