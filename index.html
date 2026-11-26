@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#17251d">
-<meta name="description" content="Universo Ocarina: un portal para descubrir proyectos, bibliotecas, herramientas, naturaleza, audiovisuales y conocimiento. Creado por Elías Martínez.">
+<meta name="description" content="Universo Ocarina: dos mundos que se encuentran. Raíces rurales, creatividad y tecnología para descubrir y compartir.">
 <meta property="og:title" content="Universo Ocarina — Raíces rurales. Mente creativa. Futuro digital.">
-<meta property="og:description" content="Una puerta de acceso a proyectos independientes, conocimiento, cultura, tecnología y territorio.">
+<meta property="og:description" content="Un encuentro entre la vida rural y las ideas digitales. Creado por Elías Martínez.">
 <meta property="og:type" content="website">
 <title>Universo Ocarina — Raíces rurales. Mente creativa. Futuro digital.</title>
 <style>
@@ -68,6 +68,57 @@ body:before{opacity:.045;background-image:radial-gradient(rgba(38,56,44,.28) .6p
 @media(max-width:720px){.navlinks{background:#263d2d}.navlinks a{color:#f7f3e8}.hero{min-height:610px}.section{padding:64px 0}.project{min-height:0}.hero-copy{font-size:1.08rem}.access-card{min-height:165px}}
 @media(max-width:440px){body{font-size:16px}.hero h1{font-size:3.2rem}.access-card{min-height:175px}.hero-foot{font-size:.85rem}}
 
+
+/* Dos mundos en equilibrio: campo y tecnología */
+.worlds{padding:86px 0 92px;background:#e5eadf;color:#26382c;overflow:hidden}
+.world-heading{text-align:center;max-width:700px;margin:0 auto 38px}
+.world-heading .eyebrow{color:#638067}
+.world-heading h2{font-size:clamp(2.7rem,6vw,5rem);line-height:.95;margin:13px 0}
+.world-heading h2 em{color:#65886b}
+.world-heading p{max-width:510px;margin:16px auto 0;color:#566858;font-size:1.05rem}
+.world-pair{display:grid;grid-template-columns:1fr 100px 1fr;align-items:center;gap:0;max-width:1000px;margin:auto;position:relative}
+.world-card{overflow:hidden;border-radius:26px;background:#f8f5ec;box-shadow:0 18px 45px rgba(40,60,42,.1);border:1px solid rgba(50,75,51,.13)}
+.world-image{height:270px;position:relative;display:flex;align-items:flex-end;padding:22px;background-size:cover;background-position:center}
+.world-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,35,24,.68),transparent 65%)}
+.rural .world-image{background-image:url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85")}
+.digital .world-image{background-image:linear-gradient(135deg,rgba(28,50,45,.25),rgba(22,44,38,.3)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85")}
+.world-symbol{position:absolute;right:20px;top:16px;z-index:1;color:#fff;font-size:2.2rem;text-shadow:0 2px 18px #15251b}
+.world-tag{position:relative;z-index:1;color:#fff;font-size:.75rem;letter-spacing:.14em;font-weight:850}
+.world-caption{padding:22px 25px 25px}
+.world-caption h3{font-size:2.2rem;margin:0 0 5px;color:#2b4231}
+.world-caption p{margin:0;color:#5b6b5a}
+.world-bridge{width:78px;height:78px;border-radius:50%;background:#d0dfca;border:7px solid #e5eadf;display:grid;place-items:center;justify-self:center;z-index:2;box-shadow:0 6px 22px rgba(34,57,39,.12)}
+.world-bridge span{font-size:2rem;color:#466b4c;line-height:1}
+.world-bridge small{position:absolute;transform:translateY(58px);font-size:.55rem;letter-spacing:.08em;font-weight:900;color:#5e765f;white-space:nowrap}
+.world-note{text-align:center;color:#566858;margin:35px 0 0;font-size:1rem}
+.world-note strong{color:#34583a}
+.hero{min-height:650px}
+.hero:before{background:linear-gradient(90deg,rgba(25,45,31,.94) 0%,rgba(25,45,31,.75) 50%,rgba(25,45,31,.2) 100%),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 54%/cover}
+.hero:after{width:520px;height:520px;border:1px solid rgba(210,231,213,.4);box-shadow:0 0 0 35px rgba(210,231,213,.07),0 0 0 80px rgba(210,231,213,.045),0 0 0 130px rgba(210,231,213,.025)}
+.hero-kicker{background:rgba(24,44,30,.28);backdrop-filter:blur(8px)}
+.hero-foot{font-size:.88rem}
+.access-card{min-height:172px}
+.access-card .symbol{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:#e6eddf;font-size:1.45rem}
+.project{min-height:280px}
+.project h3{margin-top:18px}
+.section-head h2{letter-spacing:-.035em}
+.button,.small-link,.filter,.nav-cta{transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
+.button:hover,.small-link.primary:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(40,60,42,.12)}
+.project:hover .project-icon{transform:rotate(-5deg) scale(1.06)}
+.project-icon{transition:transform .2s ease}
+@media(max-width:720px){
+ .worlds{padding:62px 0}
+ .world-pair{grid-template-columns:1fr;gap:14px;max-width:520px}
+ .world-image{height:210px}
+ .world-bridge{width:58px;height:58px;margin:-2px auto;transform:rotate(90deg)}
+ .world-bridge small{transform:translateY(45px) rotate(-90deg)}
+ .world-caption{padding:18px 20px 20px}
+ .world-caption h3{font-size:1.9rem}
+ .world-note{font-size:.92rem;padding:0 12px}
+ .hero{min-height:600px}
+ .hero:after{width:290px;height:290px;right:-190px;top:190px}
+}
+
 </style>
 </head>
 <body>
@@ -78,25 +129,25 @@ body:before{opacity:.045;background-image:radial-gradient(rgba(38,56,44,.28) .6p
 </div></header>
 <main>
 <section class="hero" id="inicio"><div class="wrap"><div class="hero-inner">
-<div class="hero-kicker"><i></i> CULTURA · CONOCIMIENTO · TECNOLOGÍA · TERRITORIO</div>
+<div class="hero-kicker"><i></i> DOS MUNDOS · UN UNIVERSO</div>
 <h1 class="serif">Raíces rurales.<br><span>Mente creativa.</span><br>Futuro digital.</h1>
-<p class="hero-copy">Un lugar para descubrir historias, aprender cosas nuevas, escuchar radio y explorar pequeñas creaciones digitales.</p>
+<p class="hero-copy">De los caminos de tierra a los caminos digitales. Un espacio donde la naturaleza, las historias y la creatividad se encuentran con la tecnología.</p>
 <div class="hero-actions"><a class="button" href="#proyectos">Descubrir los proyectos <span>↗</span></a><a class="button outline" href="#camino">Conocer nuestro camino</a></div>
-<div class="hero-foot"><span><b>01</b> Conectar conocimientos</span><span><b>02</b> Mostrar lo que podemos crear</span><span><b>03</b> Compartir el recorrido</span></div>
+<div class="hero-foot"><span><b>🌱</b> Raíces que inspiran</span><span><b>✳</b> Ideas que se transforman</span><span><b>⌘</b> Tecnología para crear</span></div>
 </div></div></section>
 <section class="section" id="bienvenida"><div class="wrap welcome">
-<div><div class="eyebrow">Un universo abierto</div><h2 class="serif welcome-quote">No reunirlo todo en un solo lugar. <em>Hacer que todo pueda encontrarse.</em></h2></div>
-<div class="welcome-copy"><p>Universo Ocarina es un portal que conecta iniciativas digitales independientes. Cada proyecto conserva su propio espacio, propósito, contenidos y repositorio. Desde esta entrada común, las personas pueden descubrirlos y acceder a ellos de manera sencilla.</p><p>También es una invitación a explorar recursos de conocimiento, conocer experiencias creativas y descubrir cómo una idea puede convertirse en una herramienta, una historia o un nuevo proyecto.</p><div class="founder">Una creación de Elías Martínez · San Patricio del Chañar</div></div>
+<div><div class="eyebrow">Bienvenidos a Universo Ocarina</div><h2 class="serif welcome-quote">Un pie en la tierra. <em>La mirada en el futuro.</em></h2></div>
+<div class="welcome-copy"><p>Universo Ocarina es un lugar para explorar. Acá conviven la cultura rural, las historias locales y las ideas que se convierten en proyectos digitales.</p><p>Entrá, recorré y elegí lo que te guste. Cada espacio tiene algo distinto para mostrar.</p><div class="founder">Una creación de Elías Martínez · San Patricio del Chañar</div></div>
 </div></section>
-<section class="manifesto-strip"><div class="wrap manifesto-inner"><div><div class="eyebrow">La idea que nos guía</div><h2 class="serif">Puentes antes que paredes.</h2></div><p>Queremos facilitar el acceso a páginas que aportan conocimiento y a nuevas creaciones independientes. No buscamos apropiarnos de los contenidos ni fusionar sus espacios: buscamos conectarlos, reconocer sus autorías y ayudar a que más personas los encuentren.</p></div></section>
-<section class="section" id="puertas"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Entradas al universo</div><h2 class="serif">Elegí por dónde empezar.</h2></div><p class="intro">Elegí una opción. Cada botón te lleva directamente al lugar que querés visitar.</p></div>
+<section class="worlds" aria-label="Los dos mundos de Universo Ocarina"><div class="wrap"><div class="world-heading"><span class="eyebrow">Nuestra esencia</span><h2 class="serif">Dos mundos.<br><em>Un mismo horizonte.</em></h2><p>La tierra nos conecta con lo que somos. La tecnología nos ayuda a imaginar lo que podemos hacer.</p></div><div class="world-pair"><article class="world-card rural"><div class="world-image"><span class="world-symbol">✺</span><span class="world-tag">01 · EL MUNDO RURAL</span></div><div class="world-caption"><h3 class="serif">La tierra.</h3><p>Los paisajes, las personas, los oficios, la naturaleza y las historias que nos dan raíces.</p></div></article><div class="world-bridge"><span>+</span><small>SE ENCUENTRAN</small></div><article class="world-card digital"><div class="world-image"><span class="world-symbol">⌘</span><span class="world-tag">02 · EL MUNDO DIGITAL</span></div><div class="world-caption"><h3 class="serif">Las ideas.</h3><p>El diseño, las pantallas, los mapas, la inteligencia artificial y las ganas de crear.</p></div></article></div><div class="world-note">No hay que elegir entre uno y otro. <strong>El futuro también puede tener raíces.</strong></div></div></section>\n<section class="manifesto-strip"><div class="wrap manifesto-inner"><div><div class="eyebrow">La idea que nos guía</div><h2 class="serif">La tecnología también nace de la tierra.</h2></div><p>Creamos puentes entre el conocimiento, la vida cotidiana y las nuevas herramientas. Cada proyecto tiene su propio espacio; desde aquí podés descubrirlos, disfrutarlos y compartirlos.</p></div></section>
+<section class="section" id="puertas"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Un universo para recorrer</div><h2 class="serif">¿Qué te gustaría descubrir?</h2></div><p class="intro">Elegí una opción. Cada botón te lleva directamente al lugar que querés visitar.</p></div>
 <div class="access-grid">
 <a class="access-card" href="#proyectos"><div class="symbol">⌕</div><div><h3>Conocimiento</h3><p>Bibliotecas, archivos, recursos y descubrimientos.</p><div class="go">Explorar proyectos ↗</div></div></a>
 <a class="access-card" href="#proyectos"><div class="symbol">⌘</div><div><h3>Creación digital</h3><p>Herramientas, experiencias interactivas y experimentos.</p><div class="go">Ver creaciones ↗</div></div></a>
 <a class="access-card" href="#escuchar"><div class="symbol">◉</div><div><h3>Radio y audiovisual</h3><p>Señales, videos, registros y producciones.</p><div class="go">Escuchar y mirar ↗</div></div></a>
 <a class="access-card" href="#camino"><div class="symbol">⌁</div><div><h3>Trayectoria</h3><p>El camino, las experiencias y los aprendizajes.</p><div class="go">Conocer el recorrido ↗</div></div></a>
 </div></div></section>
-<section class="section" id="proyectos"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Red de proyectos conectados</div><h2 class="serif">Proyectos para<br>descubrir.</h2></div><p class="intro">Estos son los espacios que podés visitar. Buscá por nombre o elegí un tema.</p></div>
+<section class="section" id="proyectos"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Pequeños mundos para explorar</div><h2 class="serif">Entrá y descubrí.</h2></div><p class="intro">Elegí una tarjeta para entrar. Hay historias, naturaleza, juegos y herramientas.</p></div>
 <div class="catalog-tools"><div class="search"><input id="projectSearch" type="search" placeholder="Buscar un proyecto..." aria-label="Buscar proyectos"></div><div class="filters" role="group" aria-label="Filtrar proyectos"><button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="conocimiento">Conocimiento</button><button class="filter" data-filter="naturaleza">Naturaleza</button><button class="filter" data-filter="audiovisual">Audiovisual</button><button class="filter" data-filter="comunidad">Comunidad</button><button class="filter" data-filter="digital">Digital</button></div></div>
 <div class="project-grid" id="projectGrid">
 <article class="project" data-category="conocimiento" data-search="librito biblioteca digital chanarense documentos historia cultura archivos recursos conocimiento local"><div class="project-top"><span class="project-icon">▤</span><span class="project-category">Conocimiento · Biblioteca</span></div><h3>LIBRITO</h3><p>Libros, documentos, publicaciones y materiales para conocer mejor San Patricio del Chañar.</p><div class="project-bottom"><a class="small-link primary" href="https://eliasmartinezcultural-glitch.github.io/LIBRITO/" target="_blank" rel="noopener">Entrar a LIBRITO ↗</a></div></article>
@@ -107,7 +158,7 @@ body:before{opacity:.045;background-image:radial-gradient(rgba(38,56,44,.28) .6p
 <article class="project" data-category="digital comunidad" data-search="codigo cero emergencias orientacion ayuda herramienta digital comunidad seguridad"><div class="project-top"><span class="project-icon">⌁</span><span class="project-category">Digital · Orientación</span></div><h3>CÓDIGO CERO</h3><p>Una guía de orientación ante emergencias. Recordá confirmar siempre los teléfonos y las indicaciones con los servicios oficiales.</p><div class="project-bottom"><a class="small-link primary" href="https://eliasmartinezcultural-glitch.github.io/C-DIGO-CERO/" target="_blank" rel="noopener">Abrir Código Cero ↗</a></div></article>
 </div><div class="empty" id="noResults">No encontramos resultados. Probá con otra palabra.</div><p class="statusline">Colección inicial · 6 proyectos independientes · Se incorporarán nuevas puertas a medida que estén listas.</p>
 </div></section>
-<section class="section" id="camino"><div class="wrap"><div class="section-head"><div><div class="eyebrow">El camino también forma parte del universo</div><h2 class="serif">Aprender.<br>Hacer. Compartir.</h2></div><p class="intro">Universo Ocarina no empieza ni termina en una página web. Es el resultado de experiencias, pruebas, producciones y proyectos que siguen evolucionando.</p></div>
+<section class="section" id="camino"><div class="wrap"><div class="section-head"><div><div class="eyebrow">De dónde venimos y hacia dónde vamos</div><h2 class="serif">Curiosidad para<br>seguir creando.</h2></div><p class="intro">Cada idea nace de mirar alrededor, hacer preguntas, aprender algo nuevo y animarse a probar.</p></div>
 <div class="roadmap">
 <article class="road-card"><div class="road-number">01</div><h3>Comunicación y radio</h3><p>Experiencias de comunicación, conducción, producción y trabajo con contenidos sonoros y comunidades.</p></article>
 <article class="road-card"><div class="road-number">02</div><h3>Historias y territorio</h3><p>Producción audiovisual, fotografía, entrevistas y registros vinculados con la cultura y la vida local.</p></article>
@@ -119,7 +170,7 @@ body:before{opacity:.045;background-image:radial-gradient(rgba(38,56,44,.28) .6p
 <article class="media-card"><div class="media-label">Radio · Transmisión en línea</div><h3>Radiando Ando.</h3><p>Una radio comunitaria que transmite desde San Patricio del Chañar y comparte historias, cultura y voces de nuestra comunidad.</p><a class="button" style="margin-top:12px" href="https://zeno.fm/radio/radiando-ando/" target="_blank" rel="noopener">Escuchar Radiando Ando ↗</a></article>
 <article class="media-card"><div class="media-label">Video · YouTube</div><h3>Videos de Elías.</h3><p>Videos, historias y producciones audiovisuales en el canal de Elías. Entrá para conocer los contenidos y descubrir nuevas publicaciones.</p><a class="button" href="https://www.youtube.com/@EliasM-creator" target="_blank" rel="noopener">Ver el canal de YouTube ↗</a></article>
 </div></div></section>
-<section class="section" id="fundador"><div class="wrap"><div class="about-panel"><div><div class="eyebrow">La persona detrás de las ideas</div><h2 class="serif">Elías Martínez.<br>Fundador y creador.</h2><p>Comunicador, productor audiovisual y creador de proyectos digitales desde San Patricio del Chañar, Neuquén. Me inspiran el territorio, la vida rural, las historias de las personas y las posibilidades de la tecnología.</p><p>Universo Ocarina reúne ese recorrido: una manera de aprender haciendo, construir herramientas, conectar conocimientos y abrir nuevas posibilidades creativas.</p></div><div class="about-stamp">Raíces rurales.<br>Mente creativa.<br>Futuro digital.<span>San Patricio del Chañar · Neuquén</span></div></div></div></section>
+<section class="section" id="fundador"><div class="wrap"><div class="about-panel"><div><div class="eyebrow">Una persona curiosa detrás de este universo</div><h2 class="serif">Soy Elías.<br>Me gusta crear.</h2><p>Vivo en San Patricio del Chañar, Neuquén. Me apasionan la vida rural, las historias de las personas y la tecnología. Sueño con trabajar cerca de la tierra y disfruto creando cosas nuevas en el mundo digital.</p><p>Este universo une esas dos pasiones: las raíces rurales y la imaginación tecnológica.</p></div><div class="about-stamp">Raíces rurales.<br>Mente creativa.<br>Futuro digital.<span>San Patricio del Chañar · Neuquén</span></div></div></div></section>
 <section class="contact" id="contacto"><div class="wrap contact-inner"><div><div class="eyebrow">Un universo que sigue creciendo</div><h2 class="serif">Los puentes se<br>construyen <em>en compañía.</em></h2><p>¿Tenés un proyecto, un recurso de conocimiento, una idea o una propuesta de colaboración? Este espacio está abierto a nuevas conexiones.</p><div class="socials"><a href="https://www.instagram.com/ocarina_producciones.spch/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/@EliasM-creator" target="_blank" rel="noopener">YouTube ↗</a><a href="https://zeno.fm/radio/radiando-ando/" target="_blank" rel="noopener">Radio ↗</a></div></div><a class="button" href="https://www.instagram.com/ocarina_producciones.spch/" target="_blank" rel="noopener">Conectar con Ocarina ↗</a></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><div><strong>UNIVERSO OCARINA</strong><br>Raíces rurales. Mente creativa. Futuro digital.</div><div>Un proyecto independiente de Elías Martínez · San Patricio del Chañar, Neuquén</div><div>© <span id="year"></span> · Tecnología y creación independiente</div></div></footer>
