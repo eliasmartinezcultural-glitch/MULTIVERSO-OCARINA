@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.55**  
+**Versión vigente: 3.57**  
 *Raíces locales. Tecnología para explorar un territorio vivo.*
 
 Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, Neuquén. Reúne nueve mundos en una experiencia integrada: cultura, memoria, naturaleza, audiovisual, comunidad y herramientas.
@@ -133,3 +133,13 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - Se refuerza la jerarquía visual de cabeceras, muestras internas, botones y acceso al proyecto completo.
 - Se adapta la composición de cada sala a celulares y controles táctiles grandes.
 - No se alteran los proyectos originales ni los contenidos de sus repositorios.
+
+
+## Cambios 3.57
+
+- La sala YOUTUBE incorpora un reproductor integrado con un video real del canal y dos selecciones adicionales del archivo audiovisual.
+- Se diferencia el propósito de YOUTUBE (seguir el canal y ver destacados) del de OCARINA TV (recorrer la videoteca documental).
+- Se mantiene un único reproductor en la sala YOUTUBE; al elegir otro destacado, cambia el mismo video.
+- Se incorpora una presentación visual propia para la pantalla, el título y los controles de selección, adaptada a celulares.
+- Se conservan las nueve experiencias diferenciadas y los accesos a los proyectos originales.
+- No se modifican los repositorios originales de los mundos.

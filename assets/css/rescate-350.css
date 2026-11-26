@@ -708,3 +708,19 @@ html{scroll-padding-top:82px}
 @media(prefers-reduced-motion:reduce){
   .world-room .room-experience button,.world-room .room-experience a{transition:none!important}
 }
+
+
+/* 3.57 · Canal con video real y selección simple */
+.theme-channel .channel-featured{margin-top:20px;padding:clamp(14px,3vw,24px);border:1px solid #dfaaa1;border-radius:20px;background:linear-gradient(145deg,#fffaf6,#f4ded7);box-shadow:0 14px 32px #773b3210}
+.theme-channel .channel-video-heading{display:grid;gap:6px;margin-bottom:13px}
+.theme-channel .channel-video-heading>b{color:#783b37;font-size:.76rem;letter-spacing:.08em}
+.theme-channel .channel-video-screen{position:relative;overflow:hidden;aspect-ratio:16/9;border:5px solid #fff;border-radius:15px;background:#211c1b;box-shadow:0 10px 25px #4c29251c}
+.theme-channel .channel-video-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.theme-channel .channel-video-meta{display:grid;gap:4px;padding:13px 2px 9px;color:#653e3a}
+.theme-channel .channel-video-meta>b{font:1.2rem/1.25 "DM Serif Display",Georgia,serif}
+.theme-channel .channel-video-meta>span{font-size:.75rem;color:#8a6a64}
+.theme-channel .channel-video-picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:8px}
+.theme-channel .channel-video-picks button{min-height:46px;padding:9px 10px;border:1px solid #e1bdb5;border-radius:12px;background:#fff9f5;color:#78413b;font:800 .76rem "DM Sans",sans-serif;cursor:pointer}
+.theme-channel .channel-video-picks button.is-active{background:#a83d37;border-color:#a83d37;color:#fff;box-shadow:0 5px 14px #a83d3728}
+.theme-channel .channel-video-picks button:focus-visible{outline:3px solid #a83d37;outline-offset:3px}
+@media(max-width:600px){.theme-channel .channel-video-picks{grid-template-columns:1fr}.theme-channel .channel-video-picks button{min-height:50px;font-size:.85rem}}
