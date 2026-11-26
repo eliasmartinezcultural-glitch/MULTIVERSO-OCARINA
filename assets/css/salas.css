@@ -64,3 +64,19 @@
 @media(max-width:680px){.world-room{width:calc(100% - 12px);max-height:96vh;border-radius:20px}.room-hero{grid-template-columns:1fr;gap:9px;padding:30px 20px 19px}.room-art{height:155px;max-width:240px;width:100%;margin:0 auto}.room-art-symbol{width:68px;height:68px;font-size:2.6rem}.room-heading{text-align:center;padding:8px 0 0}.room-heading h2{font-size:2.65rem}.room-headline{margin-inline:auto}.room-body{padding:0 18px 25px}.room-intro{font-size:.91rem;padding:16px}.room-points{grid-template-columns:1fr;gap:8px}.room-points article{padding:12px}.room-actions{grid-template-columns:1fr}.room-enter{width:100%}.room-entry-note{text-align:center}.room-back{justify-self:center}}
 @media(prefers-reduced-motion:reduce){.room-enter,.doors-grid .project-card,.room-art-symbol{transition:none!important}}
 .night-mode .doors-grid .project-content{background:#25372a}.night-mode .doors-grid .project-content h3{color:#e8eee3}.night-mode .doors-grid .project-content p{color:#c1cdbd}.night-mode .doors-grid .project-link{background:#344b38;color:#f1f3e9;border-color:#627a5d}.night-mode .doors-grid .project-card:hover .project-link{background:#e5eadc;color:#304532}
+
+/* Detalle editorial de cada puerta */
+.doors-grid .art-world-caption{
+ position:absolute;z-index:2;left:13px;bottom:11px;
+ color:var(--door-deep);font-size:.55rem;font-weight:900;
+ letter-spacing:.15em;text-transform:uppercase;opacity:.72;
+}
+.doors-grid .project-art:after{box-shadow:0 0 0 8px color-mix(in srgb,var(--door-accent),transparent 94%)}
+.doors-grid .project-card[data-world="library"] .project-art{background:repeating-linear-gradient(90deg,transparent 0 17%,#9a80581a 18% 19%),linear-gradient(145deg,#f5eddd,#e5d6bb)}
+.doors-grid .project-card[data-world="cinema"] .project-art{background:radial-gradient(ellipse at 50% 48%,#fff8 0 5%,transparent 6%),linear-gradient(135deg,#ead9c8,#c9a68d)}
+.doors-grid .project-card[data-world="wild"] .project-art{background:radial-gradient(ellipse at 50% 110%,#72985b55 0 27%,transparent 28%),linear-gradient(#e2eee0,#cbdcbd)}
+.doors-grid .project-card[data-world="curiosity"] .project-art{background:radial-gradient(circle at 20% 25%,#fff9 0 4%,transparent 5%),radial-gradient(circle at 82% 65%,#c4afd9 0 8%,transparent 9%),linear-gradient(135deg,#f3eafa,#e1d5ed)}
+.doors-grid .project-card[data-world="hub"] .project-art{background:radial-gradient(circle at 25% 25%,#fff 0 3px,transparent 4px),radial-gradient(circle at 78% 68%,#fff 0 4px,transparent 5px),linear-gradient(135deg,#e2f0f2,#c5dfe3)}
+.doors-grid .project-card[data-world="safety"] .project-art{background:linear-gradient(135deg,#edf4fa,#d3e2ee)}
+.doors-grid .project-card[data-world="channel"] .project-art{background:radial-gradient(circle at 50% 50%,#fff8 0 20%,transparent 21%),linear-gradient(135deg,#f4e3df,#e7c4be)}
+.doors-grid .project-card[data-world="radio"] .project-art{background:repeating-radial-gradient(ellipse at center,transparent 0 12px,#bd945433 13px 14px),linear-gradient(135deg,#f5ecd9,#e5d1aa)}
