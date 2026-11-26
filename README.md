@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.24**  
+**Versión vigente: 3.25**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
