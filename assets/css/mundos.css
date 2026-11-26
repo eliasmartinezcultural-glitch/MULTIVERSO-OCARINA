@@ -1,0 +1,240 @@
+/* MULTIVERSO OCARINA 3.30 · mundos visuales, táctiles y mobile-first */
+:root{--mo-ink:#263d32;--mo-muted:#718076;--mo-paper:#fbfaf4;--mo-line:#dce5d9}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+.simple-header{position:sticky;top:0;z-index:80;backdrop-filter:blur(16px);box-shadow:0 5px 22px #2547390a}
+.simple-brand{gap:9px}
+.version-stamp{padding:4px 7px;border:1px solid #c8d9cf;border-radius:20px;background:#ffffff9c}
+.simple-hero{min-height:clamp(470px,62vw,690px)}
+.simple-hero-content{border-radius:28px;box-shadow:0 25px 70px #1b43532a, inset 0 1px #fff}
+.hero-primary{min-height:54px;border-radius:999px;box-shadow:0 8px 22px #234e5630}
+.territory-ribbon{max-width:none}
+.simple-doors{max-width:1320px}
+.doors-intro{margin-bottom:clamp(22px,4vw,42px)}
+.doors-intro h2{letter-spacing:-.035em}
+.doors-grid{gap:clamp(10px,1.8vw,22px)}
+.project-card{position:relative;isolation:isolate;overflow:hidden;border:1px solid color-mix(in srgb,var(--door-accent,#73927a),#fff 68%);border-radius:23px;background:linear-gradient(160deg,#fffefa,var(--door-light,#edf2e8));box-shadow:0 12px 28px #2a46300c;transition:transform .25s,box-shadow .25s,border-color .25s}
+.project-card:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.45;background:radial-gradient(circle at 100% 0%,color-mix(in srgb,var(--door-accent),transparent 82%),transparent 55%)}
+.project-card:hover{transform:translateY(-4px);border-color:var(--door-accent);box-shadow:0 20px 42px #2a46301a}
+.project-card:active{transform:scale(.985)}
+.project-card[data-world="library"]{--door-accent:#a98a5c;--door-light:#f4ead8}
+.project-card[data-world="cinema"]{--door-accent:#c48a65;--door-light:#f2e4d9}
+.project-card[data-world="wild"]{--door-accent:#72945c;--door-light:#e6efdc}
+.project-card[data-world="curiosity"]{--door-accent:#a18cbd;--door-light:#eee8f5}
+.project-card[data-world="hub"]{--door-accent:#6c9ca9;--door-light:#e1eef0}
+.project-card[data-world="safety"]{--door-accent:#bd7d80;--door-light:#f5e5e3}
+.project-card[data-world="channel"]{--door-accent:#c56d62;--door-light:#f5e3df}
+.project-card[data-world="radio"]{--door-accent:#819b72;--door-light:#e7efdf}
+.project-card[data-world="social"]{--door-accent:#a58ab7;--door-light:#eee6f3}
+.project-art{overflow:hidden;background:var(--door-light);aspect-ratio:1.5/1}
+.door-art-image{width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+.project-card:hover .door-art-image{transform:scale(1.045);filter:saturate(1.08)}
+.art-symbol{display:none}
+.project-content{position:relative;padding:16px 17px 17px}
+.project-number{display:inline-flex;align-items:center;gap:7px;color:color-mix(in srgb,var(--door-accent),#293d31 24%);font-size:.61rem;font-weight:900;letter-spacing:.13em}
+.project-number:before{content:"";width:17px;height:1px;background:var(--door-accent)}
+.project-content h3{margin:7px 0 3px;color:#2c4537;font:clamp(1.22rem,2.1vw,1.62rem)/1.1 "DM Serif Display",Georgia,serif;letter-spacing:-.02em}
+.project-content p{margin:0 0 12px;color:#718075;font-size:.79rem;line-height:1.45}
+.project-link{display:inline-flex;align-items:center;gap:7px;min-height:34px;color:color-mix(in srgb,var(--door-accent),#253e32 22%);font-size:.62rem;font-weight:950;letter-spacing:.08em}
+.project-link:after{content:"↗";font-size:.9rem;transition:transform .2s}
+.project-card:hover .project-link:after{transform:translate(3px,-2px)}
+.doors-footnote{padding-top:7px}
+.simple-footer{border-top:1px solid #dce5dc}
+.world-room{--room-gutter:clamp(14px,3vw,30px);width:min(100% - 18px,1080px);max-width:1080px;max-height:min(94dvh,960px);margin:auto;border:1px solid color-mix(in srgb,var(--room-accent,#819b72),#fff 66%);border-radius:26px;background:var(--room-bg,#f8f8f0);box-shadow:0 30px 100px #152b2440;overscroll-behavior:contain}
+.world-room::backdrop{background:#13251f9c;backdrop-filter:blur(8px)}
+.world-room[open]{animation:mo-room-in .28s cubic-bezier(.2,.75,.25,1)}
+@keyframes mo-room-in{from{opacity:0;transform:translateY(15px) scale(.99)}to{opacity:1;transform:none}}
+.room-close-form{position:sticky;top:0;z-index:30;display:flex;justify-content:flex-end;height:0;padding:10px 10px 0;pointer-events:none}
+.room-close{pointer-events:auto;display:grid;place-items:center;width:46px;height:46px;border:1px solid #ffffffa6;border-radius:50%;background:#fffef0e8;color:#294637;font-size:1.6rem;box-shadow:0 5px 18px #1b34251c;backdrop-filter:blur(12px)}
+.room-content{max-height:min(94dvh,960px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#9aaf9d transparent}
+.room-hero{padding:0 var(--room-gutter) 18px}
+.room-art{height:clamp(150px,25vw,250px);border-radius:20px}
+.room-world-image{object-fit:cover}
+.room-heading{padding:18px 2px 4px}
+.room-universe{font-size:.58rem;letter-spacing:.16em}
+.room-kicker{font-size:.67rem;letter-spacing:.14em}
+.room-heading h2{margin:8px 0 5px;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.04em}
+.room-headline{max-width:680px;font-size:clamp(.95rem,1.7vw,1.12rem);line-height:1.5}
+.room-body{padding:0 var(--room-gutter) 18px}
+.room-experience{border-radius:21px}
+.experience-topline{min-height:35px}
+.experience-frame{border-radius:16px}
+.experience-frame iframe{display:block;width:100%;border:0;background:#f8f8f3}
+.room-complete{border-radius:19px}
+.room-related{padding:8px 0 14px}
+.related-world{min-height:66px;border-radius:14px}
+.room-actions{position:sticky;bottom:0;z-index:15;margin:0 calc(-1 * var(--room-gutter));padding:10px var(--room-gutter) max(12px,env(safe-area-inset-bottom));border-top:1px solid #d7e2d7;background:color-mix(in srgb,var(--room-bg,#f8f8f0),transparent 7%);backdrop-filter:blur(14px)}
+/* Cada mundo tiene su propia atmósfera */
+.theme-library{--room-accent:#a98a5c;--room-paper:#f5ead7;--room-deep:#59462e}
+.theme-cinema{--room-accent:#c48a65;--room-paper:#f0e1d6;--room-deep:#49352d}
+.theme-wild{--room-accent:#72945c;--room-paper:#e5eedb;--room-deep:#304b35}
+.theme-curiosity{--room-accent:#a18cbd;--room-paper:#eee8f5;--room-deep:#504268}
+.theme-hub{--room-accent:#6c9ca9;--room-paper:#e2eff0;--room-deep:#294e59}
+.theme-safety{--room-accent:#d4ad65;--room-paper:#17332e;--room-deep:#fff9e8}
+.theme-channel{--room-accent:#c56d62;--room-paper:#f4e3df;--room-deep:#56332f}
+.theme-radio{--room-accent:#819b72;--room-paper:#e5eddf;--room-deep:#304532}
+.theme-social{--room-accent:#a58ab7;--room-paper:#eee6f3;--room-deep:#4f3d5b}
+.theme-library .room-art{background:linear-gradient(135deg,#e7d6b9,#f8f0e1)}
+.theme-cinema .room-art{background:linear-gradient(135deg,#d8b49b,#f2dfd2)}
+.theme-wild .room-art{background:linear-gradient(135deg,#bfd1a8,#eaf0df)}
+.theme-curiosity .room-art{background:linear-gradient(135deg,#d7c8e9,#f2edf8)}
+.theme-hub .room-art{background:linear-gradient(135deg,#b9d7dc,#e8f2f2)}
+.theme-safety .room-art{background:linear-gradient(135deg,#31574d,#17332e)}
+.theme-channel .room-art{background:linear-gradient(135deg,#e4b6ad,#f7eae6)}
+.theme-radio .room-art{background:linear-gradient(135deg,#b9cba9,#edf2e7)}
+.theme-social .room-art{background:linear-gradient(135deg,#d2c0df,#f2ebf5)}
+.library-intro{position:relative;overflow:hidden;border:1px solid #c9b58f;border-radius:20px;background:radial-gradient(circle at 100% 0%,#fff9 0 15%,transparent 45%),linear-gradient(125deg,#ead8b7,#fbf2df)}
+.library-intro:after{content:"";position:absolute;right:-30px;bottom:-65px;width:180px;height:180px;border:1px solid #b79d7066;border-radius:50%;box-shadow:0 0 0 14px #b79d7020,0 0 0 30px #b79d7014}
+.librito-tabs{position:sticky;top:0;z-index:4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.librito-tabs button{min-height:46px;border-radius:12px;font-weight:850}
+.library-frame iframe{height:min(64dvh,680px);min-height:420px}
+.tv-cinema-heading{position:relative;overflow:hidden;border-radius:20px}
+.tv-cinema-heading:after{content:"";position:absolute;right:-24px;bottom:-82px;width:210px;height:210px;border:1px solid #c48a6555;border-radius:50%;box-shadow:0 0 0 18px #c48a6514,0 0 0 38px #c48a650d}
+.video-screen{overflow:hidden;border:7px solid #292725;border-radius:19px;background:#111;box-shadow:0 14px 32px #30251d26}
+.video-screen iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
+.tv-filters{display:flex;gap:7px;overflow-x:auto;padding:4px 1px 9px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.tv-filters button{flex:0 0 auto;min-height:42px;padding:9px 14px;border-radius:999px;scroll-snap-align:start}
+.video-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-height:390px;overflow:auto;padding:2px 3px 5px}
+.video-choice{min-height:76px;border-radius:13px}
+.wild-direct-heading{position:relative;overflow:hidden;border-radius:20px}
+.wild-direct-heading:after{content:"";position:absolute;right:-45px;top:-70px;width:190px;height:190px;border:1px solid #72945c66;border-radius:50%;box-shadow:0 0 0 15px #72945c18,0 0 0 34px #72945c10;pointer-events:none}
+.wild-direct-groups{display:flex;flex-wrap:wrap;gap:7px}
+.wild-direct-groups span{padding:8px 12px;border:1px solid #72945c66;border-radius:99px;background:#ffffff9c;color:#3f6541;font-size:.65rem;font-weight:900}
+.wild-atlas-frame iframe{height:min(68dvh,720px);min-height:440px}
+.quiz-board{position:relative;overflow:hidden;border-radius:20px}
+.quiz-steps span{border-radius:12px}
+.quiz-experience .experience-frame iframe{height:min(68dvh,720px);min-height:480px}
+.hub-board{position:relative;overflow:hidden;border-radius:20px}
+.hub-needs span{min-height:48px;border-radius:13px}
+.hub-experience .experience-frame iframe,.zero-experience .experience-frame iframe{height:min(70dvh,740px);min-height:500px}
+.zero-board{position:relative;overflow:hidden;border-radius:20px}
+.zero-mark{box-shadow:0 0 0 10px #f5df9c20,0 0 0 22px #f5df9c10}
+.channel-stage{position:relative;overflow:hidden;border-radius:22px}
+.channel-stage:after{content:"";position:absolute;right:-50px;bottom:-95px;width:220px;height:220px;border:1px solid #c56d6266;border-radius:50%;box-shadow:0 0 0 18px #c56d6215,0 0 0 40px #c56d620d;pointer-events:none}
+.channel-open{min-height:50px;border-radius:99px}
+.radio-world-scene{position:relative;overflow:hidden;border-radius:22px}
+.radio-world-scene:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--room-accent),transparent)}
+.radio-dial{box-shadow:0 15px 35px #344b3026}
+.radio-player-card{border-radius:22px}
+.radio-main-toggle{min-height:58px;border-radius:99px}
+.radio-volume-control input{accent-color:#6d8d62}
+.social-gallery-heading{position:relative;overflow:hidden;border-radius:20px}
+.social-photo-grid{grid-auto-rows:clamp(110px,19vw,190px);gap:9px}
+.social-photo{border-radius:15px}
+.social-world-card{min-height:74px;border-radius:15px}
+/* Accesibilidad y puntería táctil */
+button,a,input{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #347f87;outline-offset:3px}
+@media(min-width:900px){
+ .doors-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .project-art{aspect-ratio:16/9}
+ .project-content{padding:18px 20px 19px}
+ .world-room{width:min(94vw,1080px)}
+ .room-hero{display:grid;grid-template-columns:minmax(230px,.72fr) 1fr;align-items:center;gap:clamp(20px,4vw,46px);padding-top:16px}
+ .room-art{height:220px}
+ .room-heading{padding:15px 0}
+ .room-body{padding-bottom:24px}
+ .video-choices{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:680px){
+ .simple-header{height:58px;padding-inline:12px}
+ .simple-brand{font-size:.68rem;gap:6px}
+ .simple-logo{width:32px;height:32px}
+ .header-actions{gap:6px}
+ .install-app-button{min-height:38px}
+ .simple-about{min-height:38px;padding:7px 10px;font-size:.68rem}
+ .simple-hero{min-height:510px;padding:24px 13px 58px}
+ .simple-hero-content{width:100%;padding:21px 17px 19px;border-radius:21px}
+ .simple-hero h1{font-size:clamp(2.65rem,11vw,4rem)}
+ .hero-primary{width:100%;min-height:52px}
+ .hero-caption{font-size:.49rem;letter-spacing:.1em}
+ .territory-ribbon{gap:8px;padding:12px 13px}
+ .territory-ribbon-label{font-size:.56rem}
+ .territory-ribbon-path{gap:7px}
+ .territory-ribbon-path span{font-size:.5rem}
+ .territory-ribbon-place{font-size:.5rem}
+ .simple-doors{padding:38px 10px 62px}
+ .doors-intro{margin-bottom:22px}
+ .doors-intro h2{font-size:2.1rem}
+ .doors-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .project-card{border-radius:16px}
+ .project-art{aspect-ratio:1.18/1}
+ .project-content{padding:11px 11px 12px}
+ .project-content h3{font-size:1.03rem;line-height:1.12}
+ .project-content p{min-height:2.25em;margin-bottom:6px;font-size:.68rem}
+ .project-number{font-size:.52rem}
+ .project-link{min-height:34px;font-size:.54rem;letter-spacing:.04em}
+ .world-room{width:100%;max-width:none;max-height:100dvh;height:100dvh;margin:0;border:0;border-radius:0}
+ .world-room::backdrop{background:#13251f}
+ .room-content{max-height:100dvh;padding-top:0}
+ .room-close-form{padding:calc(env(safe-area-inset-top) + 7px) 10px 0}
+ .room-close{width:43px;height:43px}
+ .room-hero{padding:0 12px 13px}
+ .room-art{height:145px;border-radius:0 0 17px 17px}
+ .room-heading{padding:13px 2px 2px}
+ .room-universe{font-size:.5rem}
+ .room-kicker{font-size:.58rem}
+ .room-heading h2{font-size:2.05rem;margin:6px 0 4px}
+ .room-headline{font-size:.88rem;line-height:1.4}
+ .room-body{padding:0 11px max(12px,env(safe-area-inset-bottom))}
+ .room-experience{padding:12px;border-radius:17px}
+ .experience-topline{font-size:.55rem}
+ .library-intro{align-items:flex-start;gap:12px;padding:14px;border-radius:15px}
+ .library-mark{flex-basis:48px;height:64px;font-size:2.4rem}
+ .library-intro h3,.tv-cinema-heading h3,.quiz-board h3,.hub-board h3,.zero-board h3{font-size:1.42rem}
+ .library-intro p,.tv-cinema-heading p,.quiz-board p,.hub-board p,.zero-board p{font-size:.75rem}
+ .library-counts{gap:7px;padding:12px 9px}
+ .library-counts>div b{font-size:1.35rem}
+ .library-counts>div span{font-size:.52rem}
+ .librito-tabs{top:0;gap:4px;margin:10px 0;padding:4px}
+ .librito-tabs button{min-height:44px;padding:8px 5px;font-size:.73rem}
+ .library-frame iframe{height:62dvh;min-height:390px}
+ .tv-cinema-heading{padding:14px}
+ .video-screen{border-width:4px;border-radius:13px}
+ .tv-filters{margin:5px -2px}
+ .tv-filters button{min-height:44px;font-size:.72rem}
+ .video-choices{grid-template-columns:1fr;max-height:42dvh;gap:7px}
+ .video-choice{min-height:70px}
+ .wild-direct-heading,.quiz-board,.hub-board,.zero-board,.channel-stage,.radio-world-scene,.social-gallery-heading{padding:15px;border-radius:16px}
+ .wild-atlas-frame iframe{height:66dvh;min-height:420px}
+ .wild-direct-groups{gap:5px}
+ .wild-direct-groups span{padding:7px 9px;font-size:.57rem}
+ .quiz-experience .experience-frame iframe{height:68dvh;min-height:470px}
+ .quiz-steps{gap:6px}
+ .hub-needs{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .hub-needs span{min-height:46px;font-size:.67rem}
+ .hub-experience .experience-frame iframe,.zero-experience .experience-frame iframe{height:69dvh;min-height:480px}
+ .channel-stage{gap:13px}
+ .channel-open{width:100%;justify-content:center}
+ .radio-world-scene{gap:8px}
+ .radio-dial{width:116px;height:116px}
+ .radio-player-card{padding:14px;border-radius:17px}
+ .radio-main-toggle{width:100%;min-height:54px}
+ .social-photo-grid{grid-auto-rows:118px;gap:7px}
+ .social-photo{border-radius:11px}
+ .social-world-links{grid-template-columns:1fr;gap:8px}
+ .social-world-card{min-height:68px;padding:12px}
+ .room-complete{margin:14px 0;padding:12px;border-radius:15px}
+ .room-complete-link{min-height:48px}
+ .room-related{padding:5px 0 12px}
+ .related-worlds{grid-template-columns:1fr 1fr;gap:7px}
+ .related-world{min-height:62px;padding:9px}
+ .related-world small{font-size:.57rem}
+ .room-actions{position:sticky;bottom:0;display:flex;gap:7px;margin:0 -11px;padding:9px 11px max(10px,env(safe-area-inset-bottom))}
+ .room-back,.room-home-link{min-height:46px;border-radius:12px;font-size:.72rem}
+ .radio-floating{bottom:max(8px,env(safe-area-inset-bottom));}
+}
+@media(max-width:360px){
+ .doors-grid{gap:7px}
+ .project-content{padding:9px}
+ .project-content h3{font-size:.94rem}
+ .project-content p{font-size:.63rem}
+ .project-link{font-size:.49rem}
+ .room-heading h2{font-size:1.8rem}
+ .room-experience{padding:9px}
+ .related-worlds{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .project-card,.door-art-image,.world-room[open]{animation:none!important;transition:none!important}
+}

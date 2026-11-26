@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.29**  
+**Versión vigente: 3.30**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -43,6 +43,7 @@ Sitio estático para GitHub Pages. No requiere registro ni base de datos.
 - `assets/js/salas.js`: contenido y comportamiento de las salas.
 - `assets/css/estilo.css`: identidad general y portada.
 - `assets/css/salas.css`: puertas, salas y experiencias.
+- `assets/css/mundos.css`: identidad visual por mundo y adaptación móvil-first.
 - `assets/css/dedicatoria.css`: presentación de la dedicatoria.
 - `sw.js` y `manifest.webmanifest`: caché y configuración instalable.
 
