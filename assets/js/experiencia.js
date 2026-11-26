@@ -1,108 +1,11 @@
-(() => {
-  const $ = (selector, scope = document) => scope.querySelector(selector);
-  const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
-
-  // Construye las puertas desde un único listado fácil de mantener.
-  const grid = $("#projectGrid");
-  const projects = window.OCARINA_PROJECTS || [];
-  if (grid) {
-    grid.innerHTML = projects.map((project, index) => `
-      <article class="project-card reveal" style="--delay:${index * 65}ms">
-        <div class="project-top">
-          <span class="project-icon" aria-hidden="true">${project.icon}</span>
-          <span class="project-kind">${project.kind}</span>
-        </div>
-        <h3>${project.name}</h3>
-        <p>${project.description}</p>
-        <a class="project-link" href="${project.url}" target="_blank" rel="noopener noreferrer">
-          ${project.action} <span aria-hidden="true">↗</span>
-        </a>
-      </article>`).join("");
-  }
-
-  // Menú accesible: se abre con un toque y se cierra al elegir una sección.
-  const menuButton = $("#menuToggle");
-  const nav = $("#mainNav");
-  function closeMenu() {
-    if (!menuButton || !nav) return;
-    nav.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Abrir menú");
-    document.body.classList.remove("menu-open");
-  }
-  if (menuButton && nav) {
-    menuButton.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(open));
-      menuButton.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
-      document.body.classList.toggle("menu-open", open);
-    });
-    $$("a", nav).forEach(link => link.addEventListener("click", closeMenu));
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closeMenu();
-    });
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 680) closeMenu();
-    });
-  }
-
-  // Aparición suave de elementos; el contenido sigue visible si no hay soporte.
-  const revealItems = $$(".reveal");
-  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold: 0.12});
-    revealItems.forEach(item => observer.observe(item));
-  } else {
-    revealItems.forEach(item => item.classList.add("is-visible"));
-  }
-
-  // Línea de recorrido discreta y botón para volver arriba.
-  const progress = $("#readingProgress");
-  const backTop = $("#backTop");
-  let ticking = false;
-  function updateScroll() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const percent = max > 0 ? (window.scrollY / max) * 100 : 0;
-    if (progress) progress.style.width = percent + "%";
-    if (backTop) backTop.classList.toggle("visible", window.scrollY > 500);
-    ticking = false;
-  }
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(updateScroll);
-      ticking = true;
-    }
-  }, {passive:true});
-  updateScroll();
-  if (backTop) backTop.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
-
-  // Compartir: usa el menú nativo del teléfono o copia el enlace.
-  const shareButton = $("#shareButton");
-  if (shareButton) {
-    shareButton.addEventListener("click", async () => {
-      const shareData = {title:document.title, text:"Conocé Universo Ocarina: raíces rurales e ideas digitales.", url:window.location.href};
-      try {
-        if (navigator.share) {
-          await navigator.share(shareData);
-        } else if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(window.location.href);
-          shareButton.textContent = "✓ Enlace copiado";
-          window.setTimeout(() => shareButton.textContent = "Compartir", 2200);
-        } else {
-          window.prompt("Copiá este enlace para compartir Universo Ocarina:", window.location.href);
-        }
-      } catch (error) {
-        if (error.name !== "AbortError") window.prompt("Copiá este enlace:", window.location.href);
-      }
-    });
-  }
-
-  const year = $("#currentYear");
-  if (year) year.textContent = new Date().getFullYear();
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const grid=$("#projectGrid"),projects=window.OCARINA_PROJECTS||[];
+if(grid)grid.innerHTML=projects.map(p=>`<article class="project-card reveal"><div class="project-image"><img src="${p.image}" alt="${p.alt}" loading="lazy"></div><span class="project-number">OC / ${p.number}</span><div class="project-top"><span class="project-icon" aria-hidden="true">${p.icon}</span><span class="project-kind">${p.kind}</span></div><div class="project-body"><h3>${p.name}</h3><p>${p.description}</p><a class="project-link" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.action} <span>↗</span></a></div></article>`).join("");
+const menu=$("#menuToggle"),nav=$("#mainNav");function close(){if(!menu||!nav)return;nav.classList.remove("open");menu.setAttribute("aria-expanded","false");document.body.classList.remove("menu-open")}
+if(menu&&nav){menu.addEventListener("click",()=>{let o=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(o));document.body.classList.toggle("menu-open",o)});$$(".nav a").forEach(a=>a.addEventListener("click",close));document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});window.addEventListener("resize",()=>{if(innerWidth>700)close()})}
+function reveal(){let items=$$(".reveal");if("IntersectionObserver"in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){let ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("is-visible");ob.unobserve(e.target)}}),{threshold:.12});items.forEach(x=>ob.observe(x))}else items.forEach(x=>x.classList.add("is-visible"))}reveal();
+const bar=$("#readingProgress"),top=$("#backTop");let busy=false;function scroll(){let max=document.documentElement.scrollHeight-innerHeight;if(bar)bar.style.width=(max>0?scrollY/max*100:0)+"%";if(top)top.classList.toggle("visible",scrollY>500);busy=false}addEventListener("scroll",()=>{if(!busy){requestAnimationFrame(scroll);busy=true}},{passive:true});scroll();if(top)top.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+const share=$("#shareButton");if(share)share.addEventListener("click",async()=>{let data={title:document.title,text:"Entrá a Universo Ocarina: raíces rurales, mente creativa y futuro digital.",url:location.href};try{if(navigator.share)await navigator.share(data);else if(navigator.clipboard&&isSecureContext){await navigator.clipboard.writeText(location.href);share.textContent="✓ Enlace copiado";setTimeout(()=>share.textContent="Compartir ↗",2200)}else prompt("Copiá este enlace:",location.href)}catch(e){if(e.name!=="AbortError")prompt("Copiá este enlace:",location.href)}});
+const year=$("#currentYear");if(year)year.textContent=new Date().getFullYear();
 })();
