@@ -124,3 +124,12 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - Se conserva el diseño de lectura simple, los controles de accesibilidad, la dedicatoria y las nueve funciones originales.
 - Se actualizan referencias de caché y versión a 3.55.
 - No se modifican los repositorios originales de los mundos.
+
+
+## Cambios 3.56
+
+- Cada sala recibe una dirección visual propia: LIBRITO editorial de papel y cuero; Ocarina TV cinematográfico; Wild botánico; ¿Sabías que? gabinete de curiosidades; Chañar HUB cartográfico; Código Cero señalética de orientación; YouTube estudio de creador; Radio Online dial y ondas; Ocarina Social collage comunitario.
+- Se agregan paletas diferenciadas, texturas, fondos, marcos, paneles y superficies específicas por mundo.
+- Se refuerza la jerarquía visual de cabeceras, muestras internas, botones y acceso al proyecto completo.
+- Se adapta la composición de cada sala a celulares y controles táctiles grandes.
+- No se alteran los proyectos originales ni los contenidos de sus repositorios.
