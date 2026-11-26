@@ -11,7 +11,6 @@ if(grid){
   </button>
  </article>`).join("");
 }
-window.OCARINA_VISIT=()=>{};
 let installPrompt=null;
 const installButton=document.getElementById("installApp");
 window.addEventListener("beforeinstallprompt",event=>{event.preventDefault();installPrompt=event;if(installButton)installButton.hidden=false;});
