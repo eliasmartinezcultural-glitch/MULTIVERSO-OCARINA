@@ -219,3 +219,16 @@
  .room-actions{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){.room-feature-link,.related-world{transition:none}}
+
+
+/* Ilustraciones editoriales originales para las nueve puertas */
+.doors-grid .project-art{isolation:isolate;overflow:hidden;min-height:190px}
+.doors-grid .door-art-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+.doors-grid .project-card:hover .door-art-image{transform:scale(1.055);filter:saturate(1.08)}
+.doors-grid .art-orbit,.doors-grid .art-symbol,.doors-grid .art-world-caption,.doors-grid .art-dots,.doors-grid .art-glow{z-index:1}
+.doors-grid .art-symbol{background:#fffdf0d9;backdrop-filter:blur(7px)}
+.room-feature-art{position:relative;isolation:isolate;overflow:hidden}
+.room-feature-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.room-feature-art:after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,transparent 45%,#1b241b35)}
+.room-feature-art .feature-orbit,.room-feature-art .feature-symbol,.room-feature-art .feature-caption{z-index:1}
+@media(max-width:680px){.doors-grid .project-art{min-height:170px}}
