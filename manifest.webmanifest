@@ -1,13 +1,13 @@
 {
   "name": "Multiverso Ocarina",
   "short_name": "Ocarina",
-  "description": "Cultura, historias, naturaleza, comunidad y tecnología · Versión 3.18.",
+  "description": "Un universo rural y tecnológico para explorar cultura, historias, naturaleza, comunidad y creación digital de San Patricio del Chañar.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#f3f2e9",
-  "theme_color": "#f3f2e9",
+  "theme_color": "#e7efe4",
   "icons": [
     {
       "src": "assets/img/ocarina-icon.svg",
