@@ -267,3 +267,83 @@ button,a,[role="button"]{touch-action:manipulation}
 @media(max-width:390px){
  .portal-share-button{flex-basis:36px;width:36px;height:36px;min-height:36px}
 }
+
+
+/* 3.36 · lectura y navegación pensadas para personas mayores */
+@media(max-width:680px){
+  body.simple-multiverse{font-size:18px;line-height:1.6}
+  .simple-header{min-height:64px;height:calc(64px + env(safe-area-inset-top,0px));padding-left:14px;padding-right:14px}
+  .simple-brand{font-size:.72rem;letter-spacing:.015em;gap:7px}
+  .version-stamp{display:none}
+  .portal-share-button{min-width:46px;min-height:46px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 11px}
+  .portal-share-button .share-label{font-size:.75rem;font-weight:700}
+  .simple-about{min-height:46px;font-size:.75rem;padding:8px 9px}
+  .simple-hero{min-height:clamp(430px,66svh,590px);padding:20px 13px 54px}
+  .simple-hero-content{padding:23px 18px;border-radius:18px}
+  .simple-eyebrow{font-size:.68rem;letter-spacing:.08em}
+  .simple-hero h1{font-size:clamp(2.55rem,10vw,3.45rem);line-height:1.02}
+  .simple-hero-content>p{font-size:1.05rem;line-height:1.5}
+  .hero-primary{min-height:58px;font-size:1rem;border-radius:14px}
+  .territory-ribbon{padding:15px 12px;gap:9px}
+  .territory-ribbon-path span,.territory-ribbon-place{font-size:.66rem}
+  .simple-doors{padding:38px 14px 52px}
+  .doors-intro h2{font-size:2.15rem}
+  .doors-intro p{font-size:1rem;line-height:1.5}
+  .doors-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .doors-grid .project-card{
+    display:grid;grid-template-columns:104px minmax(0,1fr);align-items:stretch;
+    min-height:112px;border-radius:15px;
+  }
+  .doors-grid .project-art{width:104px;height:100%;min-height:112px;aspect-ratio:auto}
+  .doors-grid .door-art-image{width:100%;height:100%;object-fit:cover}
+  .doors-grid .art-symbol{display:none}
+  .doors-grid .project-content{padding:11px 12px;justify-content:center;gap:3px}
+  .doors-grid .project-number{display:none}
+  .doors-grid .project-content h3{font-size:1.12rem;line-height:1.2;margin:0 0 2px;letter-spacing:0}
+  .doors-grid .project-content p{font-size:.9rem;line-height:1.35;min-height:0;margin:0 0 7px}
+  .doors-grid .project-link{
+    width:100%;min-height:42px;padding:8px 9px;justify-content:flex-start;
+    border-radius:9px;font-size:.72rem;line-height:1.2;letter-spacing:0;
+  }
+  .doors-footnote{font-size:.9rem;margin-top:20px}
+  .room-hero{padding:0 13px 13px;gap:0}
+  .room-art{height:112px;min-height:112px;border-radius:0 0 14px 14px}
+  .room-heading{padding:13px 2px 3px;text-align:left}
+  .room-universe,.room-kicker,.room-door-number{font-size:.68rem;letter-spacing:.07em}
+  .room-door-number{display:none}
+  .room-heading h2{font-size:2rem;line-height:1.08;margin:5px 0}
+  .room-headline{font:1.05rem/1.5 var(--sans,Arial,sans-serif);max-width:none}
+  .room-body{padding:0 12px calc(112px + env(safe-area-inset-bottom,0px))}
+  .room-experience{padding:16px;border-radius:15px;margin-bottom:13px}
+  .room-experience h3{font-size:1.35rem;line-height:1.25}
+  .room-experience p,.room-experience li{font-size:1rem;line-height:1.6}
+  .experience-topline,.room-label{font-size:.68rem;letter-spacing:.06em}
+  .experience-foot,.experience-footnote{font-size:.85rem;line-height:1.5}
+  .room-complete{padding:15px;gap:11px}
+  .room-complete-copy>span{font-size:.68rem}
+  .room-complete-copy h3{font-size:1.25rem}
+  .room-complete-copy p{font-size:.9rem;line-height:1.5}
+  .room-complete-link,.channel-open,.radio-main-toggle{min-height:54px;font-size:.95rem}
+  .room-related{padding:15px}
+  .room-related-heading h3{font-size:1.4rem}
+  .related-worlds{grid-template-columns:1fr;gap:9px}
+  .related-world{min-height:60px;padding:11px 12px}
+  .related-world b{font-size:.9rem}
+  .related-world small{font-size:.75rem}
+  .room-actions{grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+  .room-actions .room-back,.room-actions .room-share,.room-actions .room-home-link{
+    min-height:50px;display:flex;align-items:center;justify-content:center;
+    padding:10px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 55%);
+    border-radius:11px;background:var(--room-paper);font-size:.9rem;
+  }
+  .room-actions .room-share-status{grid-column:1/-1;min-height:24px;font-size:.85rem;text-align:center}
+  .simple-footer{font-size:.9rem}
+}
+@media(max-width:360px){
+  .simple-brand{font-size:.65rem}
+  .header-actions{gap:4px}
+  .portal-share-button{padding:0 8px}
+  .simple-about{padding:8px 7px}
+  .doors-grid .project-card{grid-template-columns:88px minmax(0,1fr)}
+  .doors-grid .project-art{width:88px}
+}
