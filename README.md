@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.36**  
+**Versión vigente: 3.40**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -98,3 +98,14 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Se elimina el botón y la lógica de instalación de la aplicación, el manifiesto PWA y el registro del service worker. El portal se abre y usa desde el navegador.
 - Al entrar, los mundos ya no ofrecen «Ir al inicio»: se vuelve a la grilla de puertas mediante «Volver a las puertas» o el botón de cierre.
 - Se retira el botón de regreso al inicio del pie de página para evitar duplicaciones.
+
+
+## 3.40 · montaje editorial profesional de las salas
+
+- Se incorpora una capa visual específica para las salas, separada de los estilos generales de la portada.
+- Cada mundo presenta una jerarquía más clara: identidad visual, contenido principal, acceso a la experiencia completa y mundos conectados.
+- Se unifican tarjetas, encabezados, marcos, filtros y botones sin borrar la personalidad cromática de cada mundo.
+- LIBRITO gana navegación de secciones más visible; OCARINA TV, una pantalla principal y catálogo más ordenado; WILD, un atlas con mayor protagonismo; y las salas de curiosidades, guía local, orientación, canal, radio y social reciben una composición más clara.
+- Se ajustan las proporciones de contenido incrustado y los controles para pantallas pequeñas.
+- No se modifican los repositorios originales de los mundos.
+- Los servicios externos incrustados siguen dependiendo de las políticas de cada plataforma y de la conexión.
