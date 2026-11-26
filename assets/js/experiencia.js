@@ -17,7 +17,7 @@ function renderProjects(){
   grid.innerHTML=projects.map((p,index)=>{
     const c=palettes[p.palette]||palettes.sage;
     const url=safe(p.url);
-    return `<article class="project-card" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]}" style="--card-index:${index}">
+    return `<article class="project-card" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]};--card-index:${index}">
       <div class="project-art" aria-hidden="true">
         <span class="art-orbit"></span><span class="art-symbol">${safe(p.symbol)}</span>
         <span class="art-dots"></span><span class="art-glow"></span>
