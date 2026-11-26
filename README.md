@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.34**  
+**Versión vigente: 3.35**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -58,3 +58,12 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Repositorio: https://github.com/eliasmartinezcultural-glitch/MULTIVERSO-OCARINA
 
 **Universo Ocarina** · Elías Martínez · San Patricio del Chañar, Neuquén.
+
+
+## Ajustes 3.35
+
+- El reproductor persistente se inicializa únicamente al entrar a Radio Online, evitando trabajo innecesario en las otras ocho salas.
+- Cerrar una sala desde el botón, volver o elegir Inicio conserva una navegación coherente y devuelve el foco al acceso anterior cuando corresponde.
+- Compartir un mundo incluye una alternativa de copia compatible con navegadores móviles sin Clipboard API.
+- Los controles muestran un foco visible para navegación por teclado y accesibilidad.
+- El estado de conexión de radio informa correctamente cuando la reproducción no pudo iniciarse.

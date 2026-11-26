@@ -241,6 +241,10 @@ button,a,[role="button"]{touch-action:manipulation}
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
 
+/* 3.35 · foco accesible y controles claros */
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #557d62;outline-offset:3px}
+.room-close:focus-visible,.room-share:focus-visible,.room-back:focus-visible,.room-home-link:focus-visible{outline-color:var(--room-accent,#557d62);outline-offset:3px}
+@media(hover:none) and (pointer:coarse){.portal-share-button:active,.room-share:active,.room-back:active,.room-home-link:active{transform:scale(.97)}}
 /* 3.34 · ajustes de navegación y jerarquía táctil */
 .sr-only{
  position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
