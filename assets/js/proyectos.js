@@ -1,10 +1,10 @@
 window.OCARINA_PROJECTS=[
-{name:"LIBRITO",kind:"Lectura y memoria",number:"01",symbol:"▤",description:"Leer y descubrir.",url:"https://eliasmartinezcultural-glitch.github.io/LIBRITO/",palette:"sage",action:"ENTRAR"},
-{name:"OCARINA TV",kind:"Videos",number:"02",symbol:"▶",description:"Historias en imágenes.",url:"https://eliasmartinezcultural-glitch.github.io/OCARINA-TV/",palette:"peach",action:"ENTRAR"},
-{name:"OCARINA WILD",kind:"Naturaleza",number:"03",symbol:"✿",description:"Naturaleza y territorio.",url:"https://eliasmartinezcultural-glitch.github.io/OCARINA-WILD/",palette:"butter",action:"ENTRAR"},
-{name:"¿SABÍAS QUE?",kind:"Curiosidades",number:"04",symbol:"?",description:"Aprender jugando.",url:"https://eliasmartinezcultural-glitch.github.io/SABIAS-QUE/",palette:"lilac",action:"ENTRAR"},
-{name:"CHAÑAR HUB",kind:"Comunidad",number:"05",symbol:"⌖",description:"Encontrar y conectar.",url:"https://eliasmartinezcultural-glitch.github.io/chanar-hub/",palette:"blue",action:"ENTRAR"},
-{name:"CÓDIGO CERO",kind:"Orientación",number:"06",symbol:"♡",description:"Información y ayuda.",url:"https://eliasmartinezcultural-glitch.github.io/C-DIGO-CERO/",palette:"rose",action:"ENTRAR"},
-{name:"YOUTUBE",kind:"Canal de videos",number:"07",symbol:"▷",description:"Ver nuestro canal.",url:"https://www.youtube.com/@EliasM-creator",palette:"peach",action:"VER"},
-{name:"RADIO ONLINE",kind:"Radio",number:"08",symbol:"♫",description:"Escuchar la radio.",url:"https://zeno.fm/radio/radiando-ando/",palette:"sage",action:"ESCUCHAR"}
+{name:"LIBRITO",kind:"Lectura y memoria",number:"01",symbol:"▤",description:"Leer y descubrir.",url:"https://eliasmartinezcultural-glitch.github.io/LIBRITO/",palette:"sage",roomId:"library",action:"ENTRAR"},
+{name:"OCARINA TV",kind:"Videos",number:"02",symbol:"▶",description:"Historias en imágenes.",url:"https://eliasmartinezcultural-glitch.github.io/OCARINA-TV/",palette:"peach",roomId:"cinema",action:"ENTRAR"},
+{name:"OCARINA WILD",kind:"Naturaleza",number:"03",symbol:"✿",description:"Naturaleza y territorio.",url:"https://eliasmartinezcultural-glitch.github.io/OCARINA-WILD/",palette:"butter",roomId:"wild",action:"ENTRAR"},
+{name:"¿SABÍAS QUE?",kind:"Curiosidades",number:"04",symbol:"?",description:"Aprender jugando.",url:"https://eliasmartinezcultural-glitch.github.io/SABIAS-QUE/",palette:"lilac",roomId:"curiosity",action:"ENTRAR"},
+{name:"CHAÑAR HUB",kind:"Comunidad",number:"05",symbol:"⌖",description:"Encontrar y conectar.",url:"https://eliasmartinezcultural-glitch.github.io/chanar-hub/",palette:"blue",roomId:"hub",action:"ENTRAR"},
+{name:"CÓDIGO CERO",kind:"Orientación",number:"06",symbol:"♡",description:"Información y ayuda.",url:"https://eliasmartinezcultural-glitch.github.io/C-DIGO-CERO/",palette:"rose",roomId:"safety",action:"ENTRAR"},
+{name:"YOUTUBE",kind:"Canal de videos",number:"07",symbol:"▷",description:"Ver nuestro canal.",url:"https://www.youtube.com/@EliasM-creator",palette:"peach",roomId:"channel",action:"VER"},
+{name:"RADIO ONLINE",kind:"Radio",number:"08",symbol:"♫",description:"Escuchar la radio.",url:"https://zeno.fm/radio/radiando-ando/",palette:"sage",roomId:"radio",action:"ESCUCHAR"}
 ];
