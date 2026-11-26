@@ -246,3 +246,43 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 @media(max-width:680px){.world-shortcuts{position:sticky;top:0;z-index:8;padding:8px 0;background:#f4f2e9e8;backdrop-filter:blur(12px)}.world-shortcuts button{flex:1;min-width:0;padding:10px 8px;font-size:.78rem}.favorite-toggle{width:38px;height:38px;right:10px;top:10px}.world-room{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border-radius:0}.world-room .room-content{max-height:100dvh}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 .night-mode .world-shortcuts button{background:#263a2c;color:#e4eadf;border-color:#60745d}.night-mode .world-shortcuts button.is-active{background:#d9e5d0;color:#263a2c}
+
+
+/* EXPERIENCIA INMERSIVA · reproductores y contenidos dentro de cada sala */
+.room-player{margin:18px 0 22px;padding:clamp(16px,3vw,25px);border:1px solid color-mix(in srgb,var(--room-accent),transparent 65%);border-radius:22px;background:var(--room-paper);box-shadow:0 12px 30px #1d2d2510}
+.room-player-heading{display:grid;gap:6px;margin-bottom:16px}
+.room-player-heading strong{color:var(--room-deep);font:clamp(1.45rem,3vw,2.15rem)/1.1 "DM Serif Display",Georgia,serif}
+.room-player-heading small{color:var(--room-muted);font-size:.78rem;line-height:1.55}
+.radio-player audio{display:block;width:100%;min-height:48px;margin:14px 0 8px;accent-color:var(--room-deep)}
+.room-player-foot{display:block;color:var(--room-muted);font-size:.7rem;line-height:1.5}
+.video-screen{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:16px;background:#101915;box-shadow:0 12px 28px #14251c20}
+.video-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-now{display:grid;gap:4px;padding:13px 2px 12px;color:var(--room-deep)}
+.video-now b{font-size:.95rem}.video-now span{font-size:.72rem;color:var(--room-muted)}
+.video-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:8px 0 16px}
+.video-choice{display:flex;align-items:center;gap:10px;min-width:0;padding:8px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 76%);border-radius:13px;background:var(--room-bg);color:var(--room-ink);text-align:left;cursor:pointer;transition:border-color .2s,transform .2s,background .2s}
+.video-choice:hover{transform:translateY(-2px);border-color:var(--room-accent)}
+.video-choice.is-active{border-color:var(--room-deep);background:color-mix(in srgb,var(--room-accent),white 87%)}
+.video-choice img{width:92px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:#18231d;flex:none}
+.video-choice>span{display:grid;gap:4px;min-width:0}
+.video-choice b{font-size:.72rem;line-height:1.25}
+.video-choice small{font-size:.62rem;line-height:1.35;color:var(--room-muted)}
+.video-choice i{margin-left:auto;color:var(--room-deep);font-style:normal}
+.room-player-channel{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 15px;border-radius:999px;background:var(--room-deep);color:#fff;text-decoration:none;font-size:.74rem;font-weight:800}
+.instagram-frame-wrap{height:520px;overflow:hidden;border-radius:16px;background:#fff;border:1px solid #e8deee}
+.instagram-profile-frame{width:100%;height:100%;border:0;background:#fff}
+.social-hub .social-links{margin-top:14px}
+.social-note{line-height:1.6}
+.night-mode .room-player{background:#26362d;border-color:#526c58}
+.night-mode .room-player-heading strong,.night-mode .video-now{color:#e4ecdf}
+.night-mode .room-player-heading small,.night-mode .video-now span,.night-mode .video-choice small{color:#b7c6b4}
+.night-mode .video-choice{background:#1f3027;border-color:#526c58;color:#edf2e9}
+.night-mode .video-choice.is-active{background:#344a38;border-color:#9ab294}
+@media(max-width:680px){
+ .room-player{padding:14px;border-radius:17px}
+ .video-choices{grid-template-columns:1fr}
+ .video-choice{padding:7px}
+ .video-choice img{width:104px}
+ .instagram-frame-wrap{height:490px}
+}
+@media(prefers-reduced-motion:reduce){.video-choice{transition:none}}
