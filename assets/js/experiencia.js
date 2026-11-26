@@ -4,6 +4,30 @@
 const shareButton=document.getElementById("sharePortal");
 const shareStatus=document.getElementById("portalShareStatus");
 const portalUrl=()=>location.origin+location.pathname+location.search;
+const root=document.documentElement;
+const accessMenu=document.querySelector(".accessibility-menu");
+let readerLevel=0;
+const readerButtons=[...document.querySelectorAll("[data-reader-size]")];
+const contrastButton=document.querySelector("[data-reader-contrast]");
+const applyReaderSize=()=>{
+ root.classList.toggle("reader-large",readerLevel===1);
+ root.classList.toggle("reader-extra-large",readerLevel===2);
+ readerButtons.forEach(button=>button.setAttribute("aria-pressed",String((button.dataset.readerSize==="up"&&readerLevel>0)||(button.dataset.readerSize==="down"&&readerLevel===0))));
+};
+readerButtons.forEach(button=>button.addEventListener("click",()=>{
+ readerLevel=button.dataset.readerSize==="up"?Math.min(2,readerLevel+1):Math.max(0,readerLevel-1);
+ applyReaderSize();
+}));
+contrastButton?.addEventListener("click",()=>{
+ const enabled=document.body.classList.toggle("high-contrast");
+ contrastButton.setAttribute("aria-pressed",String(enabled));
+});
+document.querySelector("[data-reader-reset]")?.addEventListener("click",()=>{
+ readerLevel=0;document.body.classList.remove("high-contrast");
+ contrastButton?.setAttribute("aria-pressed","false");applyReaderSize();
+});
+accessMenu?.addEventListener("keydown",event=>{if(event.key==="Escape")accessMenu.open=false;});
+applyReaderSize();
 async function copyText(value){
  if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}
  const field=document.createElement("textarea");
