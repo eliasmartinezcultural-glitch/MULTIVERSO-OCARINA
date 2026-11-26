@@ -859,3 +859,110 @@ html{scroll-padding-top:82px}
 .project-card[hidden]{display:none!important}
 @media(max-width:600px){.door-finder{margin:16px 0;padding:13px}.door-search-line input{font-size:16px}.door-search-line button{padding-inline:9px}}
 @media(prefers-reduced-motion:reduce){.project-card{transition:none!important}}
+
+
+/* 3.60 · Nueve lenguajes visuales: forma, material y señalética propios */
+.world-room{--room-paper:#f5f0e4;--room-ink:#263a36;--room-accent:#557b70;--room-edge:#c9bea8;background:var(--room-paper);color:var(--room-ink);border:1px solid var(--room-edge);box-shadow:0 24px 80px #17241e55}
+.world-room .room-content{background:var(--room-paper)}
+.world-room .room-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--room-edge);background:linear-gradient(120deg,var(--room-paper),color-mix(in srgb,var(--room-accent) 13%,var(--room-paper)))}
+.world-room .room-hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;background-image:repeating-linear-gradient(135deg,transparent 0 13px,var(--room-accent) 14px,transparent 15px 27px)}
+.world-room .room-art{border:1px solid var(--room-edge);box-shadow:0 10px 25px #1d2b241c;background:var(--room-paper)}
+.world-room .room-heading{position:relative;z-index:1}
+.world-room .room-universe{letter-spacing:.18em;color:var(--room-accent);font-weight:900}
+.world-room .room-kicker{display:inline-flex;align-items:center;width:max-content;padding:6px 11px;border:1px solid var(--room-edge);border-radius:999px;background:#ffffffa8;font-size:.7rem;font-weight:850;letter-spacing:.08em}
+.world-room .room-body{padding:clamp(14px,3vw,28px)}
+.world-room .room-experience{border:1px solid var(--room-edge);border-radius:var(--room-radius,18px);background:var(--room-panel,#fffdf7);box-shadow:0 12px 28px #1c2b2410;overflow:hidden}
+.world-room .experience-topline{padding:12px 16px;border-bottom:1px solid var(--room-edge);background:var(--room-band,#eee7d8);color:var(--room-ink);font-size:.7rem;font-weight:900;letter-spacing:.09em}
+.world-room .experience-foot,.world-room .experience-footnote{color:color-mix(in srgb,var(--room-ink) 72%,transparent)}
+.world-room .room-complete{border:1px solid var(--room-edge);border-radius:var(--room-radius,18px);background:var(--room-band,#eee7d8);padding:18px}
+.world-room .room-complete-link,.world-room .room-actions button{min-height:48px;border:1px solid var(--room-accent);border-radius:var(--button-radius,12px);background:var(--room-accent);color:white;font-weight:850;box-shadow:0 4px 0 color-mix(in srgb,var(--room-accent) 65%,#17241e)}
+.world-room .room-actions button{background:transparent;color:var(--room-ink);box-shadow:none}
+.world-room button:focus-visible,.world-room a:focus-visible{outline:3px solid var(--room-accent);outline-offset:3px}
+.world-room .room-close{min-height:46px;border-radius:999px;padding:8px 17px;border:1px solid var(--room-edge);background:var(--room-panel);color:var(--room-ink);font-weight:850}
+.world-room .room-label{color:var(--room-accent);font-weight:900;letter-spacing:.12em}
+.world-room .room-experience button{transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+.world-room .room-experience button:hover{filter:brightness(1.04);transform:translateY(-2px)}
+.world-room .room-experience button:active{transform:translateY(0)}
+/* LIBRITO · papel, lomos y fichas de archivo */
+.world-room.theme-library{--room-paper:#f1e6cc;--room-panel:#fff9e9;--room-band:#e6d5b3;--room-ink:#493a2a;--room-accent:#786044;--room-edge:#c4aa7e;--room-radius:7px;--button-radius:4px;background-color:#efe2c6;background-image:repeating-linear-gradient(0deg,#795d3010 0 1px,transparent 1px 5px)}
+.theme-library .room-hero{background:linear-gradient(110deg,#e8d6b3,#f7efd9 58%,#d6c19b)}
+.theme-library .room-art{border-radius:5px;box-shadow:7px 8px 0 #9b80504a}
+.theme-library .library-intro{background:#fff8e7;border:1px solid #c8ad7c;border-left:8px solid #876747;padding:20px;border-radius:5px;box-shadow:inset 0 0 0 4px #f4e8ce}
+.theme-library .library-mark{border-radius:4px;background:#72553b;color:#fff1d5;box-shadow:4px 4px 0 #c7ad82}
+.theme-library .library-counts>div{border:1px solid #c6ae84;border-radius:4px;background:repeating-linear-gradient(0deg,#fff9e9 0 24px,#f5ebd6 25px 26px)}
+.theme-library .librito-tabs{gap:8px}
+.theme-library .librito-tabs button{min-height:46px;border:1px solid #b89b6c;border-radius:4px;background:#e7d7b8;color:#493a2a;font-weight:850}
+.theme-library .librito-tabs button.is-active{background:#654b34;color:#fff8e8;box-shadow:3px 3px 0 #c2a77a}
+/* OCARINA TV · marquesina y fotogramas */
+.world-room.theme-cinema{--room-paper:#17191c;--room-panel:#22252a;--room-band:#302a24;--room-ink:#f4ead7;--room-accent:#d6a64d;--room-edge:#66543a;--room-radius:5px;--button-radius:3px;background-image:radial-gradient(#fff2d00c 1px,transparent 1px);background-size:7px 7px}
+.theme-cinema .room-hero{background:linear-gradient(110deg,#17191c,#29231d 55%,#41311e)}
+.theme-cinema .room-art{border:2px solid #c99c4a;border-radius:3px;box-shadow:0 0 0 5px #d6a64d22,0 12px 30px #000}
+.theme-cinema .room-kicker{background:#d6a64d;color:#241d13;border-color:#d6a64d}
+.theme-cinema .tv-cinema-heading{padding:20px;background:linear-gradient(110deg,#2a2b2d,#17191c);border:1px solid #6d5735}
+.theme-cinema .tv-reel{border:2px dashed #d6a64d;border-radius:50%;color:#d6a64d}
+.theme-cinema .video-screen{border:8px solid #302a24;border-radius:5px;box-shadow:0 0 0 1px #d6a64d,0 12px 35px #000}
+.theme-cinema .video-choice{border:1px solid #514536;border-radius:4px;background:#242528;color:#f4ead7}
+.theme-cinema .video-choice.is-active{border-color:#e0b85e;box-shadow:inset 0 0 0 2px #e0b85e}
+.theme-cinema .tv-filters button{border:1px solid #8e7040;border-radius:3px;background:#302a24;color:#f5e6c8}
+.theme-cinema .tv-filters button.is-active{background:#d6a64d;color:#241d13}
+/* OCARINA WILD · herbario, hojas y cuaderno de campo */
+.world-room.theme-wild{--room-paper:#e6eddf;--room-panel:#f7faef;--room-band:#d2e0ca;--room-ink:#263e30;--room-accent:#46764d;--room-edge:#a8bea0;--room-radius:24px;--button-radius:24px;background-image:radial-gradient(ellipse at 90% 5%,#7ca36b22,transparent 38%),repeating-linear-gradient(35deg,transparent 0 19px,#4c78400c 20px 21px)}
+.theme-wild .room-hero{background:linear-gradient(120deg,#d7e5cf,#edf2e4 55%,#b9d0ad)}
+.theme-wild .room-art{border-radius:46% 46% 18px 18px;border:3px solid #77966c}
+.theme-wild .wild-direct-heading{padding:22px;border:1px solid #abc19f;border-radius:28px 8px 28px 8px;background:linear-gradient(145deg,#f7faef,#dce9d4)}
+.theme-wild .wild-direct-groups span{border-radius:999px;background:#d1e1c8;border:1px solid #9cb696;color:#2d5939;padding:8px 13px;font-weight:850}
+.theme-wild .wild-atlas-frame{border:5px solid #b2c9a5;border-radius:18px;background:#f7faef}
+.theme-wild .room-complete-link{border-radius:999px}
+/* ¿SABÍAS QUE? · gabinete de curiosidades y sellos */
+.world-room.theme-curiosity{--room-paper:#eee8f6;--room-panel:#fbf8ff;--room-band:#e0d5f0;--room-ink:#392d50;--room-accent:#7955a0;--room-edge:#c1aed8;--room-radius:22px;--button-radius:999px;background-image:radial-gradient(circle,#8865aa19 1px,transparent 1.5px);background-size:15px 15px}
+.theme-curiosity .room-hero{background:linear-gradient(120deg,#e3d9f2,#f7f0fb 55%,#d5c7eb)}
+.theme-curiosity .room-art{border:2px solid #9c7db8;border-radius:50% 50% 18px 18px}
+.theme-curiosity .quiz-board{padding:22px;border:1px dashed #9a7bb6;border-radius:24px;background:linear-gradient(145deg,#fffaff,#e8ddf4)}
+.theme-curiosity .quiz-stamp{border:3px double #8b65a8;border-radius:50%;background:#7955a0;color:#fff;width:64px;height:64px;display:grid;place-items:center}
+.theme-curiosity .quiz-steps span{border-radius:999px;background:#ded0ef;border:1px solid #b49acb;padding:9px 12px;color:#4b3564}
+.theme-curiosity .room-experience iframe{border:5px solid #d6c7e8;border-radius:14px}
+/* CHAÑAR HUB · mapa, coordenadas y nodos */
+.world-room.theme-hub{--room-paper:#e2eff0;--room-panel:#f5fbfa;--room-band:#c9e1e2;--room-ink:#1e4148;--room-accent:#267c82;--room-edge:#9bc5c7;--room-radius:12px;--button-radius:8px;background-image:linear-gradient(#3e8b8b12 1px,transparent 1px),linear-gradient(90deg,#3e8b8b12 1px,transparent 1px);background-size:22px 22px}
+.theme-hub .room-hero{background:linear-gradient(120deg,#cbe4e4,#eef8f5 55%,#b5d6d8)}
+.theme-hub .room-art{border:2px solid #70aeb1;border-radius:12px;clip-path:polygon(0 0,100% 0,100% 88%,88% 100%,0 100%)}
+.theme-hub .hub-board{padding:22px;border:1px solid #91bec0;border-radius:12px;background:linear-gradient(145deg,#f9ffff,#d7ebea);background-image:linear-gradient(#277c8210 1px,transparent 1px),linear-gradient(90deg,#277c8210 1px,transparent 1px);background-size:18px 18px}
+.theme-hub .hub-needs span{border:1px solid #77aeb0;border-radius:7px;background:#f5ffff;color:#245a60;box-shadow:0 3px 0 #b4d3d2;padding:9px 12px;font-weight:850}
+.theme-hub .room-complete-link{background:#176c75}
+/* CÓDIGO CERO · señalética clara y alto contraste */
+.world-room.theme-safety{--room-paper:#e7eff7;--room-panel:#fff;--room-band:#d3e1f0;--room-ink:#142f4b;--room-accent:#145b9b;--room-edge:#9db5cd;--room-radius:8px;--button-radius:7px}
+.theme-safety .room-hero{background:linear-gradient(110deg,#d2e1f0,#f5f9ff 60%,#b9d0e7)}
+.theme-safety .room-art{border:3px solid #28699f;border-radius:8px;box-shadow:5px 5px 0 #9bb7d1}
+.theme-safety .zero-board{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px;border:2px solid #2c6798;border-left:10px solid #145b9b;border-radius:8px;background:#fff}
+.theme-safety .zero-mark{width:64px;height:64px;display:grid;place-items:center;border-radius:12px;background:#145b9b;color:#fff;font-size:2rem;font-weight:950}
+.theme-safety .zero-board strong{display:inline-block;background:#f5d9d5;color:#8a241d;padding:7px 12px;border-radius:4px}
+.theme-safety .room-complete-link{background:#145b9b}
+.theme-safety .room-actions button{border-width:2px}
+/* YOUTUBE · interfaz de canal y botones de reproducción */
+.world-room.theme-channel{--room-paper:#191919;--room-panel:#242424;--room-band:#302323;--room-ink:#f5f5f5;--room-accent:#e52d27;--room-edge:#5b4543;--room-radius:14px;--button-radius:999px;background-image:radial-gradient(#fff1 1px,transparent 1px);background-size:8px 8px}
+.theme-channel .room-hero{background:linear-gradient(110deg,#1b1b1b,#38201f 60%,#511e1c)}
+.theme-channel .room-art{border:2px solid #e52d27;border-radius:18px}
+.theme-channel .channel-stage{padding:22px;border:1px solid #6b3b39;border-radius:18px;background:linear-gradient(130deg,#302020,#191919)}
+.theme-channel .channel-emblem{border-radius:18px;background:#e52d27;color:white;box-shadow:0 6px 0 #8e1d1a}
+.theme-channel .channel-follow-link{display:inline-flex;padding:12px 17px;border-radius:999px;background:#e52d27;color:#fff;font-weight:900}
+.theme-channel .channel-video-screen{border:5px solid #3b3030;border-radius:14px;box-shadow:0 0 0 1px #e52d27}
+.theme-channel .channel-video-picks button{border:1px solid #554343;border-radius:12px;background:#262222;color:#fff}
+.theme-channel .channel-video-picks button.is-active{border:2px solid #ef4540;background:#3b2423}
+.theme-channel .room-complete-link{background:#e52d27}
+/* RADIO ONLINE · dial analógico, aro y escala */
+.world-room.theme-radio{--room-paper:#dce8ee;--room-panel:#f5fafc;--room-band:#c5dce6;--room-ink:#1b3547;--room-accent:#176c84;--room-edge:#9abac7;--room-radius:18px;--button-radius:999px;background-image:repeating-linear-gradient(0deg,#28617b0a 0 1px,transparent 1px 5px)}
+.theme-radio .room-hero{background:linear-gradient(120deg,#c6dce5,#edf5f7 55%,#b3d0dc)}
+.theme-radio .room-art{border:2px solid #5e91a6;border-radius:50%;box-shadow:inset 0 0 0 5px #d9e9ee}
+.theme-radio .radio-world-scene{padding:22px;border:1px solid #9abac7;border-radius:18px;background:linear-gradient(120deg,#f3fafb,#d2e6ec)}
+.theme-radio .radio-dial{border:7px double #4e8398;border-radius:50%;background:radial-gradient(circle,#f7fcfd 0 38%,#b9d5df 39% 41%,#e5f1f4 42%);box-shadow:0 8px 18px #1a455522}
+.theme-radio .radio-main-toggle{border:0;border-radius:999px;background:#176c84;color:white;box-shadow:0 5px 0 #0e4d61}
+.theme-radio .radio-volume-control input{accent-color:#176c84}
+/* OCARINA SOCIAL · collage, papelitos y tarjetas superpuestas */
+.world-room.theme-social{--room-paper:#f3e7e5;--room-panel:#fffaf8;--room-band:#f0d8d3;--room-ink:#4c303c;--room-accent:#a34d6b;--room-edge:#d7b4bc;--room-radius:18px;--button-radius:13px;background-image:radial-gradient(circle at 10% 20%,#d98ca522 0 2px,transparent 3px),radial-gradient(circle at 80% 70%,#d4a27d22 0 2px,transparent 3px);background-size:25px 25px,31px 31px}
+.theme-social .room-hero{background:linear-gradient(120deg,#f0d9d5,#fff5ed 55%,#e7c9d2)}
+.theme-social .room-art{border:3px solid #fff;border-radius:18px;box-shadow:0 0 0 1px #d3aeb6,7px 8px 0 #b97b8c55;transform:rotate(-2deg)}
+.theme-social .social-live-card{border:1px solid #d6b3bb;border-radius:18px;background:#fffaf8;box-shadow:5px 6px 0 #e6c8cd}
+.theme-social .social-feed-title{background:#f5e3e2;border-radius:14px 14px 0 0}
+.theme-social .social-world-icon{display:grid;place-items:center;border-radius:50%;background:#a34d6b;color:white;width:42px;height:42px}
+.theme-social .social-network-links a{border:1px solid #d5b3bb;border-radius:14px;background:#fff9f6;box-shadow:0 4px 0 #e5c9ce}
+@media(max-width:680px){.world-room .room-body{padding:12px}.world-room .room-hero{gap:14px}.world-room .room-complete{padding:14px}.world-room .room-complete-link{width:100%;justify-content:center}.theme-safety .zero-board{grid-template-columns:1fr}.theme-safety .zero-mark{width:54px;height:54px}.theme-library .library-intro,.theme-curiosity .quiz-board,.theme-hub .hub-board,.theme-safety .zero-board,.theme-social .social-live-card{padding:15px}}
+@media(prefers-reduced-motion:reduce){.world-room .room-experience button{transition:none}.world-room .room-experience button:hover{transform:none}}
