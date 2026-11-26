@@ -273,3 +273,197 @@ button:focus-visible,a:focus-visible,summary:focus-visible,.project-card:focus-v
   .simple-hero h1{font-size:1.55rem}
   .simple-hero .simple-eyebrow{font-size:.63rem}
 }
+
+
+/* 3.55 · atlas visual del territorio: más imagen, jerarquía y profundidad */
+html{scroll-padding-top:82px}
+.simple-header{
+  min-height:72px;padding-inline:clamp(14px,4.5vw,58px);
+  background:rgba(248,250,247,.96);backdrop-filter:blur(14px);
+  border-bottom:1px solid #c6d9dc;
+}
+.simple-brand{gap:12px;letter-spacing:.085em;font-size:.78rem}
+.simple-logo{
+  width:42px;height:42px;border-radius:50% 50% 50% 12px;
+  border:1px solid #a9c5cb;box-shadow:0 4px 12px #24485d1b;
+  font-size:2.15rem;
+}
+.header-actions{gap:9px}
+.simple-about,.portal-share-button,.accessibility-menu summary{
+  min-height:46px;border-radius:999px;padding:9px 15px;
+  box-shadow:0 3px 10px #24485d0a;
+}
+.simple-hero{background:#dcebf0}
+.simple-hero .hero-landscape{
+  aspect-ratio:16/8.2;max-height:650px;object-fit:cover;
+  object-position:center 52%;
+}
+.simple-hero .simple-hero-content{
+  position:relative;width:min(100%,1320px);padding:clamp(22px,3.3vw,38px) clamp(18px,5vw,72px);
+  border-top:0;border-left:5px solid #b99668;
+  background:
+    radial-gradient(ellipse at 94% 0%,rgba(143,192,213,.22),transparent 40%),
+    linear-gradient(100deg,#fbf8ef 0%,#f1f5ef 62%,#e6f0f2 100%);
+}
+.simple-hero .simple-hero-content:after{
+  content:"⌖  38°37′ S  ·  68°18′ O";
+  position:absolute;right:clamp(18px,5vw,72px);bottom:20px;
+  color:#7695a0;font:700 .62rem/1.2 Arial,sans-serif;letter-spacing:.12em;
+}
+.simple-hero h1{font-size:clamp(1.8rem,4vw,3.15rem);letter-spacing:-.035em}
+.simple-hero .simple-eyebrow{letter-spacing:.17em}
+.simple-hero .simple-hero-content p{font-size:clamp(1rem,1.5vw,1.18rem)}
+.territory-ribbon{
+  position:relative;isolation:isolate;min-height:76px;padding:15px clamp(12px,4vw,48px);
+  background:
+    radial-gradient(ellipse at 50% 0%,#78a9b7 0%,transparent 60%),
+    linear-gradient(105deg,#203f52 0%,#2c6378 56%,#547d79 100%);
+}
+.territory-ribbon:before{
+  content:"";position:absolute;z-index:-1;inset:0;opacity:.13;
+  background-image:linear-gradient(30deg,transparent 49.5%,#d9edf0 50%,transparent 50.5%),linear-gradient(150deg,transparent 49.5%,#d9edf0 50%,transparent 50.5%);
+  background-size:38px 38px;
+}
+.territory-ribbon-path{gap:8px}
+.territory-ribbon-path span{
+  padding:7px 12px;border-radius:999px;background:#ffffff0c;
+  font-size:.62rem;letter-spacing:.09em;
+}
+.simple-doors{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(42px,6vw,78px) clamp(14px,4vw,54px) clamp(48px,6vw,82px);
+  background:
+    radial-gradient(ellipse at 8% 10%,rgba(197,164,119,.13),transparent 28%),
+    radial-gradient(ellipse at 92% 40%,rgba(110,166,184,.12),transparent 34%),
+    linear-gradient(180deg,#f7f4eb 0%,#edf2ec 54%,#e8f1f2 100%);
+}
+.simple-doors:before{
+  content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.2;
+  background-image:radial-gradient(#8aa8a6 1px,transparent 1px);
+  background-size:24px 24px;mask-image:linear-gradient(90deg,black,transparent 35%,transparent 65%,black);
+}
+.doors-intro{
+  max-width:1280px;margin:0 auto clamp(22px,3vw,34px);
+  padding:0 0 22px;border-bottom:1px solid #c5d8d8;
+}
+.doors-intro h2{font:clamp(2.1rem,4.5vw,3.6rem)/1.04 Georgia,serif;letter-spacing:-.035em}
+.doors-intro p{font-size:1rem;color:#5d7379}
+.doors-intro:after{width:112px;height:5px;margin-top:19px;border-radius:999px}
+.doors-grid{
+  width:min(100%,1280px);grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(14px,1.8vw,23px);
+}
+.project-card{
+  display:flex;flex-direction:column;min-height:0;
+  border:1px solid #cbdcda;border-left:1px solid #cbdcda;
+  border-bottom:4px solid var(--door-accent,#6b91a0);
+  border-radius:18px 18px 9px 18px;background:#fffdf8;
+  box-shadow:0 9px 24px rgba(35,72,93,.075);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.project-card:after{border-radius:inherit;opacity:.65}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(35,72,93,.14)}
+.project-art{
+  display:block;width:100%;height:auto;min-height:0;aspect-ratio:16/9;
+  padding:0;overflow:hidden;border:0;border-bottom:1px solid #d4e0dc;
+  background:var(--door-wash,#e8f1f3);
+}
+.door-art-image{
+  display:block;width:100%;height:100%;min-height:0;aspect-ratio:16/9;
+  object-fit:cover;border-radius:0;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.project-card:hover .door-art-image{transform:scale(1.035)}
+.project-content{
+  flex:1;justify-content:flex-start;padding:17px 18px 16px;
+  background:transparent;
+}
+.project-content small{font-size:.62rem;letter-spacing:.13em}
+.project-content b{margin:7px 0 3px;font-size:1.22rem;letter-spacing:-.015em}
+.project-descriptor{margin:3px 0 8px;font-size:.75rem!important}
+.project-content>span:not(.project-link):not(.project-descriptor){
+  font-size:.88rem;line-height:1.5;
+}
+.project-link{
+  align-self:flex-start;min-height:42px;margin-top:15px;padding:8px 14px;
+  border-radius:999px;font-size:.72rem;letter-spacing:.075em;
+}
+.doors-footnote{
+  width:min(100%,1280px);margin:26px auto 0;padding:15px 0 0;
+  border-top:1px solid #cadbd8;color:#637a7d;font-size:.82rem;
+}
+.simple-origin{
+  position:relative;isolation:isolate;
+  padding:clamp(54px,8vw,104px) 14px;
+}
+.simple-origin:before,.simple-origin:after{opacity:.65}
+.origin-card{
+  border-radius:10px 30px 10px 30px;
+  box-shadow:0 26px 70px rgba(35,72,93,.14);
+}
+.simple-footer{
+  min-height:112px;gap:18px;
+  background:linear-gradient(105deg,#1d3b4d 0%,#2c6175 62%,#426e70 100%);
+}
+.footer-mark{border:1px solid #8cb0b7;box-shadow:0 5px 16px #102e3d55}
+@media(min-width:1100px){
+  .simple-hero .hero-landscape{aspect-ratio:16/7.5}
+  .project-card{min-height:340px}
+  .project-content{padding:19px 20px}
+}
+@media(max-width:900px){
+  .doors-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .simple-hero .hero-landscape{aspect-ratio:16/9}
+}
+@media(max-width:680px){
+  .simple-header{min-height:62px;padding:7px 9px;gap:6px}
+  .simple-brand{font-size:.63rem;letter-spacing:.055em;gap:7px}
+  .simple-logo{width:34px;height:34px;font-size:1.8rem}
+  .header-actions{gap:4px}
+  .simple-about,.portal-share-button,.accessibility-menu summary{min-height:42px;padding:7px 9px;font-size:.64rem}
+  .simple-hero .hero-landscape{aspect-ratio:1.12/1;object-position:53% center}
+  .simple-hero .simple-hero-content{padding:18px 17px 21px;border-left-width:4px}
+  .simple-hero .simple-hero-content:after{display:none}
+  .simple-hero h1{font-size:1.72rem;line-height:1.08}
+  .simple-hero .simple-eyebrow{font-size:.62rem;letter-spacing:.12em}
+  .simple-hero .simple-hero-content p{font-size:.98rem;line-height:1.5}
+  .territory-ribbon{gap:8px;padding:13px 8px}
+  .territory-ribbon strong{font-size:.58rem;text-align:center}
+  .territory-ribbon-path{gap:5px}
+  .territory-ribbon-path span{padding:6px 8px;font-size:.55rem}
+  .simple-doors{padding:38px 12px 48px}
+  .doors-intro{margin-bottom:19px;padding-bottom:16px}
+  .doors-intro h2{font-size:2.15rem}
+  .doors-intro p{font-size:.94rem}
+  .doors-grid{grid-template-columns:minmax(0,1fr);gap:13px}
+  .project-card{
+    display:grid;grid-template-columns:112px minmax(0,1fr);
+    min-height:132px;border-radius:13px 18px 10px 13px;
+    border-bottom:1px solid #cbdcda;border-left:4px solid var(--door-accent,#6b91a0);
+  }
+  .project-art{
+    width:112px;height:100%;min-height:132px;aspect-ratio:auto;
+    border-right:1px solid #d4e0dc;border-bottom:0;
+  }
+  .door-art-image{width:100%;height:100%;min-height:132px;aspect-ratio:auto;object-fit:cover}
+  .project-content{padding:11px 11px 10px}
+  .project-content small{font-size:.56rem}
+  .project-content b{font-size:1.04rem;margin:5px 0 2px}
+  .project-descriptor{font-size:.68rem!important;margin:2px 0 5px}
+  .project-content>span:not(.project-link):not(.project-descriptor){font-size:.77rem;line-height:1.35}
+  .project-link{min-height:40px;margin-top:8px;padding:7px 12px;font-size:.66rem}
+  .doors-footnote{margin-top:20px;padding-top:13px;font-size:.78rem}
+  .simple-origin{padding:48px 12px calc(52px + env(safe-area-inset-bottom))}
+  .origin-card{border-radius:8px 22px 8px 22px}
+  .simple-footer{gap:10px;padding:21px 12px calc(22px + env(safe-area-inset-bottom))}
+}
+@media(max-width:360px){
+  .simple-brand{font-size:.58rem}
+  .simple-about{display:none}
+  .project-card{grid-template-columns:98px minmax(0,1fr);min-height:126px}
+  .project-art{width:98px;min-height:126px}
+  .door-art-image{min-height:126px}
+  .project-content{padding:9px}
+}
+@media(hover:none){.project-card:hover{transform:none}.project-card:hover .door-art-image{transform:none}}
+@media(prefers-reduced-motion:reduce){.project-card,.door-art-image{transition:none!important}}
