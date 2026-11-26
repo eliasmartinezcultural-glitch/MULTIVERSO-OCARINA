@@ -1,0 +1,31 @@
+/* MULTIVERSO OCARINA 3.68 · puertas panorámicas en una sola columna */
+.simple-doors #projectGrid.doors-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%;max-width:1180px;margin-inline:auto;gap:30px}
+.simple-doors #projectGrid .project-card{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:clamp(245px,34vw,390px) auto!important;width:100%;min-width:0;min-height:0;height:auto;margin:0;position:relative;isolation:isolate;overflow:hidden;border-radius:28px;border:1px solid color-mix(in srgb,var(--accent),white 48%);background:#fffefa;box-shadow:0 16px 40px #173d351b;transition:transform .2s,box-shadow .2s}
+.simple-doors #projectGrid .project-art{position:relative!important;inset:auto!important;display:block!important;grid-row:1;width:100%!important;height:100%!important;min-height:0!important;overflow:hidden;background:var(--light);z-index:0}
+.simple-doors #projectGrid .project-art:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent 58%,rgba(12,35,28,.20) 100%);opacity:1}
+.simple-doors #projectGrid .project-art:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(110deg,color-mix(in srgb,var(--accent),transparent 91%),transparent 55%)}
+.simple-doors #projectGrid .door-art-image{display:block;width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important;object-position:center 48%;padding:0!important;filter:saturate(1.12) contrast(1.02);transition:transform .45s}
+.simple-doors #projectGrid .project-content{position:relative;z-index:2;grid-row:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;width:100%!important;min-height:0!important;height:auto;margin:0!important;padding:clamp(24px,4vw,42px)!important;background:linear-gradient(115deg,#fffefa,#f5f7f0)!important;border-top:5px solid var(--accent)}
+.simple-doors #projectGrid .project-content small{color:var(--accent);font-size:.76rem;font-weight:950;letter-spacing:.16em}
+.simple-doors #projectGrid .project-content b{color:var(--deep);font-size:clamp(2rem,4vw,3rem);line-height:1.04}
+.simple-doors #projectGrid .project-descriptor{color:color-mix(in srgb,var(--deep),white 22%);font-size:1.06rem;font-weight:850}
+.simple-doors #projectGrid .project-story{max-width:76ch;color:#344f43;font-size:clamp(1rem,1.45vw,1.12rem);line-height:1.7}
+.simple-doors #projectGrid .project-highlights{display:flex;flex-wrap:wrap;color:var(--deep);font-size:.9rem;font-weight:850}
+.simple-doors #projectGrid .project-highlights:before{content:"✦";margin-right:9px;color:var(--accent)}
+.simple-doors #projectGrid .project-tag{display:inline-flex;margin-top:3px;padding:8px 13px;border-radius:99px;background:var(--light);color:var(--deep);font-size:.72rem;font-weight:950;letter-spacing:.1em}
+.simple-doors #projectGrid .project-link{display:inline-flex;align-items:center;justify-content:center;min-height:56px;margin-top:8px;padding:14px 30px;border-radius:14px;background:var(--deep);color:#fff;font-size:.95rem;font-weight:950;box-shadow:0 5px 0 color-mix(in srgb,var(--deep),black 18%)}
+.simple-doors #projectGrid .project-card:hover{transform:translateY(-3px);box-shadow:0 23px 52px #173d3528}
+.simple-doors #projectGrid .project-card:hover .door-art-image{transform:scale(1.035)}
+.simple-doors #projectGrid .project-card:focus-visible{outline:4px solid var(--accent);outline-offset:4px}
+.simple-doors #projectGrid [data-world=library] .project-art{background:repeating-linear-gradient(0deg,transparent 0 30px,#a1814f18 31px 32px),linear-gradient(135deg,#f5eddd,#e6d5b5)}
+.simple-doors #projectGrid [data-world=cinema] .project-art{background:radial-gradient(ellipse at center,#fff2 0 25%,transparent 26%),linear-gradient(135deg,#322a2a,#87614f)}
+.simple-doors #projectGrid [data-world=wild] .project-art{background:radial-gradient(ellipse at 50% 100%,#6b984b66 0 28%,transparent 29%),linear-gradient(145deg,#e4f0dc,#b9d2ae)}
+.simple-doors #projectGrid [data-world=curiosity] .project-art{background:radial-gradient(circle at 22% 24%,#fff9 0 4%,transparent 5%),linear-gradient(135deg,#f4ecfa,#ddd0ed)}
+.simple-doors #projectGrid [data-world=hub] .project-art{background-image:linear-gradient(90deg,#4c91a018 1px,transparent 1px),linear-gradient(#4c91a018 1px,transparent 1px),linear-gradient(135deg,#eaf4f4,#c9e0e4);background-size:27px 27px,27px 27px,auto}
+.simple-doors #projectGrid [data-world=safety] .project-art{background-image:linear-gradient(45deg,transparent 48%,#5484ad18 49% 51%,transparent 52%),linear-gradient(135deg,#edf4fa,#cfdfed)}
+.simple-doors #projectGrid [data-world=channel] .project-art{background-image:radial-gradient(circle at center,#fff 0 4%,transparent 5%),linear-gradient(135deg,#f8e9e6,#e8bcb6)}
+.simple-doors #projectGrid [data-world=radio] .project-art{background-image:repeating-radial-gradient(ellipse at center,transparent 0 18px,#a77a3920 19px 20px),linear-gradient(135deg,#f7efdf,#e6d3a9)}
+.simple-doors #projectGrid [data-world=social] .project-art{background-image:radial-gradient(circle at 25% 25%,#fff9 0 8%,transparent 9%),linear-gradient(135deg,#f6edf6,#dfd0e9)}
+@media(max-width:680px){.simple-doors #projectGrid.doors-grid{grid-template-columns:minmax(0,1fr)!important;gap:20px}.simple-doors #projectGrid .project-card{grid-template-rows:clamp(205px,62vw,270px) auto!important;border-radius:21px}.simple-doors #projectGrid .project-content{padding:23px 20px 25px!important;gap:9px}.simple-doors #projectGrid .project-content b{font-size:2rem}.simple-doors #projectGrid .project-story{font-size:1rem;line-height:1.65}.simple-doors #projectGrid .project-link{width:100%;min-height:60px}}
+@media(max-width:370px){.simple-doors #projectGrid .project-card{grid-template-rows:195px auto!important}.simple-doors #projectGrid .project-content{padding:20px 17px 22px!important}}
+@media(prefers-reduced-motion:reduce){.simple-doors #projectGrid .project-card,.simple-doors #projectGrid .door-art-image{transition:none}}
