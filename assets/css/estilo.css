@@ -2163,3 +2163,25 @@ html{scroll-padding-top:90px}
 @media(min-width:1100px){.doors-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.world-illustration{aspect-ratio:16/9}}
 @media(max-width:760px){.simple-hero{min-height:580px;align-items:flex-end;padding:25px 16px 72px}.hero-landscape{object-position:58% center}.hero-shade{background:linear-gradient(0deg,#d9f0f4f2 0%,#d9f0f4bb 38%,#d9f0f422 75%,transparent 100%)}.simple-hero-content{max-width:520px;margin:0 auto;padding:22px 19px;border-radius:21px}.simple-hero h1{font-size:clamp(2.8rem,10vw,4.1rem)}.hero-caption{font-size:.54rem;bottom:14px;right:14px}.doors-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.world-card{border-radius:15px}.world-card-copy{grid-template-columns:1fr;gap:4px;padding:12px}.world-card-copy>b{font-size:1.08rem}.world-card-copy>small{font-size:.76rem}.world-enter{grid-column:1;grid-row:auto;justify-content:center;margin-top:7px;min-height:40px}.simple-doors{padding-left:12px;padding-right:12px}}
 @media(max-width:360px){.simple-brand{font-size:.69rem}.simple-about{padding:8px 10px;font-size:.73rem}.doors-grid{gap:8px}.world-card-copy{padding:10px}.world-card-copy>b{font-size:.96rem}.world-card-copy>small{font-size:.7rem}.world-enter{font-size:.62rem}}
+
+
+/* 3.23 · Cartografía del territorio: campo, relieve y señal */
+.simple-hero{isolation:isolate}
+.simple-hero:after{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.24;mix-blend-mode:soft-light;background-image:repeating-radial-gradient(ellipse at 78% 58%,transparent 0 30px,#fff 31px 32px,transparent 33px 52px),linear-gradient(90deg,transparent 0 49.8%,#fff7 50%,transparent 50.2%),linear-gradient(0deg,transparent 0 49.8%,#fff7 50%,transparent 50.2%);mask-image:linear-gradient(90deg,transparent 4%,#000 48%,#000 100%)}
+.simple-hero-content{position:relative;z-index:1}
+.hero-caption{z-index:1}
+.territory-ribbon{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1220px;margin:-1px auto 0;padding:17px clamp(16px,4vw,36px);overflow:hidden;border-top:1px solid #d4dfd0;border-bottom:1px solid #d4dfd0;background:linear-gradient(105deg,#e9efe2,#f5f1e4 52%,#e5eef0);color:#4d6958}
+.territory-ribbon:before{content:"";position:absolute;z-index:-1;inset:-60%;opacity:.32;background:repeating-radial-gradient(ellipse at 72% 52%,transparent 0 24px,#8cae9a 25px 26px,transparent 27px 43px)}
+.territory-ribbon-label{display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:.61rem;font-weight:900;letter-spacing:.16em}
+.territory-ribbon-label i{display:grid;place-items:center;width:29px;height:29px;border:1px solid #8eaa98;border-radius:50%;font-style:normal;font-size:1rem;color:#527b69}
+.territory-ribbon-path{display:flex;align-items:center;justify-content:center;gap:clamp(7px,2vw,20px);min-width:0;color:#74877a;font-size:.59rem;font-weight:850;letter-spacing:.13em}
+.territory-ribbon-path span{display:flex;align-items:center;gap:clamp(7px,2vw,20px);white-space:nowrap}
+.territory-ribbon-path span:after{content:"";width:clamp(12px,3vw,40px);height:1px;background:linear-gradient(90deg,#91ad99,#88b4c0)}
+.territory-ribbon-path span:last-child:after{display:none}
+.territory-ribbon-place{white-space:nowrap;color:#527b69;font-size:.58rem;font-weight:900;letter-spacing:.12em}
+.doors-intro{position:relative}
+.doors-intro:after{content:"";display:block;width:min(260px,55%);height:1px;margin:18px auto 0;background:linear-gradient(90deg,transparent,#91ae98 30%,#8eb6c0 70%,transparent)}
+.doors-grid .project-art{position:relative;isolation:isolate}
+.doors-grid .project-art:focus-within{outline:3px solid var(--door-accent);outline-offset:-4px}
+@media(max-width:680px){.territory-ribbon{align-items:flex-start;flex-direction:column;gap:9px;padding:13px 16px}.territory-ribbon-path{width:100%;justify-content:flex-start;flex-wrap:wrap;font-size:.53rem}.territory-ribbon-place{font-size:.54rem}.simple-hero:after{opacity:.16}}
+@media(max-width:360px){.territory-ribbon-path{gap:5px}.territory-ribbon-path span{gap:5px}.territory-ribbon-path span:after{width:9px}}
