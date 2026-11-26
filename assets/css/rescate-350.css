@@ -52,3 +52,29 @@
 }
 @media(hover:none){.project-card:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.project-card{transition:none}}
+
+
+/* 3.52 · retrato circular, discreto y cuidado */
+.simple-origin{padding:clamp(44px,7vw,96px) 14px;background:radial-gradient(ellipse at 50% 18%,#f4f0e3 0%,#e5ecdf 42%,#dce7dd 100%)}
+.origin-card{width:min(790px,100%);padding:clamp(26px,5vw,54px);text-align:center;border:1px solid #c8d1bd;border-top:4px solid #b99a69;border-radius:8px 26px 8px 26px;background:linear-gradient(160deg,#fffdf7 0%,#fbf9f0 72%,#f0f1e7 100%);box-shadow:0 22px 60px #173a321b}
+.origin-card>.simple-eyebrow{letter-spacing:.17em}
+.dedication-portrait{position:relative;isolation:isolate;width:clamp(104px,19vw,132px);height:clamp(104px,19vw,132px);margin:22px auto 20px;padding:5px;aspect-ratio:1;border:1px solid #b89b6b;border-radius:50%;background:linear-gradient(145deg,#fffdf6,#e8e0cd);box-shadow:0 0 0 5px #fffdf6,0 0 0 6px #d8c9a8,0 10px 28px #283e3025}
+.dedication-portrait .portrait-halo{position:absolute;z-index:-1;inset:-13px;border:1px solid #c7d3c0;border-radius:50%;box-shadow:0 0 0 5px #ffffff55}
+.dedication-portrait img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:1;object-fit:cover;object-position:center;border-radius:50%;background:#e8e7dc;image-rendering:auto}
+.dedication-portrait figcaption{position:absolute;top:calc(100% + 12px);left:50%;width:max-content;max-width:calc(100vw - 44px);transform:translateX(-50%);padding:0;border:0;text-align:center;color:#7a684e;font:italic .77rem Georgia,serif;white-space:nowrap}
+.dedication-portrait figcaption span{color:#9b8a70}
+.dedication-kicker{margin-top:48px;color:#9b7049;letter-spacing:.2em}
+.origin-card h2{margin:10px 0 8px;font-size:clamp(1.9rem,5vw,3.2rem);letter-spacing:-.025em}
+.dedication-relation{margin:0 auto 22px;color:#7b654b;font:italic 1rem Georgia,serif}
+.origin-card blockquote{max-width:620px;margin:22px auto 25px;padding:0 0 0 18px;border-left:2px solid #c7a775;text-align:left;color:#4d6254}
+.dedication-signature{display:inline-flex;flex-direction:column;align-items:center;gap:3px;margin:14px auto 0;padding:14px 28px 0;border-top:1px solid #d9dfd2;letter-spacing:.04em}
+.dedication-signature span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:680px){
+ .simple-origin{padding:42px 12px calc(48px + env(safe-area-inset-bottom))}
+ .origin-card{padding:25px 17px 27px;border-radius:7px 21px 7px 21px}
+ .dedication-portrait{width:112px;height:112px;margin:21px auto 18px}
+ .dedication-portrait .portrait-halo{inset:-10px}
+ .dedication-portrait figcaption{font-size:.73rem}
+ .dedication-kicker{margin-top:47px}
+ .origin-card blockquote{margin:19px auto 22px;padding-left:14px;font-size:1rem;line-height:1.7}
+}
