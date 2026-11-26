@@ -1266,3 +1266,326 @@ body{background:var(--uo-paper);color:var(--uo-ink)}
  .reveal{opacity:1;transform:none;transition:none}
  .doors-grid .project-card,.utility-button,.hero-down{transition:none}
 }
+
+
+
+/* ==========================================================
+   MULTIVERSO OCARINA · RURAL / DIGITAL
+   Evolución visual sin alterar la estructura ni el contenido.
+   ========================================================== */
+.simple-multiverse{
+ --earth:#8f7057;--clay:#bd8e6b;--field:#6e8b68;--field-deep:#385842;
+ --mist:#e7eee4;--ink-tech:#304b42;--gold:#d9bd83;--pixel:#9bb8a4;
+ background:#f5f3e9;
+}
+.simple-header{
+ background:rgba(247,246,237,.88);
+ border-bottom:1px solid #d9e1d4;
+ box-shadow:0 5px 24px rgba(47,69,50,.045);
+ backdrop-filter:blur(18px) saturate(125%);
+}
+.simple-brand{letter-spacing:.14em;font-size:.72rem;color:#425d49}
+.simple-logo,.footer-mark{
+ position:relative;
+ background:linear-gradient(145deg,#d8e5d3 0%,#b6cdb5 52%,#8eae94 100%);
+ color:#385b42;
+ box-shadow:inset 0 1px 0 #ffffffbd,0 5px 14px #4e694b20;
+}
+.simple-logo:after{
+ content:"";position:absolute;inset:5px;border:1px solid #ffffff9c;
+ border-radius:50% 50% 50% 8px;transform:rotate(-8deg);
+}
+.simple-about{font-weight:700}
+.simple-about span{display:inline-block;margin-left:5px;color:#a17f5e;transition:transform .2s}
+.simple-about:hover span{transform:translateY(3px)}
+.utility-button{border-color:#cbd8c8;background:#f7f7ed;color:#45634b}
+.utility-button:hover{background:#e6eee2}
+
+/* Hero: un paisaje vivo con cartografía y señales digitales */
+.simple-hero{
+ min-height:470px;
+ isolation:isolate;
+ background:
+  linear-gradient(180deg,rgba(248,247,235,.92) 0%,rgba(240,241,224,.76) 44%,rgba(219,232,216,.94) 100%),
+  repeating-linear-gradient(90deg,transparent 0 47px,rgba(85,119,88,.045) 48px 49px),
+  #edf0e2;
+}
+.simple-hero:before{
+ content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.35;
+ background:
+  radial-gradient(ellipse at 12% 70%,transparent 0 21%,#a7b99b 21.1% 21.25%,transparent 21.4% 25%,#a7b99b 25.1% 25.25%,transparent 25.4%),
+  radial-gradient(ellipse at 90% 22%,transparent 0 17%,#b5a58a 17.1% 17.25%,transparent 17.4% 21%,#b5a58a 21.1% 21.25%,transparent 21.4%);
+ mask-image:linear-gradient(90deg,#000,transparent 55%,#000);
+}
+.simple-hero:after{
+ content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.17;
+ background-image:linear-gradient(rgba(70,103,76,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(70,103,76,.18) 1px,transparent 1px);
+ background-size:42px 42px;
+ mask-image:linear-gradient(180deg,transparent 5%,#000 75%);
+}
+.simple-hero-content{z-index:3;max-width:820px}
+.simple-eyebrow{
+ color:#6b806b;font-weight:800;letter-spacing:.2em;font-size:.62rem;
+}
+.simple-hero h1{
+ position:relative;display:inline-block;
+ color:#344d3a;letter-spacing:-.055em;
+ text-shadow:0 3px 0 #ffffff7d,0 14px 35px #718c6c21;
+}
+.simple-hero h1:after{
+ content:"";position:absolute;left:4%;right:7%;bottom:-12px;height:2px;
+ background:linear-gradient(90deg,#a67c5e,#d3bd8e 42%,transparent);
+ transform:rotate(-1.2deg);transform-origin:left;
+}
+.simple-hero h1 em{color:#718c6b;text-shadow:0 2px 0 #ffffff9c}
+.simple-hero-content>p{color:#5b6e5b;font-weight:600}
+.background-sun{
+ width:220px;height:220px;right:15%;top:26px;
+ background:radial-gradient(circle at 35% 35%,#f8e8c5,#e6d3a7 62%,#d2c294);
+ opacity:.78;
+ box-shadow:0 0 0 1px #fff8,0 0 0 13px #e4d5ad3b,0 0 0 34px #e4d5ad1c,0 0 65px #d5bd8c55;
+}
+.background-sun:after{
+ content:"";position:absolute;inset:12px;border:1px solid #fff9;border-radius:50%;
+}
+.background-hill{filter:drop-shadow(0 -9px 14px #728c6a22)}
+.hill-one{
+ background:linear-gradient(165deg,#b9cbb0,#91ad8c 58%,#789875);
+ clip-path:ellipse(70% 55% at 50% 100%);
+}
+.hill-two{
+ background:linear-gradient(195deg,#d7d6b7,#b6c59c 62%,#92ab87);
+ clip-path:ellipse(70% 58% at 50% 100%);
+}
+.hero-orbit{
+ border:1px solid #829c7d66;
+ box-shadow:0 0 0 7px #ffffff14,inset 0 0 18px #ffffff20;
+}
+.hero-orbit-two{border-color:#b08d6b55}
+.hero-particles i{
+ width:4px;height:4px;background:#b18d69;
+ box-shadow:0 0 0 3px #b18d6920,0 0 12px #b18d69;
+}
+.sound-button{
+ border-color:#b7c8b1;
+ background:linear-gradient(135deg,#fffdf4ed,#e7efe3ed);
+ box-shadow:0 7px 20px #3e604318,inset 0 1px #fff;
+}
+.sound-icon{color:#8b7455}
+.sound-note{color:#7d8978}
+
+/* Las puertas como pequeños mundos: material orgánico + interfaz */
+.simple-doors{
+ position:relative;isolation:isolate;
+ background:
+  radial-gradient(ellipse at 2% 8%,#e9eddf 0,transparent 34%),
+  radial-gradient(ellipse at 98% 92%,#e8e4d7 0,transparent 31%),
+  #f8f7ef;
+}
+.simple-doors:before{
+ content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.3;
+ background:repeating-linear-gradient(135deg,transparent 0 21px,#d4ddcf 22px,transparent 23px 44px);
+ mask-image:linear-gradient(90deg,#000,transparent 30%,transparent 70%,#000);
+}
+.doors-intro h2{color:#354d3b;letter-spacing:-.035em}
+.doors-intro>p{color:#718070}
+.doors-grid .project-card{
+ overflow:hidden;
+ background:linear-gradient(155deg,#fffefa 0%,#fbfaf4 100%);
+ border:1px solid #dce5d8;
+ border-radius:17px 17px 24px 17px;
+ box-shadow:0 8px 22px #3e5d3b0b,0 1px 2px #3e5d3b0a;
+}
+.doors-grid .project-card:before{
+ content:"";position:absolute;z-index:2;left:0;top:0;bottom:0;width:3px;
+ background:linear-gradient(180deg,var(--art-line),transparent 85%);
+ opacity:.85;transition:width .25s;
+}
+.doors-grid .project-card:hover:before{width:5px}
+.doors-grid .project-art{
+ position:relative;overflow:hidden;
+ background:
+  radial-gradient(ellipse at 50% 110%,#ffffffa6,transparent 62%),
+  linear-gradient(140deg,var(--art-bg),#f8f5e9);
+ border-bottom:1px solid #dce4d7;
+}
+.doors-grid .project-art:before{
+ width:175px;height:175px;border:1px solid var(--art-line);
+ border-radius:44% 56% 48% 52%;
+ background:
+  repeating-radial-gradient(ellipse at 50% 50%,transparent 0 10px,var(--art-line) 10.5px 11px,transparent 11.5px 19px);
+ opacity:.32;transform:rotate(-18deg);
+}
+.doors-grid .project-art:after{
+ width:118px;height:118px;border:1px dashed var(--art-ink);
+ border-radius:50%;opacity:.2;
+}
+.doors-grid .art-symbol{
+ position:relative;z-index:2;
+ width:61px;height:61px;border:1px solid #ffffffd9;
+ border-radius:19px 19px 19px 5px;
+ background:linear-gradient(145deg,#fffefaed,#ffffff9c);
+ color:var(--art-ink);
+ font-size:1.85rem;
+ box-shadow:0 8px 22px #314a331a,inset 0 1px #fff;
+ transform:rotate(-4deg);
+}
+.doors-grid .art-symbol:after{
+ content:"";position:absolute;inset:5px;border:1px solid var(--art-line);
+ border-radius:14px 14px 14px 4px;opacity:.5;
+}
+.doors-grid .art-dots{
+ position:absolute;inset:0;opacity:.42;
+ background-image:radial-gradient(var(--art-ink) .8px,transparent .8px);
+ background-size:13px 13px;
+ mask-image:radial-gradient(ellipse at 50% 50%,#000,transparent 70%);
+}
+.doors-grid .art-glow{
+ width:68px;height:68px;background:#fff;opacity:.55;filter:blur(23px);
+}
+.doors-grid .project-content{padding:17px 18px 18px}
+.doors-grid .project-number{
+ color:#9a896e;letter-spacing:.17em;font-size:.57rem;
+}
+.doors-grid .project-content h3{
+ color:#354d3c;letter-spacing:-.025em;
+}
+.doors-grid .project-content p{color:#6e7d70;line-height:1.55}
+.doors-grid .project-link{
+ min-height:44px;border:1px solid #dce6d8;
+ background:linear-gradient(100deg,#edf3e9,#f5f4e9);
+ color:#47634a;font-weight:800;letter-spacing:.055em;font-size:.7rem;
+}
+.doors-grid .project-link:hover{
+ background:linear-gradient(100deg,#49694d,#35533e);
+ border-color:#49694d;
+ box-shadow:0 6px 14px #3d62451f;
+}
+.doors-footnote{color:#839080}
+.doors-footnote span{color:#a98662}
+
+/* El origen: tono de papel, textura y firma */
+.simple-origin{
+ background:
+  radial-gradient(ellipse at 7% 18%,#f7f4e8 0,transparent 35%),
+  linear-gradient(115deg,#e5ecdf,#dce8dc);
+ border-top:1px solid #d4dfd1;
+ border-bottom:1px solid #d4dfd1;
+}
+.simple-origin:after{
+ content:"";position:absolute;inset:0;pointer-events:none;opacity:.17;
+ background:repeating-linear-gradient(0deg,transparent 0 5px,#8b9e83 6px,transparent 7px 12px);
+ mask-image:linear-gradient(90deg,transparent,#000 50%,transparent);
+}
+.origin-emblem{
+ background:linear-gradient(145deg,#f7f4e8,#cadcc8);
+ border:1px solid #afc5aa;
+ box-shadow:0 12px 28px #38543c17,inset 0 1px #fff;
+}
+.origin-emblem span{color:#47664b}
+.simple-origin-copy h2{color:#334d39}
+.simple-origin-copy>p{color:#586b59}
+.simple-mission{border-top:1px solid #c7d7c3}
+.simple-mission p{color:#5d705d}
+.simple-mission b{color:#8a7556;letter-spacing:.12em;font-size:.65rem}
+
+/* Pie: una firma discreta y coherente */
+.simple-footer{
+ background:#f2f1e7;
+ border-top:1px solid #e0e4d9;
+}
+.simple-footer p{color:#788577}
+.simple-footer p b{color:#465e48;letter-spacing:.12em}
+.simple-footer .footer-mark{
+ background:linear-gradient(145deg,#dce8d6,#a9c5a9);
+}
+.simple-footer>a{
+ border:1px solid #d2ddce;
+ background:#f9f8ef;color:#506b50;
+}
+
+/* Modo nocturno: bosque, tinta y pequeñas luces */
+.night-mode .simple-header{
+ background:rgba(25,39,29,.91);border-color:#3a4d3a;
+}
+.night-mode .simple-brand{color:#d8e5d3}
+.night-mode .simple-logo,.night-mode .footer-mark{
+ background:linear-gradient(145deg,#506d50,#304b38);color:#edf2df;
+}
+.night-mode .simple-hero{
+ background:
+  radial-gradient(ellipse at 50% 5%,#435640 0%,transparent 47%),
+  linear-gradient(180deg,#26382b,#1c3024);
+}
+.night-mode .simple-hero:before{opacity:.2}
+.night-mode .simple-hero:after{opacity:.12}
+.night-mode .simple-hero h1{color:#edf1df}
+.night-mode .simple-hero h1 em{color:#b8cba8}
+.night-mode .simple-hero h1:after{background:linear-gradient(90deg,#c39b72,#d5c08e,transparent)}
+.night-mode .background-sun{background:radial-gradient(circle at 35% 35%,#d8c18d,#a18a61 65%,#776d4d);opacity:.42}
+.night-mode .background-hill{opacity:.3}
+.night-mode .hero-orbit{border-color:#c6d8b044}
+.night-mode .hero-orbit-two{border-color:#c6a77a44}
+.night-mode .simple-doors{
+ background:
+  radial-gradient(ellipse at 2% 8%,#293a2d 0,transparent 34%),
+  radial-gradient(ellipse at 98% 92%,#26372c 0,transparent 31%),#19271e;
+}
+.night-mode .simple-doors:before{opacity:.1}
+.night-mode .doors-intro h2{color:#edf1e5}
+.night-mode .doors-grid .project-card{
+ background:linear-gradient(155deg,#293b2e,#213227);
+ border-color:#405542;
+}
+.night-mode .doors-grid .project-art{
+ border-color:#405542;
+ background:radial-gradient(ellipse at 50% 110%,#ffffff13,transparent 62%),linear-gradient(140deg,#344a37,#2b3d30);
+}
+.night-mode .doors-grid .art-symbol{
+ background:linear-gradient(145deg,#526d52,#344d3a);
+ color:#f0f1e3;border-color:#a8c0a177;
+}
+.night-mode .doors-grid .project-content h3{color:#edf1e5}
+.night-mode .doors-grid .project-content p{color:#c0cdbd}
+.night-mode .doors-grid .project-number{color:#c1b08c}
+.night-mode .doors-grid .project-link{
+ background:#354d38;border-color:#526b50;color:#eff2e6;
+}
+.night-mode .doors-grid .project-link:hover{background:#d9e6d2;color:#263d2d}
+.night-mode .simple-origin{
+ background:radial-gradient(ellipse at 7% 18%,#304532 0,transparent 35%),linear-gradient(115deg,#26392b,#203328);
+ border-color:#3c523e;
+}
+.night-mode .simple-origin-copy h2,.night-mode .simple-origin-copy>p,.night-mode .simple-mission p{color:#e3ebdf}
+.night-mode .simple-mission{border-color:#50634d}
+.night-mode .simple-mission b{color:#d2b88b}
+.night-mode .simple-footer{background:#17251c;border-color:#344837}
+.night-mode .simple-footer p{color:#b9c7b6}
+.night-mode .simple-footer p b{color:#e1eadb}
+.night-mode .simple-footer>a{background:#2c4131;border-color:#52674d;color:#e7eee1}
+
+/* Adaptación fina */
+@media(min-width:1100px){
+ .simple-hero{min-height:510px}
+ .simple-doors{padding-top:68px;padding-bottom:70px}
+ .doors-grid{gap:20px}
+ .doors-grid .project-art{height:125px;min-height:125px}
+ .doors-grid .project-content{padding:20px}
+}
+@media(max-width:700px){
+ .simple-hero{min-height:405px}
+ .background-sun{right:2%;top:27px;width:138px;height:138px}
+ .simple-hero:before{opacity:.22}
+ .simple-hero:after{background-size:30px 30px}
+ .simple-hero h1:after{bottom:-9px}
+ .doors-grid .project-art:before{width:125px;height:125px}
+ .doors-grid .project-art:after{width:91px;height:91px}
+ .doors-grid .art-symbol{width:52px;height:52px;border-radius:16px 16px 16px 4px}
+ .simple-origin:after{opacity:.1}
+}
+@media(max-width:370px){
+ .simple-hero{min-height:385px}
+ .simple-eyebrow{font-size:.55rem;letter-spacing:.13em}
+ .doors-grid .project-art{height:80px;min-height:80px}
+ .doors-grid .art-symbol{width:47px;height:47px;font-size:1.55rem}
+}
