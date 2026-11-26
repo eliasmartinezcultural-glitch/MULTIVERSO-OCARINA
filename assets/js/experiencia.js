@@ -1,27 +1,99 @@
-(()=>{
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const projects=window.OCARINA_PROJECTS||[];
-const grid=$("#projectGrid"),search=$("#projectSearch"),empty=$("#emptyState"),count=$("#projectCount");
-const palettes={sage:["#e4eee2","#d4e3d2","#b8cdb8","#66836c"],peach:["#f3e5dc","#ebd2c4","#d7b6a6","#9d766a"],butter:["#f2eedc","#e9e1bd","#d5c99e","#8e8961"],lilac:["#eee9f4","#ded5eb","#c7b9d9","#88769f"],blue:["#e5eef0","#d4e4e8","#b6d0d5","#688b94"],rose:["#f2e5e4","#e8d2d1","#d8b8b8","#9c777b"]};
-const categories={memoria:["memoria"],audiovisual:["audiovisual"],naturaleza:["naturaleza"],juego:["juego"],comunidad:["comunidad"]};
-let activeFilter="todos";
-function categoryFor(p){const s=(p.kind+" "+p.name+" "+p.description).toLowerCase();if(/librito|memoria|biblioteca|document/.test(s))return"memoria";if(/tv|video|histor/.test(s))return"audiovisual";if(/wild|naturaleza|fauna|flora/.test(s))return"naturaleza";if(/sabías|juego|curios/.test(s))return"juego";return"comunidad"}
-function render(){
- const term=(search?.value||"").trim().toLocaleLowerCase("es");
- const filtered=projects.filter(p=>(activeFilter==="todos"||categoryFor(p)===activeFilter)&&(!term||(p.name+" "+p.kind+" "+p.description).toLocaleLowerCase("es").includes(term)));
- if(grid)grid.innerHTML=filtered.map(p=>{const c=palettes[p.palette]||palettes.sage;return `<article class="project-card" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]}"><div class="project-art" aria-hidden="true"><span class="art-orbit"></span><span class="art-symbol">${p.symbol}</span><span class="art-dots"></span></div><div class="project-content"><div class="project-meta"><span>${p.kind}</span><span>${p.number} / 06</span></div><h3>${p.name}</h3><p>${p.description}</p><a class="project-link" href="${p.url}" target="_blank" rel="noopener noreferrer"><span>${p.action}</span><span>↗</span></a></div></article>`}).join("");
- if(empty)empty.hidden=filtered.length>0;
- if(count)count.textContent=String(filtered.length).padStart(2,"0");
+(()=> {
+"use strict";
+const projects = Array.isArray(window.OCARINA_PROJECTS) ? window.OCARINA_PROJECTS : [];
+const grid = document.getElementById("projectGrid");
+const palettes = {
+  sage:["#e7efe3","#c8dbc8","#8ca88e","#46664c"],
+  peach:["#f5e8df","#e8cfc0","#c89f8d","#916b5d"],
+  butter:["#f3efd9","#e5dcae","#c8bd83","#81794d"],
+  lilac:["#eee9f4","#d9cde8","#b9a9cf","#78668f"],
+  blue:["#e6eff1","#d1e3e6","#a9c9cf","#5e828a"],
+  rose:["#f4e8e6","#e7d0ce","#cda9a8","#8b666a"]
+};
+const safe = value => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+function renderProjects(){
+  if(!grid) return;
+  if(!projects.length){grid.innerHTML='<p class="loading">Las puertas estarán disponibles pronto.</p>';return;}
+  grid.innerHTML=projects.map((p,index)=>{
+    const c=palettes[p.palette]||palettes.sage;
+    const url=safe(p.url);
+    return `<article class="project-card" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]}" style="--card-index:${index}">
+      <div class="project-art" aria-hidden="true">
+        <span class="art-orbit"></span><span class="art-symbol">${safe(p.symbol)}</span>
+        <span class="art-dots"></span><span class="art-glow"></span>
+      </div>
+      <div class="project-content">
+        <span class="project-number">PUERTA ${safe(p.number)}</span>
+        <h3>${safe(p.name)}</h3><p>${safe(p.description)}</p>
+        <a class="project-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="${safe(p.action)}: ${safe(p.name)}">
+          <span>${safe(p.action)}</span><span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </article>`;
+  }).join("");
 }
-render();
-if(search)search.addEventListener("input",render);
-$$(".filter-chip").forEach(btn=>btn.addEventListener("click",()=>{activeFilter=btn.dataset.filter;$$(".filter-chip").forEach(b=>{const on=b===btn;b.classList.toggle("active",on);b.setAttribute("aria-pressed",String(on))});render()}));
-document.addEventListener("keydown",e=>{if(e.key==="/"&&!/input|textarea/i.test(document.activeElement.tagName)){e.preventDefault();search?.focus()}if(e.key==="Escape"&&document.activeElement===search){search.value="";render();search.blur()}});
-const menu=$("#menuToggle"),nav=$("#mainNav");
-function closeMenu(){if(!menu||!nav)return;nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.setAttribute("aria-label","Abrir menú")}
-if(menu&&nav){menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));menu.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú")});$$(".nav a").forEach(a=>a.addEventListener("click",closeMenu));document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});window.addEventListener("resize",()=>{if(innerWidth>700)closeMenu()})}
-const back=$("#backTop");window.addEventListener("scroll",()=>back?.classList.toggle("visible",scrollY>420),{passive:true});back?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-const share=$("#shareButton");share?.addEventListener("click",async()=>{const data={title:document.title,text:"Descubrí Universo Ocarina: raíces rurales, mente creativa y futuro digital.",url:location.href};try{if(navigator.share)await navigator.share(data);else if(navigator.clipboard&&isSecureContext){await navigator.clipboard.writeText(location.href);share.textContent="✓ Enlace copiado";setTimeout(()=>share.textContent="Compartir ↗",2200)}else prompt("Copiá este enlace:",location.href)}catch(e){if(e.name!=="AbortError")prompt("Copiá este enlace:",location.href)}});
-const year=$("#currentYear");if(year)year.textContent=new Date().getFullYear();
-if("IntersectionObserver"in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("is-visible");obs.unobserve(e.target)}}),{threshold:.1});$$(".founder-layout,.connect-heading,.connect-card,.project-card,.catalog-footnote").forEach(el=>{el.classList.add("reveal");obs.observe(el)})}
+renderProjects();
+
+const themeButton=document.getElementById("themeToggle");
+themeButton?.addEventListener("click",()=>{
+  const active=document.body.classList.toggle("night-mode");
+  themeButton.setAttribute("aria-pressed",String(active));
+  themeButton.setAttribute("aria-label",active?"Activar modo claro":"Activar modo nocturno");
+  const label=themeButton.querySelector(".utility-label");
+  if(label) label.textContent=active?"Modo claro":"Modo noche";
+  const icon=themeButton.querySelector("[aria-hidden='true']");
+  if(icon) icon.textContent=active?"☀":"☾";
+});
+
+const soundButton=document.getElementById("soundButton");
+const soundLabel=document.getElementById("soundLabel");
+const soundNote=document.getElementById("soundNote");
+let audioContext=null;
+function playOcarinaSound(){
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;
+  if(!AudioCtx){if(soundNote)soundNote.textContent="Tu navegador no permite reproducir este sonido.";return;}
+  try{
+    audioContext ||= new AudioCtx();
+    if(audioContext.state==="suspended") audioContext.resume();
+    const now=audioContext.currentTime;
+    const master=audioContext.createGain();
+    master.gain.setValueAtTime(0.0001,now);
+    master.gain.exponentialRampToValueAtTime(0.11,now+0.12);
+    master.gain.exponentialRampToValueAtTime(0.0001,now+3.7);
+    master.connect(audioContext.destination);
+    const notes=[392,523.25,659.25,523.25,440];
+    notes.forEach((frequency,i)=>{
+      const osc=audioContext.createOscillator();
+      const envelope=audioContext.createGain();
+      const start=now+0.12+i*0.58;
+      osc.type="sine";
+      osc.frequency.setValueAtTime(frequency,start);
+      envelope.gain.setValueAtTime(0.0001,start);
+      envelope.gain.exponentialRampToValueAtTime(0.34,start+0.045);
+      envelope.gain.exponentialRampToValueAtTime(0.0001,start+0.52);
+      osc.connect(envelope);envelope.connect(master);
+      osc.start(start);osc.stop(start+0.55);
+    });
+    if(soundLabel)soundLabel.textContent="Reproducir otra vez";
+    if(soundNote)soundNote.textContent="Un sonido original de Ocarina. Volvé a escucharlo cuando quieras.";
+    soundButton?.classList.add("is-playing");
+    window.setTimeout(()=>soundButton?.classList.remove("is-playing"),2300);
+  }catch(error){
+    if(soundNote)soundNote.textContent="No se pudo iniciar el sonido. Probá nuevamente.";
+  }
+}
+soundButton?.addEventListener("click",playOcarinaSound);
+
+if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target);}
+    });
+  },{threshold:0.12});
+  document.querySelectorAll(".project-card,.simple-origin-copy,.origin-emblem,.doors-intro").forEach((el,index)=>{
+    el.style.setProperty("--reveal-delay",Math.min(index*55,330)+"ms");
+    el.classList.add("reveal");
+    observer.observe(el);
+  });
+}
 })();
