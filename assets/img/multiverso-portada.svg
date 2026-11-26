@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Terruño patagónico conectado</title><desc id="desc">Chacras, río, álamos y montañas bajo un cielo azul con un satélite y líneas de conexión.</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0d4774"/><stop offset=".48" stop-color="#4e9bc0"/><stop offset="1" stop-color="#e5d9b9"/></linearGradient>
+ <linearGradient id="sunset" x2="0" y2="1"><stop stop-color="#fff4cf" stop-opacity=".95"/><stop offset="1" stop-color="#f3d49a" stop-opacity="0"/></linearGradient>
+ <linearGradient id="river" x2="1" y2="1"><stop stop-color="#a7d8e4"/><stop offset=".55" stop-color="#4c9ab7"/><stop offset="1" stop-color="#246b91"/></linearGradient>
+ <linearGradient id="field" x2="0" y2="1"><stop stop-color="#9caf7e"/><stop offset="1" stop-color="#526e55"/></linearGradient>
+ <linearGradient id="bluefield" x2="0" y2="1"><stop stop-color="#658d83"/><stop offset="1" stop-color="#345f62"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+ <pattern id="rows" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(-14)"><path d="M0 0V34" stroke="#e5d8ad" stroke-opacity=".25" stroke-width="5"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="360" cy="390" r="220" fill="url(#sunset)"/><circle cx="360" cy="390" r="72" fill="#ffe9b5" opacity=".88"/>
+<g fill="none" stroke="#b9e5f4" stroke-opacity=".38"><path d="M-30 210Q390 -70 830 120T1640 105"/><path d="M-20 270Q410 20 840 200T1640 175"/><path d="M60 0Q520 250 1040 20T1600 85" stroke-dasharray="5 13"/></g>
+<g fill="#d9eff4" opacity=".75"><circle cx="210" cy="145" r="3"/><circle cx="570" cy="92" r="4"/><circle cx="920" cy="175" r="3"/><circle cx="1240" cy="94" r="4"/><circle cx="1450" cy="260" r="3"/></g>
+<!-- distant cordillera -->
+<path d="M0 540 150 405 250 475 390 340 500 470 650 365 790 490 950 335 1090 475 1240 350 1380 465 1510 385 1600 455V700H0Z" fill="#6e9ab0" opacity=".9"/>
+<path d="m150 405 55 60 45 10-55-2-45-34-35 45zM390 340l66 83 45 47-58-26-53-58-42 40zM950 335l70 85 70 55-77-32-65-65-48 43zM1240 350l65 70 75 45-76-25-64-52-38 34z" fill="#e8edf0" opacity=".9"/>
+<path d="M0 560Q280 470 540 560T1060 545T1600 530V900H0Z" fill="#b5a47f"/>
+<path d="M0 620Q280 530 560 620T1120 590T1600 605V900H0Z" fill="url(#field)"/>
+<path d="M0 675Q330 585 670 675T1320 655T1600 665V900H0Z" fill="url(#bluefield)"/>
+<path d="M0 620Q280 530 560 620T1120 590T1600 605V900H0Z" fill="url(#rows)" opacity=".7"/>
+<!-- cultivated rows -->
+<g fill="none" stroke="#d6c99e" stroke-width="7" opacity=".5"><path d="M-50 760Q300 635 650 760T1350 745T1660 750"/><path d="M-40 805Q300 685 650 805T1350 790T1660 795"/><path d="M-30 850Q300 735 650 850T1350 835T1660 840"/></g>
+<!-- irrigation river -->
+<path d="M970 900Q1040 790 950 725T1015 620Q1110 565 1210 620T1350 690Q1450 730 1600 650L1600 740Q1460 820 1350 760T1190 690Q1090 650 1040 730T1090 900Z" fill="url(#river)" stroke="#d4eef0" stroke-width="7"/>
+<path d="M1000 900Q1070 790 990 730T1050 635" fill="none" stroke="#e4f6f5" stroke-width="5" opacity=".6"/>
+<!-- poplar line -->
+<g fill="#315d4d"><path d="M1280 660l25-150 25 150zM1320 665l22-190 22 190zM1370 670l24-160 24 160zM1430 670l26-205 26 205zM1490 675l24-165 24 165z"/></g>
+<g fill="#739b78"><path d="M1290 595l15-100 15 100zM1330 600l12-120 12 120zM1380 610l14-105 14 105zM1440 600l16-125 16 125zM1500 610l14-110 14 110z"/></g>
+<!-- farmhouse -->
+<g transform="translate(250 590)"><path d="M0 85 90 15 180 85V185H0Z" fill="#e8dfc8"/><path d="m-12 88 102-82 103 82" fill="none" stroke="#725f4b" stroke-width="18" stroke-linejoin="round"/><rect x="68" y="112" width="45" height="73" fill="#8a735a"/><rect x="20" y="105" width="32" height="34" fill="#80b4c7"/><rect x="130" y="105" width="32" height="34" fill="#80b4c7"/></g>
+<!-- windmill -->
+<g transform="translate(180 390)" stroke="#36586a" stroke-width="9" stroke-linecap="round"><path d="M0 0 10 215M0 0l-80-76M0 0l87-75M0 0l-100 10M0 0l95 25" fill="none"/><circle r="14" fill="#d9e9e8" stroke-width="5"/></g>
+<!-- satellite signal arc -->
+<g fill="none" stroke="#b9e9fa" stroke-width="4" opacity=".85"><path d="M950 210Q1210 -15 1480 180" stroke-dasharray="9 14"/><path d="M870 290Q1210 30 1550 270" stroke-dasharray="3 14"/></g>
+<g fill="#c5efff"><circle cx="1040" cy="153" r="7"/><circle cx="1260" cy="100" r="7"/><circle cx="1470" cy="190" r="7"/></g>
+<!-- satellite -->
+<g transform="translate(1320 190) rotate(-18)">
+ <path d="M-115-28h-82v56h82zM115-28h82v56h-82z" fill="#2d78a5" stroke="#b8e4f4" stroke-width="5"/>
+ <path d="M-185-28v56m18-56v56m18-56v56m18-56v56M132-28v56m18-56v56m18-56v56m18-56v56" stroke="#c5eaf5" stroke-width="3"/>
+ <rect x="-100" y="-43" width="200" height="86" rx="20" fill="#d6e4e4" stroke="#f7f0d9" stroke-width="6"/>
+ <rect x="-48" y="-35" width="96" height="70" rx="12" fill="#4d8db0"/>
+ <path d="M0-43V-88m-18-10h36l-18 25z" fill="#d7e9ec" stroke="#e9f4f3" stroke-width="5"/>
+ <path d="M100 0q75 0 110 60" fill="none" stroke="#d9f5ff" stroke-width="7"/>
+</g>
+<!-- satellite link to village -->
+<path d="M1320 255Q1150 420 920 505T520 635" fill="none" stroke="#b9e9fa" stroke-width="3" stroke-dasharray="8 13" opacity=".8"/>
+<g fill="#d9f4ff" stroke="#2b7195" stroke-width="5"><circle cx="920" cy="505" r="10"/><circle cx="520" cy="635" r="10"/></g>
+<!-- small native shrubs -->
+<g fill="#527454"><circle cx="80" cy="690" r="32"/><circle cx="115" cy="675" r="24"/><circle cx="1530" cy="690" r="35"/><circle cx="1560" cy="675" r="24"/></g>
+<rect width="1600" height="900" fill="none" stroke="#e4f1ee" stroke-opacity=".35" stroke-width="3"/>
+</svg>

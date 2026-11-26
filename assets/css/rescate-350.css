@@ -238,3 +238,38 @@ button:focus-visible,a:focus-visible,summary:focus-visible,.project-card:focus-v
 @media(prefers-reduced-motion:reduce){
   .project-card,.hero-primary{transition:none!important}
 }
+
+
+/* 3.54 · portada ilustrada: terruño + conexión satelital */
+.simple-hero{
+  display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;
+  min-height:0;padding:0;gap:0;overflow:hidden;
+  background:linear-gradient(180deg,#dcecf0 0%,#f3efe4 100%);
+}
+.simple-hero .hero-landscape{
+  position:relative;inset:auto;z-index:0;display:block;width:100%;height:auto;
+  aspect-ratio:16/9;object-fit:cover;object-position:center;
+  background:#28648a;
+}
+.simple-hero .simple-hero-content{
+  width:min(100%,1180px);margin:0 auto;padding:clamp(18px,3vw,30px) clamp(18px,5vw,64px);
+  border:0;border-top:4px solid #b99668;border-radius:0;
+  background:linear-gradient(100deg,#f9f6ed 0%,#edf4f1 58%,#e5f0f3 100%);
+  color:#294b5d;box-shadow:0 8px 24px rgba(31,73,91,.08);
+}
+.simple-hero .simple-eyebrow{color:#557d87;font-size:.72rem;letter-spacing:.12em}
+.simple-hero h1{
+  margin:5px 0 7px;font-family:Georgia,serif;
+  font-size:clamp(1.55rem,3.3vw,2.5rem);line-height:1.12;letter-spacing:-.025em;
+  color:#294f63;
+}
+.simple-hero h1 em{color:#3f819c;font-style:italic}
+.simple-hero .simple-hero-content p{
+  max-width:62ch;margin:0;color:#5c7077;font-size:clamp(.98rem,1.4vw,1.12rem);line-height:1.55;
+}
+@media(max-width:680px){
+  .simple-hero .hero-landscape{aspect-ratio:1.18/1;object-fit:cover;object-position:center}
+  .simple-hero .simple-hero-content{padding:17px 18px 20px}
+  .simple-hero h1{font-size:1.55rem}
+  .simple-hero .simple-eyebrow{font-size:.63rem}
+}
