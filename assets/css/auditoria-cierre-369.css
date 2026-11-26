@@ -1,0 +1,24 @@
+/* MULTIVERSO OCARINA 3.69 · cierre, WhatsApp fijo y accesibilidad de envío */
+.portal-whatsapp-button{
+ display:inline-flex;align-items:center;justify-content:center;gap:7px;
+ min-height:44px;padding:9px 13px;border:1px solid #8eae91;border-radius:12px;
+ background:linear-gradient(135deg,#eaf4e7,#dcebdc);color:#214c40;
+ font-size:.78rem;font-weight:900;line-height:1.2;text-decoration:none;white-space:nowrap;
+ box-shadow:0 3px 10px #173d3510;transition:transform .18s,background .18s,box-shadow .18s;
+}
+.portal-whatsapp-button:hover{transform:translateY(-1px);background:#d8ead8;box-shadow:0 6px 16px #173d3520}
+.portal-whatsapp-button:focus-visible{outline:3px solid #3f7953;outline-offset:3px}
+.portal-share-status{
+ position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;
+ overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important
+}
+@media(max-width:680px){
+ .simple-header{align-items:center;flex-wrap:wrap}
+ .header-actions{width:100%;justify-content:space-between;flex-wrap:wrap;gap:6px}
+ .portal-whatsapp-button{min-height:44px;padding:8px 11px;font-size:.72rem}
+}
+@media(max-width:380px){
+ .header-actions{gap:5px}
+ .header-actions .simple-about,.header-actions .portal-share-button,.header-actions .accessibility-menu summary,.portal-whatsapp-button{min-height:42px;padding:7px 9px;font-size:.68rem}
+}
+@media(prefers-reduced-motion:reduce){.portal-whatsapp-button{transition:none}}

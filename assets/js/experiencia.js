@@ -33,7 +33,7 @@ const doorSearch=document.getElementById("doorSearch");
 const doorSearchClear=document.getElementById("doorSearchClear");
 const doorSearchStatus=document.getElementById("doorSearchStatus");
 const doorCards=[...document.querySelectorAll("#projectGrid .project-card")];
-const normalizeText=value=>value.normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLocaleLowerCase("es");
+const normalizeText=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("es");
 const filterDoors=()=>{
  const query=normalizeText(doorSearch?.value.trim()||"");
  let visible=0;
@@ -56,7 +56,6 @@ async function copyText(value){
  let copied=false;try{copied=document.execCommand("copy");}catch(error){}
  field.remove();return copied;
 }
-document.getElementById("whatsappPortal")?.addEventListener("click",event=>{event.currentTarget.href="https://wa.me/?text="+encodeURIComponent("Te invito a recorrer el Multiverso Ocarina: nueve mundos de historias, naturaleza, cultura y comunidad. "+portalUrl());});
 shareButton?.addEventListener("click",async()=>{
  const url=portalUrl();
  const payload={title:"Multiverso Ocarina",text:"Un mundo de muchos mundos. Explorá las nueve puertas de Ocarina.",url};
