@@ -247,3 +247,38 @@
  .world-room[open]{animation:none!important}
  .video-choice,.room-complete-link,.related-world{transition:none!important}
 }
+
+
+/* 3.41 · arquitectura editorial: Multiverso como puerta, proyecto original como destino */
+.room-context{
+  position:relative;margin:0 0 16px;padding:17px 20px 16px;overflow:hidden;
+  border:1px solid color-mix(in srgb,var(--room-accent),transparent 68%);
+  border-radius:17px;
+  background:linear-gradient(112deg,color-mix(in srgb,var(--room-accent),var(--room-paper) 91%),var(--room-paper));
+}
+.room-context:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--room-accent)}
+.room-context-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.room-context-head>span{color:var(--room-accent);font-size:.65rem;font-weight:900;letter-spacing:.12em}
+.room-context-head>b{flex:0 0 auto;padding:6px 9px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 66%);border-radius:99px;background:#fff9;color:var(--room-deep);font-size:.58rem;letter-spacing:.08em}
+.room-context>p{max-width:850px;margin:0;color:var(--room-ink);font-size:.92rem;line-height:1.65}
+.room-context>small{display:block;margin-top:8px;color:var(--room-muted);font-size:.72rem;line-height:1.45}
+.room-complete{position:relative;border-color:color-mix(in srgb,var(--room-accent),white 35%)!important;background:linear-gradient(115deg,color-mix(in srgb,var(--room-accent),var(--room-paper) 91%),#fff)!important}
+.room-complete-copy>span{color:var(--room-accent);font-size:.65rem;font-weight:900;letter-spacing:.13em}
+.room-complete-copy h3{font-size:1.3rem!important;color:var(--room-deep)}
+.room-complete-link{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-width:210px;min-height:56px;padding:12px 20px;background:var(--room-deep);color:#fff;
+  box-shadow:0 8px 20px color-mix(in srgb,var(--room-deep),transparent 82%);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.room-complete-link:hover{transform:translateY(-2px);box-shadow:0 12px 24px color-mix(in srgb,var(--room-deep),transparent 72%)}
+@media(max-width:760px){
+ .room-context{margin:0 0 12px;padding:14px 14px 13px;border-radius:14px}
+ .room-context-head>span{font-size:.62rem}
+ .room-context>p{font-size:.91rem;line-height:1.58}
+ .room-context>small{font-size:.72rem}
+ .room-complete{margin:14px 0 16px!important}
+ .room-complete-copy h3{font-size:1.2rem!important}
+ .room-complete-link{min-height:56px;font-size:.92rem}
+}
+@media(prefers-reduced-motion:reduce){.room-complete-link{transition:none!important}}

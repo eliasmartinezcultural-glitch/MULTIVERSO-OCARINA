@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.40**  
+**Versión vigente: 3.41**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -109,3 +109,13 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Se ajustan las proporciones de contenido incrustado y los controles para pantallas pequeñas.
 - No se modifican los repositorios originales de los mundos.
 - Los servicios externos incrustados siguen dependiendo de las políticas de cada plataforma y de la conexión.
+
+
+## 3.41 · salas como puertas de entrada, proyectos como experiencias completas
+
+- Cada sala explica en pocas líneas qué es ese mundo y qué ofrece dentro del Multiverso.
+- Se identifica claramente la sala como una vista breve de descubrimiento, no como reemplazo del proyecto original.
+- El acceso al proyecto original se presenta con una llamada directa y consistente: «Ir a la versión completa».
+- La explicación editorial aparece antes del contenido de muestra; la experiencia concreta sigue siendo protagonista.
+- Se conserva la identidad visual de cada mundo, los contenidos integrados y la navegación simple para celulares.
+- No se modifican los repositorios originales de los proyectos.
