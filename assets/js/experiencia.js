@@ -28,6 +28,25 @@ document.querySelector("[data-reader-reset]")?.addEventListener("click",()=>{
 });
 accessMenu?.addEventListener("keydown",event=>{if(event.key==="Escape")accessMenu.open=false;});
 applyReaderSize();
+// Buscador sencillo: encuentra puertas por nombre, función o descripción.
+const doorSearch=document.getElementById("doorSearch");
+const doorSearchClear=document.getElementById("doorSearchClear");
+const doorSearchStatus=document.getElementById("doorSearchStatus");
+const doorCards=[...document.querySelectorAll("#projectGrid .project-card")];
+const normalizeText=value=>value.normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLocaleLowerCase("es");
+const filterDoors=()=>{
+ const query=normalizeText(doorSearch?.value.trim()||"");
+ let visible=0;
+ doorCards.forEach(card=>{
+  const match=!query||normalizeText(card.textContent).includes(query);
+  card.hidden=!match;
+  if(match)visible++;
+ });
+ if(doorSearchClear)doorSearchClear.hidden=!query;
+ if(doorSearchStatus)doorSearchStatus.textContent=query?(visible?visible+" "+(visible===1?"mundo encontrado.":"mundos encontrados."):"No encontramos una puerta con esa palabra. Probá con otra."):"Nueve mundos disponibles. Escribí una palabra para encontrar una puerta.";
+};
+doorSearch?.addEventListener("input",filterDoors);
+doorSearchClear?.addEventListener("click",()=>{doorSearch.value="";filterDoors();doorSearch.focus();});
 async function copyText(value){
  if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}
  const field=document.createElement("textarea");
