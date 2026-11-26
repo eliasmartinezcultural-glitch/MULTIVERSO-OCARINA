@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.60**  
+**Versión vigente: 3.61**  
 *Raíces locales. Tecnología para explorar un territorio vivo.*
 
 Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, Neuquén. Reúne nueve mundos en una experiencia integrada: cultura, memoria, naturaleza, audiovisual, comunidad y herramientas.
@@ -42,6 +42,14 @@ La portada combina paisaje patagónico, cultivos, agua y montaña con cartograf�
 - Buscador instantáneo de las nueve puertas por nombre, función y descripción, con contador de resultados y botón para limpiar.
 - Texturas visuales de papel, cartografía, trama de impresión y materiales cálidos en portada, tarjetas y dedicatoria.
 - Se conserva la navegación directa, los accesos a cada mundo y los controles de lectura.
+
+## Novedades 3.61
+
+- Revisión general del acabado visual: mejor jerarquía, luz, profundidad, bordes, sombras y contraste.
+- Se refinan las nueve ilustraciones existentes y sus marcos sin sustituirlas por fotografías de stock ni alterar imágenes originales.
+- Se refuerza la identidad rural-tecnológica con cartografía sutil, tonos de agua, tierra, vegetación y cielo.
+- Se mejora la lectura de tarjetas, botones, cabecera, dedicatoria y salas, con especial atención a celulares y foco visible.
+- Se conserva la navegación simple y los nueve mundos originales.
 
 ## Novedades 3.60
 
