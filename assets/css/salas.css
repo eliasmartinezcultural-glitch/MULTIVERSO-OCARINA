@@ -506,3 +506,16 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 .theme-channel .room-art{border-radius:50% 18px 50% 18px;background:linear-gradient(135deg,#e6c2ba,#f8e9e4)}
 .theme-radio .room-art{border-radius:50%;background:repeating-radial-gradient(ellipse at center,transparent 0 13px,#bd945455 14px 15px),linear-gradient(140deg,#3d3427,#78603d)}
 @media(max-width:680px){.library-intro{align-items:flex-start}.library-mark{flex-basis:54px;height:70px;font-size:2.3rem}.librito-tabs{display:grid;grid-template-columns:repeat(2,1fr)}.librito-tabs button{width:100%}.tv-cinema-heading{align-items:flex-start;padding:14px}.tv-reel{flex-basis:42px;height:42px}.tv-experience .video-choices{max-height:320px}.quiz-board{grid-template-columns:1fr;text-align:center}.quiz-stamp{margin:auto}.quiz-steps{grid-template-columns:1fr}.hub-needs{grid-template-columns:repeat(2,minmax(0,1fr))}.zero-board{grid-template-columns:1fr;text-align:center}.zero-mark{margin:auto}.social-world-links{grid-template-columns:1fr}.social-world-card{min-height:76px}}
+
+
+/* 3.20 · Ocarina Wild: misiones breves, claras y accionables */
+.wild-mission-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:16px}
+.wild-mission-picker button{display:grid;gap:6px;min-width:0;min-height:112px;padding:13px;border:1px solid #79956c66;border-radius:15px;background:#ffffffb8;color:#35583c;text-align:left;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.wild-mission-picker button:hover,.wild-mission-picker button.is-active{transform:translateY(-2px);border-color:#527b50;background:#fff;box-shadow:0 8px 18px #35583c12}
+.wild-mission-picker button>span{color:#79936e;font-size:.6rem;font-weight:950;letter-spacing:.12em}
+.wild-mission-picker button b{font:1.08rem "DM Serif Display",Georgia,serif}
+.wild-mission-picker button small{color:#6b7e67;font-size:.67rem;line-height:1.4}
+.wild-mission-result{margin:12px 0 0;padding:13px 15px;border-left:3px solid #6d8e54;border-radius:0 12px 12px 0;background:#f9f8e9;color:#4e684c;font-size:.76rem;line-height:1.6}
+.wild-mission-result b{color:#35583c}
+@media(max-width:680px){.wild-mission-picker{grid-template-columns:1fr}.wild-mission-picker button{min-height:0;grid-template-columns:28px 1fr;align-items:center;gap:3px 9px}.wild-mission-picker button>span{grid-row:span 2}.wild-mission-picker button small{grid-column:2}}
+@media(prefers-reduced-motion:reduce){.wild-mission-picker button{transition:none}}
