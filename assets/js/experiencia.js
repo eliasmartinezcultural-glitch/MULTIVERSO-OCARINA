@@ -3,7 +3,7 @@
 // La grilla HTML es el respaldo visible y navegable.
 const shareButton=document.getElementById("sharePortal");
 const shareStatus=document.getElementById("portalShareStatus");
-const portalUrl=()=>location.origin+location.pathname+location.search;
+const portalUrl=()=>location.origin+location.pathname;
 const root=document.documentElement;
 const accessMenu=document.querySelector(".accessibility-menu");
 let readerLevel=0;
@@ -56,6 +56,7 @@ async function copyText(value){
  let copied=false;try{copied=document.execCommand("copy");}catch(error){}
  field.remove();return copied;
 }
+document.getElementById("whatsappPortal")?.addEventListener("click",event=>{event.currentTarget.href="https://wa.me/?text="+encodeURIComponent("Te invito a recorrer el Multiverso Ocarina: nueve mundos de historias, naturaleza, cultura y comunidad. "+portalUrl());});
 shareButton?.addEventListener("click",async()=>{
  const url=portalUrl();
  const payload={title:"Multiverso Ocarina",text:"Un mundo de muchos mundos. Explorá las nueve puertas de Ocarina.",url};
