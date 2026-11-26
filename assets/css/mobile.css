@@ -347,3 +347,22 @@ button,a,[role="button"]{touch-action:manipulation}
   .doors-grid .project-card{grid-template-columns:88px minmax(0,1fr)}
   .doors-grid .project-art{width:88px}
 }
+
+
+/* 3.37 · lenguaje directo, botones evidentes y lectura amplia */
+@media(max-width:680px){
+ .room-close{min-width:76px!important;min-height:48px!important;padding:8px 12px!important;border-radius:12px!important;font-size:.88rem!important}
+ .room-actions .room-back,.room-actions .room-share,.room-actions .room-home-link{min-height:56px!important;font-size:1rem!important;font-weight:750}
+ .room-actions{grid-template-columns:1fr!important}
+ .room-actions .room-back,.room-actions .room-share,.room-actions .room-home-link{grid-column:1/-1}
+ .room-complete-link{width:100%;justify-content:center}
+ .room-experience{padding:14px!important}
+ .room-experience h3{font-size:1.42rem!important}
+ .room-experience p,.room-experience li{font-size:1.04rem!important}
+ .experience-foot a{display:inline-flex;align-items:center;min-height:48px;padding:8px 12px}
+ .doors-grid .project-link{min-height:48px!important;font-size:.82rem!important;font-weight:800!important}
+ .social-feed-title b{font-size:1.1rem}
+ .social-feed-title small{font-size:.9rem}
+ .social-gallery-heading p,.social-gallery-note{font-size:1rem!important;line-height:1.6!important}
+}
+@media(min-width:681px){.room-actions .room-back,.room-actions .room-share,.room-actions .room-home-link{min-height:48px}}

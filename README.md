@@ -77,3 +77,12 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Las salas aumentan tamaños de lectura y áreas táctiles; las puertas relacionadas se muestran en una lista clara.
 - Compartir en la portada muestra texto junto al icono, no depende de reconocer un símbolo.
 - Se mantiene la estructura original de los nueve mundos y el acceso a la experiencia completa.
+
+
+## Ajustes 3.37 · redes y navegación sencilla
+
+- Ocarina Social incorpora vistas integradas de las publicaciones de Instagram y Facebook, con acceso directo a cada perfil/página si la plataforma no permite la vista incrustada.
+- YouTube queda presentado como una selección de videos ya publicados, con enlace visible al canal completo.
+- Se evita presentar publicaciones inventadas: las vistas de Instagram y Facebook provienen de las plataformas originales y su disponibilidad depende de ellas.
+- Se simplifican los llamados a la acción de las nueve puertas y los textos para volver a las puertas, ir al inicio y cerrar una sala.
+- En móviles, las acciones principales de las salas se presentan en botones grandes y apilados para facilitar el uso táctil.
