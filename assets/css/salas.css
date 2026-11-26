@@ -408,3 +408,27 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 .room-art{box-shadow:0 18px 45px color-mix(in srgb,var(--room-deep),transparent 88%)}
 .theme-library .room-art{border-radius:22px 48px 22px 48px}.theme-cinema .room-art{border-radius:16px;background:#171b20}.theme-wild .room-art{border-radius:48% 48% 28px 28px}.theme-curiosity .room-art{border-radius:50% 50% 22px 22px}.theme-hub .room-art{border-radius:24px 52px 24px 52px}.theme-safety .room-art{border-radius:28px}.theme-channel .room-art{border-radius:50% 22px 50% 22px}.theme-radio .room-art{border-radius:50%}.theme-social .room-art{border-radius:28px 50% 28px 50px}
 @media(max-width:680px){.doors-grid .world-card{border-radius:17px}.doors-grid .world-illustration{aspect-ratio:1.08/1}.doors-grid .world-card-copy{padding:12px}.doors-grid .world-card-copy>b{font-size:1.1rem}.doors-grid .world-card-copy>small{font-size:.69rem;min-height:3em}.doors-grid .world-enter{font-size:.62rem}}
+
+/* 3.18 · Ocarina Wild: misión de observación */
+.wild-observatory{padding:clamp(18px,3vw,30px);border-radius:19px;background:radial-gradient(circle at 88% 10%,#fff9 0 8%,transparent 8.5%),linear-gradient(135deg,#dcebd4,#edf0d9 58%,#b6d0a8)}
+.wild-observatory-copy h3{margin:7px 0;color:#35583c;font:clamp(1.5rem,3vw,2.25rem)/1.05 "DM Serif Display",Georgia,serif}
+.wild-observatory-copy p{max-width:570px;color:#60755e;font-size:.82rem;line-height:1.6}
+.wild-missions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:18px}
+.wild-missions button{display:grid;gap:7px;min-width:0;min-height:130px;padding:13px;border:1px solid #77976d66;border-radius:15px;background:#ffffffb8;color:#35583c;text-align:left;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.wild-missions button:hover,.wild-missions button.is-active{transform:translateY(-2px);border-color:#527b50;background:#fff}
+.wild-missions button>span{font-size:.62rem;font-weight:900;letter-spacing:.12em;color:#79936e}
+.wild-missions button b{font:1.15rem "DM Serif Display",Georgia,serif}
+.wild-missions button small{font-size:.68rem;line-height:1.45;color:#6b7e67}
+.wild-mission-result{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:#f9f8e9;color:#4e684c;font-size:.76rem;line-height:1.55}
+.radio-description h3{margin:8px 0;color:var(--room-deep);font:clamp(1.5rem,3vw,2.35rem)/1.05 "DM Serif Display",Georgia,serif}
+.radio-description>p{max-width:570px;color:var(--room-muted);font-size:.82rem;line-height:1.65}
+.radio-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.radio-details span{display:grid;gap:4px;padding:10px;border:1px solid #9b7b4b55;border-radius:11px;background:#fff8e8a8;color:#6d593c;font-size:.7rem}
+.radio-details b{font-size:.54rem;letter-spacing:.1em;color:#92774e}
+.radio-console{grid-column:1/-1;padding:17px 18px;border:1px solid #a58a5c66;border-radius:16px;background:linear-gradient(135deg,#fffaf0,#f0e3c8)}
+.radio-console>b{display:inline-block;margin-left:8px;color:#604a2d;font-size:.72rem;letter-spacing:.09em}
+.radio-console>small{display:block;margin:5px 0 0 20px;color:#887456;font-size:.68rem}
+.radio-console audio{display:block;width:100%;min-height:48px;margin:13px 0 5px;accent-color:#8c6c39}
+.radio-console p{margin:5px 0 0;color:#806a49;font-size:.68rem}
+.radio-live-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#9d6c43;box-shadow:0 0 0 5px #9d6c4320}
+@media(max-width:680px){.wild-missions{grid-template-columns:1fr}.wild-missions button{min-height:0;grid-template-columns:30px 1fr;align-items:center}.wild-missions button>span{grid-row:span 2}.radio-details{grid-template-columns:1fr}.radio-console{padding:14px}}
