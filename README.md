@@ -86,3 +86,8 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Se evita presentar publicaciones inventadas: las vistas de Instagram y Facebook provienen de las plataformas originales y su disponibilidad depende de ellas.
 - Se simplifican los llamados a la acción de las nueve puertas y los textos para volver a las puertas, ir al inicio y cerrar una sala.
 - En móviles, las acciones principales de las salas se presentan en botones grandes y apilados para facilitar el uso táctil.
+
+
+## Ajustes 3.38 · control de cierre visible
+
+- El cierre de las salas muestra la palabra «Cerrar» junto al símbolo, con un botón ancho y fácil de reconocer en móviles y escritorio.
