@@ -383,3 +383,25 @@ button,a,[role="button"]{touch-action:manipulation}
  .simple-footer{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
 }
 @media(min-width:681px){.doors-grid{gap:20px}.project-card{min-height:100%}}
+
+
+/* 3.43 · las páginas propias se integran al desplazamiento único de cada sala */
+.world-room .room-content{overscroll-behavior-y:contain}
+.world-room iframe.mo-natural-page{
+ display:block!important;
+ width:100%!important;
+ max-width:100%!important;
+ min-height:0!important;
+ border:0!important;
+ overflow:hidden!important;
+}
+@media(max-width:760px){
+ .world-room .room-content{
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y:contain;
+  touch-action:pan-y;
+ }
+ .world-room iframe.mo-natural-page{touch-action:pan-y}
+}

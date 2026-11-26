@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.42**  
+**Versión vigente: 3.43**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -130,3 +130,12 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Se refuerza la identidad rural-tech con cartografía sutil, tonos de tierra, agua y vegetación, y jerarquía visual común.
 - Se mantienen controles táctiles amplios, navegación accesible y contenidos particulares de cada mundo.
 - No se modifican repositorios originales.
+
+
+## 3.43 · desplazamiento vertical unificado
+
+- Las páginas propias integradas en LIBRITO, OCARINA WILD y otros mundos del mismo sitio se expanden según la altura real de su contenido cuando el navegador permite leerlas por ser del mismo origen.
+- El recorrido se realiza desde el desplazamiento vertical de la sala, evitando que el usuario tenga que descubrir una segunda barra o zona de scroll dentro de la muestra.
+- La altura se recalcula cuando el contenido cambia, se cargan imágenes o se cambia de sección en LIBRITO.
+- Las plataformas externas que bloquean el acceso entre páginas (por ejemplo, redes sociales y reproductores de video) conservan su comportamiento independiente; no se fuerza una integración que el navegador no permite.
+- No se modifican los repositorios originales de los mundos.
