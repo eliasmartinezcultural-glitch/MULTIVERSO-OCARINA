@@ -78,3 +78,163 @@
  .dedication-kicker{margin-top:47px}
  .origin-card blockquote{margin:19px auto 22px;padding-left:14px;font-size:1rem;line-height:1.7}
 }
+
+
+/* 3.53 · terruño amable + azul tecnológico sereno */
+:root{
+  --forest:#24485d;
+  --pine:#356b7d;
+  --sand:#c7a477;
+  --cream:#f4f0e6;
+  --ink:#294452;
+  --muted:#637985;
+  --line:#d1dfe2;
+  --soil:#a9825e;
+  --sky:#8fc0d5;
+  --water:#5d9fba;
+  --field:#7e9877;
+  --blue-wash:#e8f1f3;
+}
+body{background:var(--cream);color:var(--ink)}
+.simple-header{
+  background:rgba(244,248,247,.96);
+  border-bottom-color:#cbdde2;
+  box-shadow:0 5px 22px rgba(35,72,93,.09);
+}
+.simple-brand{color:#24485d}
+.simple-logo,.footer-mark{
+  background:linear-gradient(145deg,#315d70 0%,#6b927f 58%,#b58c65 100%);
+}
+.simple-about,.portal-share-button,.accessibility-menu summary{
+  border-color:#b9d0d8;background:#f9fcfb;color:#2c6077;
+}
+.accessibility-panel{
+  border-color:#c7dce1;background:#f8fbfa;
+  box-shadow:0 14px 36px rgba(35,72,93,.16);
+}
+.accessibility-panel button{border-color:#c8dce1;background:#e8f1f3;color:#31566a}
+.simple-hero{background:#24485d}
+.hero-shade{
+  background:
+    linear-gradient(90deg,rgba(22,53,69,.88),rgba(31,75,96,.62) 54%,rgba(35,80,98,.12)),
+    linear-gradient(0deg,rgba(26,62,76,.55),transparent 72%);
+}
+.simple-hero-content{
+  border-left-color:#c7a477;
+  background:rgba(27,62,79,.87);
+  box-shadow:0 20px 55px rgba(14,43,57,.28);
+}
+.simple-eyebrow{color:#d8c09a}
+.simple-hero h1 em{color:#a9d4e4}
+.simple-hero-content p{color:#f0f5f4}
+.hero-primary{
+  background:#a9d2e1;color:#21485d;
+  box-shadow:0 5px 16px rgba(12,42,58,.18);
+}
+.hero-primary:hover{background:#c2e1eb}
+.territory-ribbon{
+  background:linear-gradient(105deg,#274c60 0%,#356f82 58%,#648b83 100%);
+}
+.territory-ribbon strong{color:#e4cfaa}
+.territory-ribbon-path span{border-color:rgba(231,244,246,.4);color:#f2f7f6}
+.simple-doors{
+  background:linear-gradient(180deg,#f4f0e6 0%,#edf2ee 48%,#e8f1f3 100%);
+}
+.doors-intro{border-bottom-color:#cbdde0}
+.doors-intro:after{
+  background:linear-gradient(90deg,#b58b63,#8eaa91,#6daec8);
+}
+.doors-intro h2{color:#24485d}
+.project-card{
+  border-color:#cfdddc;
+  border-left-color:var(--door-accent,#6b91a0);
+  background:#fffdf8;
+  box-shadow:0 7px 22px rgba(35,72,93,.08);
+}
+.project-card:after{
+  background:linear-gradient(135deg,#fffdf8 0%,#fffdf8 66%,var(--door-wash,#e8f1f3) 100%);
+}
+.project-card:hover{box-shadow:0 13px 28px rgba(35,72,93,.14)}
+.project-art{
+  border-right-color:#d6e1df;
+  background:var(--door-wash,#e8f1f3);
+}
+.project-content small{color:var(--door-accent,#47758a)}
+.project-content b{color:#294b5d}
+.project-descriptor{color:var(--door-accent,#47758a)!important}
+.project-content>span:not(.project-link):not(.project-descriptor){color:#627782}
+.project-link{
+  border-color:color-mix(in srgb,var(--door-accent,#47758a) 30%,white);
+  background:var(--door-wash,#e8f1f3);
+  color:var(--door-accent,#315f75);
+}
+.project-card[data-world="library"]{--door-accent:#98734e;--door-wash:#f1e9dc}
+.project-card[data-world="cinema"]{--door-accent:#416e87;--door-wash:#e4eef3}
+.project-card[data-world="wild"]{--door-accent:#557b61;--door-wash:#e8eee3}
+.project-card[data-world="curiosity"]{--door-accent:#a17b4e;--door-wash:#f4eddf}
+.project-card[data-world="hub"]{--door-accent:#397f8c;--door-wash:#e1eff0}
+.project-card[data-world="safety"]{--door-accent:#547b9a;--door-wash:#e5edf4}
+.project-card[data-world="channel"]{--door-accent:#9b685a;--door-wash:#f1e8e1}
+.project-card[data-world="radio"]{--door-accent:#527b91;--door-wash:#e5eff2}
+.project-card[data-world="social"]{--door-accent:#8d7865;--door-wash:#f0eae1}
+.simple-origin{
+  background:
+    radial-gradient(ellipse at 50% 12%,rgba(248,248,239,.96),transparent 58%),
+    linear-gradient(135deg,#e8eee5 0%,#dce9e8 58%,#e9e1d1 100%);
+}
+.simple-origin:before,.simple-origin:after{border-color:rgba(87,133,146,.25)}
+.origin-card{
+  border-color:#c8d8d4;border-top-color:#b99568;
+  background:linear-gradient(155deg,#fffdf7 0%,#fbfaf4 68%,#eef3ef 100%);
+  box-shadow:0 20px 54px rgba(35,72,93,.12);
+}
+.dedication-portrait{
+  border-color:#b9cbd0;
+  background:linear-gradient(145deg,#fffdf7,#e7efed);
+  box-shadow:0 0 0 5px #fffdf7,0 0 0 6px #c4d7d8,0 10px 28px rgba(35,72,93,.14);
+}
+.dedication-portrait .portrait-halo{border-color:rgba(92,143,157,.35)}
+.dedication-kicker{color:#8e704e}
+.origin-card h2{color:#294f63}
+.dedication-relation{color:#7c6b55}
+.origin-card blockquote{border-left-color:#83b7c9;color:#4f6670}
+.dedication-signature{border-top-color:#d2dfdd;color:#315c70}
+.dedication-signature span{color:#71858b}
+.simple-footer{
+  background:linear-gradient(105deg,#203f52,#2e6478 68%,#416f70);
+  color:#f7f7ef;
+}
+.simple-footer>span:last-child{color:#d9e7e4}
+.world-room{
+  border-color:#c4d8dc;background:#f5f6f0;color:#294b5c;
+  box-shadow:0 24px 70px rgba(20,53,70,.25);
+}
+.world-room::backdrop{background:rgba(18,42,56,.72)}
+.room-close,.room-actions button{
+  border-color:#c5d9df;background:#f9fcfb;color:#315c70;
+}
+.room-complete{
+  border-color:#c9dce0;background:linear-gradient(135deg,#f8fbf8,#eaf2f3);
+}
+.room-complete-link{background:#315f75;color:#fff}
+.room-complete-link:hover{background:#24485d}
+.radio-floating{
+  border-color:#c3d8de;background:rgba(247,250,247,.97);
+  color:#31566a;box-shadow:0 16px 44px rgba(26,64,81,.2);
+}
+.radio-float-toggle,.radio-float-mini-toggle{background:#356c82}
+.radio-float-restore{color:#315f75}
+.radio-floating-brand small,.radio-float-volume span,.radio-volume-control span{color:#6c828b}
+.radio-float-volume input,.radio-volume-control input{accent-color:#528ca5}
+button:focus-visible,a:focus-visible,summary:focus-visible,.project-card:focus-visible{
+  outline-color:#3983a1;
+}
+@media(max-width:680px){
+  .simple-header{background:rgba(246,249,247,.98)}
+  .simple-hero-content{background:rgba(27,62,79,.9)}
+  .project-card{border-radius:12px 16px}
+  .project-link{min-height:42px}
+}
+@media(prefers-reduced-motion:reduce){
+  .project-card,.hero-primary{transition:none!important}
+}

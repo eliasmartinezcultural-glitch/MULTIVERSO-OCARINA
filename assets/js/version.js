@@ -1,1 +1,1 @@
-(()=>{"use strict";const VERSION="3.52";window.OCARINA_VERSION=VERSION;document.documentElement.dataset.ocarinaVersion=VERSION;})();
+(()=>{"use strict";const VERSION="3.53";window.OCARINA_VERSION=VERSION;document.documentElement.dataset.ocarinaVersion=VERSION;})();

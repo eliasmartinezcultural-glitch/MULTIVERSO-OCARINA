@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.52**  
+**Versión vigente: 3.53**  
 *Raíces locales. Tecnología para explorar un territorio vivo.*
 
 Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, Neuquén. Reúne nueve mundos en una experiencia integrada: cultura, memoria, naturaleza, audiovisual, comunidad y herramientas.
@@ -23,7 +23,7 @@ Cada sala ofrece una muestra dentro del portal y un único acceso a la experienc
 
 ## Dirección de diseño
 
-La portada combina paisaje patagónico, cultivos, agua y montaña con cartografía, señal satelital, coordenadas visuales y patrones de datos. La paleta usa verde monte, tierra, arena, agua y crema; evita la estética tecnológica genérica y mantiene los mundos reconocibles.
+La portada combina paisaje patagónico, cultivos, agua y montaña con cartografía, señal satelital, coordenadas visuales y patrones de datos. La paleta une crema, arena y tierra con azules serenos de cielo y agua; la tecnología orienta sin enfriar la experiencia.
 
 ## Criterios de producto
 
@@ -94,3 +94,14 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - Se conserva el archivo fotográfico original; el encuadre circular prioriza una presentación respetuosa sin filtros ni retoques que alteren la imagen.
 - Se refina la composición de la dedicatoria: alineación editorial, nombre protagonista, tipografía, espacio y firma.
 - Se actualizan las referencias de caché y versión a 3.52.
+
+
+## Cambios 3.53
+
+- Se consolida una identidad visual de terruño amable con azul tecnológico sereno.
+- La portada incorpora una atmósfera azul petróleo suave, celestes de cielo y agua, y acentos arena.
+- Las nueve puertas mantienen sus personalidades, ahora unificadas por superficies cálidas y acentos azulados/terrosos.
+- Las salas, controles, radio flotante y dedicatoria reciben la misma familia cromática.
+- Se refuerzan contraste, estados de foco y legibilidad sin sumar controles ni complejidad.
+- Se actualizan referencias de caché y versión a 3.53.
+- No se modifican los repositorios originales de los mundos.
