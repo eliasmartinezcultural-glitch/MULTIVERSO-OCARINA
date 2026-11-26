@@ -17,7 +17,7 @@ function renderProjects(){
   grid.innerHTML=projects.map((p,index)=>{
     const c=palettes[p.palette]||palettes.sage;
     const url=safe(p.url);
-    return `<article class="project-card" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]};--card-index:${index}">
+    return `<article class="project-card" data-world="${safe(p.roomId||"library")}" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]};--card-index:${index}">
       <div class="project-art" aria-hidden="true">
         <span class="art-orbit"></span><span class="art-symbol">${safe(p.symbol)}</span>
         <span class="art-dots"></span><span class="art-glow"></span>
@@ -25,9 +25,9 @@ function renderProjects(){
       <div class="project-content">
         <span class="project-number">PUERTA ${safe(p.number)}</span>
         <h3>${safe(p.name)}</h3><p>${safe(p.description)}</p>
-        <a class="project-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="${safe(p.action)}: ${safe(p.name)}">
-          <span>${safe(p.action)}</span><span aria-hidden="true">↗</span>
-        </a>
+        <button class="project-link" type="button" data-room-open="${safe(p.name)}" aria-label="Abrir sala de presentación: ${safe(p.name)}">
+          <span>DESCUBRIR ESTE MUNDO</span><span aria-hidden="true">↗</span>
+        </button>
       </div>
     </article>`;
   }).join("");
