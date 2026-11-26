@@ -88,6 +88,13 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - En móviles, las acciones principales de las salas se presentan en botones grandes y apilados para facilitar el uso táctil.
 
 
-## Ajustes 3.38 · control de cierre visible
+## Ajustes 3.39 · control de cierre visible
 
 - El cierre de las salas muestra la palabra «Cerrar» junto al símbolo, con un botón ancho y fácil de reconocer en móviles y escritorio.
+
+
+## 3.39 · portal web directo
+
+- Se elimina el botón y la lógica de instalación de la aplicación, el manifiesto PWA y el registro del service worker. El portal se abre y usa desde el navegador.
+- Al entrar, los mundos ya no ofrecen «Ir al inicio»: se vuelve a la grilla de puertas mediante «Volver a las puertas» o el botón de cierre.
+- Se retira el botón de regreso al inicio del pie de página para evitar duplicaciones.

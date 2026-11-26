@@ -1,8 +1,6 @@
 (()=> {
 "use strict";
 // La grilla HTML es el respaldo visible y navegable.
-let installPrompt=null;
-const installButton=document.getElementById("installApp");
 const shareButton=document.getElementById("sharePortal");
 const shareStatus=document.getElementById("portalShareStatus");
 const portalUrl=()=>location.origin+location.pathname+location.search;
@@ -28,12 +26,5 @@ shareButton?.addEventListener("click",async()=>{
   if(error?.name!=="AbortError"&&shareStatus)shareStatus.textContent="No se pudo compartir. Probá nuevamente.";
  }finally{shareButton.disabled=false;}
 });
-window.addEventListener("beforeinstallprompt",event=>{event.preventDefault();installPrompt=event;if(installButton)installButton.hidden=false;});
-installButton?.addEventListener("click",async()=>{
- if(!installPrompt)return;
- try{await installPrompt.prompt();const choice=await installPrompt.userChoice;if(choice?.outcome==="accepted")installButton.hidden=true;}
- catch(error){}
- installPrompt=null;
-});
-window.addEventListener("appinstalled",()=>{if(installButton)installButton.hidden=true;});
+
 })();
