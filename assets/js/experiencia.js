@@ -15,7 +15,7 @@ function renderProjects(){
  if(count)count.textContent=shown.length+" de "+projects.length+" mundos";
  if(!shown.length){grid.innerHTML='<div class="world-empty"><span>⌕</span><strong>No encontramos esa puerta.</strong><p>Probá con otra palabra o elegí «Todos».</p></div>';return;}
  grid.innerHTML=shown.map((p,index)=>{const c=palettes[p.palette]||palettes.sage;return `<article class="project-card" data-world="${safe(p.roomId||"library")}" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]};--card-index:${index}">
-<div class="project-art" aria-hidden="true"><span class="art-orbit"></span><span class="art-symbol">${safe(p.symbol)}</span><span class="art-world-caption">${safe(p.kind)}</span><span class="art-dots"></span><span class="art-glow"></span></div>
+<div class="project-art" aria-hidden="true"><img class="door-art-image" src="${safe(p.image)}" alt="" loading="lazy" decoding="async"><span class="art-orbit"></span><span class="art-symbol">${safe(p.symbol)}</span><span class="art-world-caption">${safe(p.kind)}</span><span class="art-dots"></span><span class="art-glow"></span></div>
 <div class="project-content"><span class="project-number">PUERTA ${safe(p.number)}</span><h3>${safe(p.name)}</h3><p>${safe(p.description)}</p><button class="project-link" type="button" data-room-open="${safe(p.name)}" aria-label="Abrir sala de presentación: ${safe(p.name)}"><span>DESCUBRIR ESTE MUNDO</span><span aria-hidden="true">↗</span></button></div></article>`;}).join("");
  if("IntersectionObserver"in window&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){grid.querySelectorAll(".project-card").forEach((el,i)=>{el.style.setProperty("--reveal-delay",Math.min(i*45,270)+"ms");el.classList.add("reveal","is-visible");});}
 }
