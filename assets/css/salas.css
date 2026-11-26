@@ -291,3 +291,19 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 .immersive-project-frame{display:block;width:100%;height:100%;border:0;background:#fff}
 .immersive-project .room-player-channel{margin-top:13px}
 @media(max-width:680px){.immersive-frame-wrap{height:68vh;min-height:390px;border-radius:12px}}
+
+
+/* LANZADOR UNIVERSAL · navegación interna y pantalla inmersiva */
+.room-world-launcher{margin:24px 0 10px;padding:18px 0 8px;border-top:1px solid color-mix(in srgb,var(--room-accent),transparent 68%)}
+.room-launcher-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:13px}
+.room-launcher-item{display:flex;align-items:center;gap:9px;min-width:0;min-height:48px;padding:9px 10px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 72%);border-radius:13px;background:var(--room-paper);color:var(--room-ink);text-align:left;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.room-launcher-item:hover{transform:translateY(-2px);border-color:var(--room-accent);background:color-mix(in srgb,var(--room-accent),white 91%)}
+.room-launcher-item>span{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:9px;background:color-mix(in srgb,var(--room-accent),white 78%);color:var(--room-deep);font-size:1rem}
+.room-launcher-item b{overflow:hidden;font-size:.66rem;line-height:1.2;text-overflow:ellipsis}
+.room-fullscreen{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;margin:10px 0 4px;padding:9px 14px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 58%);border-radius:999px;background:var(--room-paper);color:var(--room-deep);font-size:.72rem;font-weight:800;cursor:pointer}
+.room-fullscreen:hover{background:color-mix(in srgb,var(--room-accent),white 86%)}
+.night-mode .room-launcher-item{background:#26362d;color:#e4ecdf;border-color:#526c58}
+.night-mode .room-launcher-item>span{background:#40543e;color:#f0f2e7}
+.night-mode .room-fullscreen{background:#26362d;color:#e4ecdf;border-color:#526c58}
+@media(max-width:560px){.room-launcher-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.room-launcher-item{min-height:44px;padding:7px 8px}.room-launcher-item b{font-size:.61rem}}
+@media(prefers-reduced-motion:reduce){.room-launcher-item{transition:none}}
