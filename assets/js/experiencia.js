@@ -20,6 +20,7 @@ function renderProjects(){
     return `<article class="project-card" data-world="${safe(p.roomId||"library")}" style="--art-bg:${c[0]};--art-line:${c[2]};--art-ink:${c[3]};--card-index:${index}">
       <div class="project-art" aria-hidden="true">
         <span class="art-orbit"></span><span class="art-symbol">${safe(p.symbol)}</span>
+        <span class="art-world-caption">${safe(p.kind)}</span>
         <span class="art-dots"></span><span class="art-glow"></span>
       </div>
       <div class="project-content">
