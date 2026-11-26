@@ -102,3 +102,42 @@
 .social-arrow{font-size:1.1rem}.social-pending{opacity:.72;border-style:dashed}
 .social-note{margin:12px 0 0;color:var(--room-muted);font-size:.72rem;line-height:1.6}
 @media(max-width:600px){.social-links{grid-template-columns:1fr}}
+
+/* MULTIVERSO 2.0 · exploración, búsqueda y filtros */
+.doors-intro{max-width:1040px}
+.world-tools{display:flex;align-items:center;gap:14px;margin:24px 0 13px}
+.world-search{display:flex;align-items:center;gap:11px;width:min(100%,430px);min-height:49px;padding:0 16px;border:1px solid #d9e2d7;border-radius:16px;background:#fffefa;box-shadow:0 8px 25px #405a4b0a;color:#829386}
+.world-search>span{font:1.6rem Georgia,serif}
+.world-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#34463c;font:500 .9rem "DM Sans",sans-serif}
+.world-search input::placeholder{color:#9aa69a}
+.world-count{font-size:.72rem;font-weight:800;letter-spacing:.06em;color:#879487}
+.world-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 27px}
+.world-filters button{min-height:36px;padding:7px 13px;border:1px solid #dfe6dc;border-radius:30px;background:#fbfaf5;color:#738176;font:700 .7rem "DM Sans",sans-serif;cursor:pointer;transition:.2s}
+.world-filters button:hover{border-color:#a9bea9;color:#45634c;transform:translateY(-1px)}
+.world-filters button.is-active{background:#405f4e;border-color:#405f4e;color:white;box-shadow:0 5px 13px #405f4e25}
+.world-empty{grid-column:1/-1;min-height:230px;display:grid;place-content:center;justify-items:center;padding:25px;border:1px dashed #cbd8c9;border-radius:22px;background:#fffefa;color:#65796a;text-align:center}
+.world-empty>span{font:3rem Georgia,serif;color:#a2b69f}.world-empty strong{font:1.45rem "DM Serif Display",Georgia,serif}.world-empty p{margin:5px 0;color:#879487;font-size:.82rem}
+.doors-grid .project-card{border-radius:22px;box-shadow:0 8px 24px #354c3d0b;transition:transform .28s,box-shadow .28s,border-color .28s}
+.doors-grid .project-card:hover{transform:translateY(-7px) scale(1.012);box-shadow:0 22px 42px #354c3d18}
+.doors-grid .project-art{height:164px}
+.doors-grid .art-symbol{width:82px;height:82px;font-size:2.7rem;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.doors-grid .project-card:hover .art-symbol{transform:rotate(5deg) scale(1.12);box-shadow:0 16px 32px #354c3d22}
+.doors-grid .project-content{padding:20px 22px 22px}
+.doors-grid .project-content h3{font-size:1.65rem}
+.doors-grid .project-content p{font-size:.85rem;min-height:2.8em}
+.doors-grid .project-link{width:100%;border-radius:12px;padding:12px 13px;transition:background .2s,color .2s,transform .2s}
+.doors-grid .project-link:hover{transform:translateY(-2px)}
+.world-room.theme-social{--room-bg:#f1eaf5;--room-paper:#fffaff;--room-ink:#4c4059;--room-muted:#7b6e87;--room-accent:#a58ac2;--room-deep:#57466d}
+.theme-social .room-art{background:radial-gradient(circle at 50% 50%,#fff 0 7%,transparent 8%),radial-gradient(circle at 20% 20%,#d8c7e8 0 7%,transparent 8%),linear-gradient(140deg,#eee3f5,#d9cbe9)}
+.social-hub{background:linear-gradient(145deg,#fffaff,#f5eff9)}
+.social-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.social-link{min-width:0;display:flex;align-items:center;gap:12px;padding:16px;border:1px solid #e5d9ee;border-radius:15px;background:white;color:#57466d}
+.social-link>span:nth-child(2){display:grid;gap:3px;min-width:0}
+.social-link b{font-size:.9rem}.social-link small{font-size:.68rem;color:#887a94;overflow-wrap:anywhere}
+.social-glyph{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:13px;background:#eee5f5;font-size:1.5rem;font-weight:800}
+.instagram-link:hover{border-color:#b79bcf;transform:translateY(-2px)}
+.social-arrow{margin-left:auto;font-size:1.1rem}
+.social-pending{opacity:.72;border-style:dashed}
+.social-note{margin:13px 0 0;color:#81758b;font-size:.72rem;line-height:1.6}
+@media(max-width:680px){.world-tools{align-items:stretch;flex-direction:column;gap:9px}.world-search{width:100%}.world-count{padding-left:4px}.world-filters{flex-wrap:nowrap;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:thin}.world-filters button{flex:none}.doors-grid .project-art{height:145px}.social-links{grid-template-columns:1fr}.social-link{padding:13px}}
+.night-mode .world-search,.night-mode .world-empty{background:#25372a;border-color:#536a55;color:#dce8dc}.night-mode .world-search input{color:#f2f4ed}.night-mode .world-filters button{background:#26382b;border-color:#536a55;color:#d2ddce}.night-mode .world-filters button.is-active{background:#dce8dc;color:#304532}
