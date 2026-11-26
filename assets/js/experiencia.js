@@ -40,4 +40,16 @@ window.addEventListener("beforeinstallprompt",event=>{event.preventDefault();ins
 installButton?.addEventListener("click",async()=>{if(!installPrompt)return;installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installButton.hidden=true;});
 window.addEventListener("appinstalled",()=>{if(installButton)installButton.hidden=true;});
 if("IntersectionObserver"in window&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target);}}),{threshold:.12});document.querySelectorAll(".simple-origin-copy,.doors-intro").forEach(el=>{el.classList.add("reveal");observer.observe(el);});}
+
+const root=document.documentElement;
+let textSize=Number(storage.get("text-size",100));
+if(!Number.isFinite(textSize))textSize=100;
+textSize=Math.min(125,Math.max(100,textSize));
+function applyTextSize(){root.style.fontSize=(16*textSize/100)+"px";storage.set("text-size",textSize);}
+applyTextSize();
+document.getElementById("textLarger")?.addEventListener("click",()=>{textSize=Math.min(125,textSize+5);applyTextSize();});
+document.getElementById("textSmaller")?.addEventListener("click",()=>{textSize=Math.max(100,textSize-5);applyTextSize();});
+const contrastButton=document.getElementById("contrastToggle");
+if(storage.get("contrast",false)){document.body.classList.add("high-contrast");contrastButton?.setAttribute("aria-pressed","true");}
+contrastButton?.addEventListener("click",()=>{const active=document.body.classList.toggle("high-contrast");storage.set("contrast",active);contrastButton.setAttribute("aria-pressed",String(active));contrastButton.setAttribute("aria-label",active?"Desactivar alto contraste":"Activar alto contraste");});
 })();
