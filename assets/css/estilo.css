@@ -1964,3 +1964,132 @@ body.simple-multiverse{
  .doors-grid .project-link{font-size:.59rem}
  .simple-mission{grid-template-columns:1fr;gap:10px}
 }
+
+
+/* MULTIVERSO OCARINA · DEDICATORIA / ROSA BENITA BUSTOS */
+/* La dedicatoria es el corazón humano del universo */
+.simple-origin{
+ position:relative;isolation:isolate;overflow:hidden;
+ background:
+  radial-gradient(ellipse at 8% 12%,#faf5e7 0,transparent 35%),
+  radial-gradient(ellipse at 94% 88%,#d5e2d1 0,transparent 37%),
+  linear-gradient(125deg,#e8eee2 0%,#f4f0e3 52%,#e1eadf 100%);
+}
+.simple-origin:before{
+ content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.2;
+ background:
+  repeating-radial-gradient(ellipse at 12% 50%,transparent 0 22px,#80977b 23px 23.7px,transparent 24.5px 43px),
+  linear-gradient(90deg,transparent 49.9%,#80977b22 50%,transparent 50.1%);
+ mask-image:linear-gradient(90deg,#000,transparent 48%,#000);
+}
+.simple-origin-copy{width:100%}
+.origin-dedication{
+ position:relative;isolation:isolate;
+ margin:30px 0 26px;padding:clamp(24px,4vw,42px);
+ overflow:hidden;
+ border:1px solid #c6b995;
+ border-radius:5px 24px 5px 24px;
+ background:
+  radial-gradient(ellipse at 100% 0%,#e9dfc5a6 0,transparent 42%),
+  linear-gradient(145deg,#fffdf5 0%,#f7f1e2 58%,#f0ead9 100%);
+ box-shadow:0 20px 48px #465d4017,0 2px 7px #465d400b,inset 0 1px #fff;
+}
+.origin-dedication:before{
+ content:"";position:absolute;z-index:-1;inset:9px;
+ border:1px solid #b7a77d66;border-radius:2px 17px 2px 17px;
+ pointer-events:none;
+}
+.origin-dedication:after{
+ content:"";position:absolute;z-index:-1;width:220px;height:220px;
+ right:-90px;bottom:-115px;border:1px solid #9eaa8b66;
+ border-radius:50%;
+ box-shadow:0 0 0 13px #a7b39810,0 0 0 28px #a7b3980c,0 0 0 44px #a7b39809;
+}
+.dedication-kicker{
+ display:inline-flex;align-items:center;gap:9px;
+ color:#8c7654;font-size:.62rem;font-weight:800;letter-spacing:.19em;
+}
+.dedication-kicker:before{content:"";width:22px;height:1px;background:#a88b60}
+.dedication-mark{
+ position:absolute;right:clamp(23px,4vw,42px);top:12px;
+ color:#c9b88f;font-family:"DM Serif Display",serif;
+ font-size:clamp(5rem,10vw,8rem);line-height:1;opacity:.46;
+}
+.origin-dedication h3{
+ position:relative;margin:17px 0 2px;
+ color:#3c563f;font-family:"DM Serif Display",serif;
+ font-size:clamp(1.9rem,4vw,3rem);font-weight:400;
+ letter-spacing:-.045em;line-height:1.05;
+}
+.dedication-relation{
+ margin:8px 0 20px;color:#947b59;
+ font-size:.78rem;font-weight:700;letter-spacing:.035em;
+}
+.origin-dedication blockquote{
+ max-width:670px;margin:0;padding:0;
+ border:0;color:#4f5d4c;
+ font-family:"DM Serif Display",Georgia,serif;
+ font-size:clamp(1.08rem,1.65vw,1.3rem);
+ line-height:1.72;letter-spacing:.005em;
+}
+.origin-dedication blockquote p+p{margin-top:13px}
+.dedication-signature{
+ display:inline-block;margin-top:23px;padding-top:12px;
+ border-top:1px solid #c6b995;
+ color:#806c4f;font-family:"DM Serif Display",serif;
+ font-size:1.18rem;font-style:italic;
+}
+.dedication-thread{
+ position:absolute;right:24px;top:50%;width:46px;height:46px;
+ border:1px solid #a6b59a;border-radius:50%;
+ opacity:.45;
+}
+.dedication-thread:before,.dedication-thread:after{
+ content:"";position:absolute;inset:7px;border:1px dashed #a6b59a;border-radius:50%;
+}
+.dedication-thread:after{inset:15px;background:#a6b59a;border:0}
+.origin-emblem{
+ box-shadow:0 18px 42px #38543c20,inset 0 1px #fff;
+}
+.origin-emblem span{font-family:"DM Serif Display",serif}
+.simple-origin-copy h2{margin-bottom:3px}
+.simple-mission{
+ padding-top:22px;margin-top:30px;
+ border-top:1px solid #c0cfb9;
+}
+.simple-mission p{padding:0 8px 0 0}
+.night-mode .simple-origin{
+ background:
+  radial-gradient(ellipse at 8% 12%,#344733 0,transparent 35%),
+  radial-gradient(ellipse at 94% 88%,#273d2d 0,transparent 37%),
+  linear-gradient(125deg,#26392b,#1e3025 55%,#26382a);
+}
+.night-mode .simple-origin:before{opacity:.1}
+.night-mode .origin-dedication{
+ border-color:#6b775a;
+ background:
+  radial-gradient(ellipse at 100% 0%,#59604655 0,transparent 42%),
+  linear-gradient(145deg,#344333,#2a392d 58%,#29382d);
+ box-shadow:0 20px 48px #07130c55,inset 0 1px #ffffff0c;
+}
+.night-mode .origin-dedication:before{border-color:#b6bd9360}
+.night-mode .dedication-kicker{color:#d1bd91}
+.night-mode .dedication-kicker:before{background:#d1bd91}
+.night-mode .dedication-mark{color:#d1bd91;opacity:.25}
+.night-mode .origin-dedication h3{color:#e9eddf}
+.night-mode .dedication-relation{color:#d5bd91}
+.night-mode .origin-dedication blockquote{color:#e0e7d9}
+.night-mode .dedication-signature{color:#e0c99b;border-color:#778367}
+.night-mode .dedication-thread,.night-mode .dedication-thread:before{border-color:#a9ba94}
+.night-mode .dedication-thread:after{background:#a9ba94}
+.night-mode .simple-mission{border-color:#53664e}
+@media(max-width:700px){
+ .origin-dedication{margin:26px 0 22px;padding:25px 20px 27px}
+ .dedication-mark{right:19px;top:10px;font-size:5.5rem}
+ .dedication-kicker{font-size:.54rem;letter-spacing:.13em}
+ .origin-dedication h3{font-size:2rem;padding-right:22px}
+ .origin-dedication blockquote{font-size:1.08rem;line-height:1.68}
+ .dedication-thread{width:32px;height:32px;right:15px;top:auto;bottom:16px}
+ .dedication-thread:before{inset:5px}
+ .dedication-thread:after{inset:11px}
+}
