@@ -2185,3 +2185,11 @@ html{scroll-padding-top:90px}
 .doors-grid .project-art:focus-within{outline:3px solid var(--door-accent);outline-offset:-4px}
 @media(max-width:680px){.territory-ribbon{align-items:flex-start;flex-direction:column;gap:9px;padding:13px 16px}.territory-ribbon-path{width:100%;justify-content:flex-start;flex-wrap:wrap;font-size:.53rem}.territory-ribbon-place{font-size:.54rem}.simple-hero:after{opacity:.16}}
 @media(max-width:360px){.territory-ribbon-path{gap:5px}.territory-ribbon-path span{gap:5px}.territory-ribbon-path span:after{width:9px}}
+
+
+/* 3.23 · Instalación opcional como aplicación */
+.install-app-button{display:inline-flex;align-items:center;gap:9px;min-height:38px;padding:8px 12px;border:1px solid #b9cdbb;border-radius:30px;background:#e9f0e4;color:#365b40;font:800 .7rem var(--sans);cursor:pointer;transition:transform .2s,background .2s}
+.install-app-button:hover{transform:translateY(-1px);background:#dce9d8}
+.install-app-button span{font-size:1rem}
+.install-app-button[hidden]{display:none}
+@media(max-width:480px){.simple-header{padding-inline:12px}.header-actions{gap:10px}.install-app-button{min-height:36px;padding:7px 9px;font-size:.64rem}.simple-about{font-size:.78rem}}
