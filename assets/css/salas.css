@@ -80,3 +80,13 @@
 .doors-grid .project-card[data-world="safety"] .project-art{background:linear-gradient(135deg,#edf4fa,#d3e2ee)}
 .doors-grid .project-card[data-world="channel"] .project-art{background:radial-gradient(circle at 50% 50%,#fff8 0 20%,transparent 21%),linear-gradient(135deg,#f4e3df,#e7c4be)}
 .doors-grid .project-card[data-world="radio"] .project-art{background:repeating-radial-gradient(ellipse at center,transparent 0 12px,#bd945433 13px 14px),linear-gradient(135deg,#f5ecd9,#e5d1aa)}
+
+/* Reproductores integrados */
+.room-player{margin:22px 0;padding:20px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 65%);border-radius:18px;background:var(--room-paper);box-shadow:0 12px 28px #17271e0b}
+.room-player-heading{display:grid;gap:6px;margin-bottom:14px}
+.room-player-heading strong{font:1.5rem "DM Serif Display",Georgia,serif;color:var(--room-deep)}
+.room-player-heading small{font-size:.77rem;line-height:1.5;color:var(--room-muted)}
+.radio-player audio{display:block;width:100%;height:46px;accent-color:var(--room-accent)}
+.room-player-foot{display:block;margin-top:10px;color:var(--room-muted);font-size:.7rem}
+.room-player-channel{display:inline-flex;align-items:center;min-height:42px;padding:10px 15px;border-radius:10px;background:var(--room-deep);color:white;font-size:.78rem;font-weight:800}
+@media(max-width:680px){.room-player{padding:16px}.room-player-heading strong{font-size:1.3rem}}
