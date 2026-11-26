@@ -1,22 +1,41 @@
 # Universo Ocarina
 
-**Raíces rurales. Mente creativa. Futuro digital.**
+**Dos mundos. Un universo.**  
+*Raíces rurales. Mente creativa. Futuro digital.*
 
-Universo Ocarina es el portal central de los proyectos y experiencias creados por Elías Martínez desde San Patricio del Chañar, Neuquén, Argentina.
+Universo Ocarina es un portal independiente que conecta proyectos, experiencias y herramientas creadas desde una mirada local, con vocación de apertura al mundo. Nace en San Patricio del Chañar, Neuquén, Patagonia argentina.
 
-La idea que orienta este espacio es simple: **no queremos construir una isla digital; queremos construir puentes.** Reunimos proyectos propios, herramientas, conocimientos y espacios que puedan aportar valor a otras personas.
+Su idea central: **la tecnología también puede ayudarnos a contar nuestras raíces.**
 
-## Propósito
+## Identidad y dirección
 
-- Conectar proyectos digitales, cultura, comunicación, memoria y territorio.
-- Facilitar el acceso a cada iniciativa desde una puerta de entrada clara.
-- Mostrar lo que se puede crear combinando sensibilidad local y tecnología.
-- Documentar el recorrido creativo y audiovisual de Ocarina.
-- Mantener una experiencia pública sencilla, visual, accesible y adaptable a celulares.
+La identidad combina dos lenguajes:
+
+- **Mundo rural:** paisaje, memoria, naturaleza, cultura, cercanía y territorio.
+- **Mundo digital:** exploración, conexiones, herramientas, ideas y creación.
+
+El diseño evita la estética tecnológica fría y también evita una estética rural folclórica literal. Busca un lenguaje editorial cálido, contemporáneo, sereno y accesible.
+
+### Sistema visual
+
+- Paleta: papel cálido, verde salvia, bosque apagado, piedra y lavanda suave.
+- Tipografía: DM Serif Display para titulares editoriales; DM Sans para lectura e interfaz.
+- Recursos gráficos: órbitas, nodos, líneas topográficas, formas orgánicas y paisajes abstractos.
+- Composición: espacios amplios, jerarquía clara, tarjetas diferenciadas y navegación breve.
+- Responsive: diseño adaptado a pantallas grandes, tabletas y móviles pequeños.
+
+## Estructura pública
+
+1. **Portada — Dos mundos. Un universo.** Presenta el concepto y la identidad.
+2. **La idea.** Explica por qué se conectan territorio y creación digital.
+3. **Proyectos.** Catálogo con búsqueda y filtros.
+4. **Manifiesto.** Una frase central que resume la mirada del proyecto.
+5. **Otros espacios.** Canales y plataformas relacionados.
+6. **Fundador.** Presentación de Elías Martínez al final del recorrido.
 
 ## Proyectos enlazados
 
-El catálogo se administra desde `assets/js/proyectos.js`. Cada ficha incluye nombre, categoría, descripción, destino, paleta visual y texto de acción.
+El catálogo se administra desde `assets/js/proyectos.js`. Cada ficha incluye nombre, categoría, descripción, destino, paleta y texto de acción.
 
 | Proyecto | Enfoque |
 | --- | --- |
@@ -27,7 +46,7 @@ El catálogo se administra desde `assets/js/proyectos.js`. Cada ficha incluye no
 | [CHAÑAR HUB](https://eliasmartinezcultural-glitch.github.io/chanar-hub/) | Información útil, lugares y comunidad |
 | [CÓDIGO CERO](https://eliasmartinezcultural-glitch.github.io/C-DIGO-CERO/) | Orientación y ayuda ante situaciones urgentes |
 
-Los repositorios de estos seis proyectos existen en la cuenta de GitHub. La publicación y el funcionamiento de cada sitio deben comprobarse individualmente antes de anunciarlos como disponibles.
+La existencia de un repositorio no garantiza por sí sola que su sitio esté publicado ni que todos sus contenidos estén actualizados. Verificar cada destino antes de anunciar disponibilidad.
 
 ## Otros espacios
 
@@ -35,13 +54,14 @@ Los repositorios de estos seis proyectos existen en la cuenta de GitHub. La publ
 - [Instagram · Ocarina Producciones](https://www.instagram.com/ocarina_producciones.spch/)
 - [Radio online · Radiando Ando](https://zeno.fm/radio/radiando-ando/)
 
-## Estructura técnica
+## Arquitectura técnica
 
-Este es un sitio estático, sin registro de usuarios ni base de datos.
+Sitio estático, sin registro de usuarios, sin base de datos y sin dependencias de construcción.
 
 ```text
 /
 ├── index.html
+├── README.md
 └── assets/
     ├── css/
     │   └── estilo.css
@@ -50,28 +70,31 @@ Este es un sitio estático, sin registro de usuarios ni base de datos.
         └── experiencia.js
 ```
 
-- `index.html`: estructura, navegación, metadatos y contenido institucional.
-- `assets/css/estilo.css`: identidad visual, diseño adaptable y estados de interacción.
-- `assets/js/proyectos.js`: catálogo editable de proyectos.
-- `assets/js/experiencia.js`: búsqueda, filtros, menú móvil, compartir y comportamiento de interfaz.
+- `index.html`: estructura semántica, metadatos, navegación y contenido.
+- `assets/css/estilo.css`: sistema visual, ilustraciones CSS, responsive, estados e interacciones.
+- `assets/js/proyectos.js`: catálogo centralizado de proyectos.
+- `assets/js/experiencia.js`: búsqueda, filtros, menú móvil, compartir, año y animaciones de entrada.
 
-## Criterios de trabajo
+## Criterios de calidad
 
-1. **Primero preservar:** revisar el archivo actual y sus dependencias antes de modificarlo.
-2. **Una fuente para el catálogo:** mantener los datos de las tarjetas en `proyectos.js`, evitando duplicarlos en HTML.
-3. **Diseño inclusivo:** priorizar lectura clara, controles visibles, navegación simple y pantallas pequeñas.
-4. **Contenido verificable:** no publicar fechas, datos históricos, servicios o promesas que no estén confirmados.
-5. **Enlaces confiables:** comprobar los destinos antes de presentar un proyecto como activo.
-6. **Cambios pequeños y trazables:** cada mejora debe tener un objetivo concreto y un mensaje de commit descriptivo.
-7. **Sin dependencias innecesarias:** conservar la arquitectura liviana de HTML, CSS y JavaScript mientras alcance para el objetivo.
+1. Preservar la arquitectura liviana mientras cumpla su función.
+2. Revisar dependencias y SHA del archivo antes de cada reemplazo.
+3. Mantener un único origen de datos para el catálogo.
+4. Priorizar lectura, contraste, teclado, áreas táctiles y pantallas pequeñas.
+5. Respetar movimiento reducido del sistema.
+6. No inventar estadísticas, instituciones asociadas, servicios ni disponibilidad.
+7. Comprobar enlaces y destinos antes de presentarlos como activos.
+8. Mantener los cambios trazables con commits descriptivos.
+9. No agregar registros, formularios ni recolección de datos personales sin una necesidad justificada.
 
-## Próximas prioridades
+## Próximas etapas
 
-- Verificar la publicación real de GitHub Pages y su URL pública.
-- Comprobar uno por uno los seis destinos del catálogo.
-- Revisar accesibilidad, contraste, navegación por teclado y rendimiento móvil.
-- Completar la propuesta de puentes de conocimiento sin recargar la portada.
-- Incorporar novedades solo cuando exista un proyecto terminado o una experiencia concreta para mostrar.
+- Comprobar el despliegue de GitHub Pages y su URL publicada.
+- Probar la página en teléfonos pequeños y pantallas amplias.
+- Verificar los seis proyectos enlazados, sus contenidos y sus condiciones de uso.
+- Añadir una sección de novedades solo cuando exista contenido real y una frecuencia sostenible.
+- Evaluar accesibilidad, rendimiento y metadatos sociales.
+- Definir oportunidades de sostenibilidad económica sin convertir el portal en una página saturada de publicidad.
 
 ---
 
