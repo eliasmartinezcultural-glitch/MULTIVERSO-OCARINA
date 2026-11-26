@@ -286,3 +286,8 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
  .instagram-frame-wrap{height:490px}
 }
 @media(prefers-reduced-motion:reduce){.video-choice{transition:none}}
+
+.immersive-frame-wrap{width:100%;height:min(74vh,760px);min-height:430px;overflow:hidden;border-radius:16px;background:#fff;border:1px solid color-mix(in srgb,var(--room-accent),transparent 70%)}
+.immersive-project-frame{display:block;width:100%;height:100%;border:0;background:#fff}
+.immersive-project .room-player-channel{margin-top:13px}
+@media(max-width:680px){.immersive-frame-wrap{height:68vh;min-height:390px;border-radius:12px}}
