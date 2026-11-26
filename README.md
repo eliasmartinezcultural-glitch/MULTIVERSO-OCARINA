@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.48**  
+**Versión vigente: 3.49**  
 *Raíces locales. Tecnología para explorar un territorio vivo.*
 
 Portal público de Ocarina Producciones, creado desde San Patricio del Chañar, Neuquén. Reúne nueve mundos en una experiencia integrada: cultura, memoria, naturaleza, audiovisual, comunidad y herramientas.
@@ -56,7 +56,7 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - Portal: https://eliasmartinezcultural-glitch.github.io/MULTIVERSO-OCARINA/
 - Repositorio: https://github.com/eliasmartinezcultural-glitch/MULTIVERSO-OCARINA
 
-## Cambios 3.48
+## Cambios 3.49
 
 - Nueva paleta rural-tech: verde monte, tierra, arena, agua y crema.
 - Nueva ilustración vectorial de portada: paisaje agrícola patagónico, canales de riego, montañas y satélite.
@@ -66,3 +66,13 @@ La radio se inicializa al entrar en su mundo y puede continuar al cerrar la sala
 - No se modifican los repositorios originales de los mundos.
 
 **Universo Ocarina** · Elías Martínez · San Patricio del Chañar, Neuquén.
+
+
+## Reparación 3.49
+
+- Neutraliza restricciones heredadas de ancho y padding del body.
+- Recupera visibilidad de portada, franja territorial, nueve puertas, dedicatoria y pie.
+- Añade estilos de respaldo para mantener la navegación visible y funcional.
+- Corrige capas y contraste del hero rural-tech.
+- Oculta el sello de versión en la cabecera para priorizar el contenido.
+- No modifica los repositorios originales.
