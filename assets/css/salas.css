@@ -372,7 +372,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 }
 @media(prefers-reduced-motion:reduce){.video-choice{transition:none}}
 
-/* 3.16 · navegación sin pérdida dentro de las salas */
+/* 3.17 · navegación sin pérdida dentro de las salas */
 .world-room{overscroll-behavior:contain}
 .room-close-form{position:sticky;top:0;z-index:30;display:flex;justify-content:flex-end;padding:8px 10px 0;background:linear-gradient(180deg,var(--room-paper,#fffefa) 70%,transparent)}
 .room-close{width:48px;height:48px;border-radius:50%;font-size:1.8rem;line-height:1;background:#fff;color:#294536;border:2px solid #d3dfd1;box-shadow:0 4px 14px #203b2a20}
@@ -381,3 +381,9 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d09c
 .room-home-link{background:#fff;border-color:#c8d9e1;color:#2e5868}
 @media(max-width:680px){.world-room{width:100%;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0;padding:0}.room-content{min-height:100%;padding-bottom:env(safe-area-inset-bottom)}.room-close-form{padding:8px 12px 0}.room-close{width:50px;height:50px}.room-body{padding:0 13px 14px}.room-actions{margin:0 -13px;padding:12px 13px max(12px,env(safe-area-inset-bottom))}.room-back,.room-home-link{flex:1;min-height:54px;padding:10px 8px;font-size:.78rem}}
 @media(prefers-reduced-motion:reduce){.world-room{scroll-behavior:auto}}
+
+/* 3.17 · la ilustración identifica cada mundo también al entrar */
+.room-art{border-radius:24px;overflow:hidden;background:var(--room-paper)}
+.room-world-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.room-art:before,.room-art:after,.room-art-orbit,.room-art-symbol,.room-art-stars{display:none}
+@media(max-width:680px){.room-art{height:150px;border-radius:18px}.room-world-image{object-position:center}}

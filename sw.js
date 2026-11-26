@@ -1,12 +1,12 @@
-const CACHE="multiverso-ocarina-3.16-experiencias";
+const CACHE="multiverso-ocarina-3.17-experiencias";
 const CORE=[
  "./","./index.html","./manifest.webmanifest",
- "./assets/css/estilo.css?v=3.16","./assets/css/dedicatoria.css?v=3.16","./assets/css/salas.css?v=3.16",
- "./assets/js/proyectos.js?v=3.16","./assets/js/experiencia.js?v=3.16","./assets/js/salas.js?v=3.16",
+ "./assets/css/estilo.css?v=3.17","./assets/css/dedicatoria.css?v=3.17","./assets/css/salas.css?v=3.17",
+ "./assets/js/proyectos.js?v=3.17","./assets/js/experiencia.js?v=3.17","./assets/js/salas.js?v=3.17",
  "./assets/img/mundos/librito.svg","./assets/img/mundos/ocarina-tv.svg","./assets/img/mundos/wild.svg",
  "./assets/img/mundos/sabias.svg","./assets/img/mundos/chanar-hub.svg","./assets/img/mundos/codigo-cero.svg",
  "./assets/img/mundos/youtube.svg","./assets/img/mundos/radio.svg","./assets/img/mundos/social.svg",
- "./assets/img/rosa-benita-bustos.jpg","./assets/img/ocarina-icon.svg"
+ "./assets/img/rosa-benita-bustos.jpg","./assets/img/hero-terrunio-digital.svg","./assets/img/ocarina-icon.svg"
 ];
 self.addEventListener("install",event=>{
  event.waitUntil((async()=>{try{const cache=await caches.open(CACHE);await cache.addAll(CORE);}catch(error){/* La web debe seguir disponible aunque falle un recurso opcional. */}await self.skipWaiting();})());
