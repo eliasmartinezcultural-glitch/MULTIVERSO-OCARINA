@@ -1,6 +1,6 @@
 # Multiverso Ocarina
 
-**Versión vigente: 3.45**  
+**Versión vigente: 3.46**  
 **Un mundo de muchos mundos.**  
 *Raíces locales. Ideas sin fronteras.*
 
@@ -141,7 +141,7 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - No se modifican los repositorios originales de los mundos.
 
 
-## Ajustes 3.45 · identidad visual y color
+## Ajustes 3.46 · identidad visual y color
 
 - Se incorpora una capa visual cromática propia para portada, nueve puertas, salas y dedicatoria.
 - Paletas diferenciadas por mundo: biblioteca cálida, cine terracota, naturaleza verde, curiosidades lila, hub agua, orientación azul, canal coral, radio dorado y social violeta.
@@ -150,7 +150,7 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - No se modifican los repositorios originales de los mundos.
 
 
-## 3.45 · simplificación editorial y diseño rural-tech
+## 3.46 · simplificación editorial y diseño rural-tech
 
 - La portada se ordena como paisaje de entrada y nueve puertas cromáticas con descripciones breves y cotidianas.
 - Cada mundo mantiene su función única; se quitan bloques explicativos repetidos dentro de las salas.
@@ -161,3 +161,9 @@ La versión móvil prioriza una portada compacta, puertas táctiles, salas a pan
 - Radio conserva un único reproductor; Ocarina TV conserva una única pantalla de video.
 - No se inventan teléfonos ni datos de emergencia; se conserva la información del proyecto original y sus advertencias.
 - No se modifican repositorios originales de los mundos.
+
+
+## 3.46 · ajuste de renderizado
+
+- Se corrige la interpolación dinámica de imágenes, títulos, nombres de mundos, contenido de sala y destino del proyecto completo.
+- Validación sintáctica de `assets/js/salas.js` realizada.
