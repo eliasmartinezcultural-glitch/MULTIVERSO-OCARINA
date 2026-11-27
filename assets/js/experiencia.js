@@ -58,7 +58,7 @@ async function copyText(value){
 }
 shareButton?.addEventListener("click",async()=>{
  const url=portalUrl();
- const payload={title:"Multiverso Ocarina",text:"Un mundo de muchos mundos. Explorá las nueve puertas de Ocarina.",url};
+ const payload={title:"Multiverso Ocarina",text:"Nueve mundos para descubrir historias, naturaleza, cultura y comunidad de San Patricio del Chañar.",url};
  shareButton.disabled=true;
  if(shareStatus)shareStatus.textContent="Preparando enlace…";
  try{
