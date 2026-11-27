@@ -36,15 +36,15 @@ const doorSearchStatus=document.getElementById("doorSearchStatus");
 const doorCards=[...document.querySelectorAll("#projectGrid .project-card")];
 const normalizeText=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("es");
 const searchAliases={
- "LIBRITO":"estudiar escuela tarea trabajo practico documento archivo hemeroteca noticia libro lectura autor fuente citar investigacion",
+ "LIBRITO":"estudiar escuela tarea trabajo practico documento archivo hemeroteca noticia libro lectura autor fuente citar investigacion ficha aula imprimir pdf mapa estadistica normativa carta organica",
  "OCARINA TV":"video pelicula documental entrevista historia mirar ver escuela familia cultura territorio",
- "OCARINA WILD":"animal planta ave pez naturaleza fauna flora foto fotografia huella ambiente observar",
- "¿SABÍAS QUE?":"dato curiosidad pregunta respuesta juego aprender descubrir escuela estudiante familia",
- "CHAÑAR HUB":"telefono direccion numero contacto servicio tramite salud transporte comercio vecino lugar horario mapa",
- "CÓDIGO CERO":"emergencia ayuda seguridad orientacion telefono numero urgente servicio oficial",
- "YOUTUBE":"canal video estreno publicaciones recorridos seguir",
+ "OCARINA WILD":"animal planta ave pez naturaleza fauna flora foto fotografia huella ambiente observar especie insecto arbol arbusto mamifero invertebrado cuidado habitat",
+ "¿SABÍAS QUE?":"dato curiosidad pregunta respuesta juego aprender descubrir escuela estudiante familia fundacion 1973 1969 riego 1966 historia fuente",
+ "CHAÑAR HUB":"telefono direccion numero contacto servicio tramite salud transporte comercio vecino lugar horario mapa hospital farmacia alojamiento dormir comer restaurante compras correo municipio",
+ "CÓDIGO CERO":"emergencia ayuda seguridad orientacion telefono numero urgente servicio oficial ambulancia bomberos policia defensa civil violencia siniestro vial",
+ "YOUTUBE":"canal video estreno publicaciones recorridos seguir suscribirse suscripcion",
  "RADIO ONLINE":"radio escuchar sonido musica señal online",
- "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos abuelo abuela adulto mayor mayores"
+ "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos abuelo abuela adulto mayor mayores instagram facebook"
 };
 const filterDoors=()=>{
  const query=normalizeText(doorSearch?.value.trim()||"");
