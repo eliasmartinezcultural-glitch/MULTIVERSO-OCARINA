@@ -1,0 +1,67 @@
+/* 3.77 · acabado editorial, territorio y microinteracciones discretas */
+:root{--ocarina-ink:#243b32;--ocarina-leaf:#315b43;--ocarina-paper:#fbf8ef;--ocarina-clay:#b96f43}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{color:var(--ocarina-ink);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+::selection{background:#d6e5cf;color:#203a2c}
+.simple-header{background:rgba(251,248,239,.96);border-bottom:1px solid #dce2d4;backdrop-filter:blur(12px)}
+.simple-brand{color:#294b3b;text-decoration:none}
+.simple-logo{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#315b43;color:#f7efd9;font-family:Georgia,serif;font-size:1.5rem;font-weight:700}
+.simple-hero{isolation:isolate;overflow:hidden;background:#274c55}
+.simple-hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(12,34,35,.18),transparent 70%),linear-gradient(0deg,rgba(15,35,31,.18),transparent 55%)}
+.hero-landscape{filter:saturate(.92) contrast(1.02)}
+.simple-hero-content{position:relative;z-index:1;border:1px solid rgba(255,255,255,.26);box-shadow:0 18px 55px rgba(14,35,32,.22)}
+.simple-eyebrow{letter-spacing:.13em}
+.simple-hero h1{letter-spacing:-.045em;text-wrap:balance}
+.simple-hero-content p{max-width:42ch;text-wrap:pretty}
+.doors-intro h2{letter-spacing:-.035em;text-wrap:balance}
+.door-finder{border:1px solid #d9dfd0;box-shadow:0 8px 24px rgba(40,65,48,.06)}
+.door-search-line:focus-within{outline:3px solid rgba(185,111,67,.32);outline-offset:2px}
+.simple-doors #projectGrid .project-card{background:#fffdf7;border:1px solid #e0e2d7;box-shadow:0 8px 25px rgba(36,59,50,.07)}
+.simple-doors #projectGrid .project-card:hover{border-color:#b6c8ae;box-shadow:0 14px 32px rgba(36,59,50,.12)}
+.simple-doors #projectGrid .project-art{overflow:hidden;background:#e6e4d4}
+.simple-doors #projectGrid .door-art-image{display:block;width:100%;height:100%;object-fit:cover}
+.simple-doors #projectGrid .project-content{background:linear-gradient(180deg,#fffef9,#faf8ef)}
+.simple-doors #projectGrid .project-content b{letter-spacing:-.025em}
+.simple-doors #projectGrid .project-story{max-width:54ch;text-wrap:pretty}
+.simple-doors #projectGrid .project-link{box-shadow:0 4px 0 #234532}
+.simple-doors #projectGrid .project-card:active .project-link{transform:translateY(2px);box-shadow:0 2px 0 #234532}
+.simple-origin{border-top:1px solid #e1e2d7}
+.origin-card{box-shadow:0 12px 32px rgba(35,55,43,.07)}
+.simple-footer{border-top:1px solid #dfe3d8}
+.world-room{border:1px solid rgba(40,60,45,.14);box-shadow:0 24px 90px rgba(10,25,20,.34)}
+.world-room .room-heading h2{letter-spacing:-.035em;text-wrap:balance}
+.world-room .room-summary,.world-room p{line-height:1.65;text-wrap:pretty}
+.world-room :where(a,button){touch-action:manipulation}
+.accessibility-menu>summary{font-family:inherit}
+.accessibility-panel button{font-family:inherit;font-size:.9rem;line-height:1.25}
+.accessibility-panel>span{letter-spacing:0}
+#doorSearchStatus,#readerStatus,#portalShareStatus{line-height:1.45}
+a,button{-webkit-tap-highlight-color:transparent}
+button:disabled{opacity:.65;cursor:wait}
+@media(hover:hover) and (pointer:fine){
+ .simple-doors #projectGrid .project-card{transition:box-shadow .2s ease,border-color .2s ease}
+ .simple-doors #projectGrid .project-card:hover .door-art-image{transform:scale(1.018)}
+ .simple-doors #projectGrid .door-art-image{transition:transform .35s ease}
+}
+@media(max-width:680px){
+ .simple-header{position:relative}
+ .simple-hero-content{backdrop-filter:blur(5px)}
+ .simple-doors #projectGrid .project-card{box-shadow:0 5px 16px rgba(36,59,50,.07)}
+ .simple-doors #projectGrid .project-content{background:#fffdf7}
+ .world-room{box-shadow:0 12px 45px rgba(10,25,20,.28)}
+}
+@media(max-width:360px){
+ .simple-hero h1{font-size:clamp(1.9rem,9vw,2.35rem)}
+ .doors-intro h2{font-size:1.65rem}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media(forced-colors:active){
+ .simple-doors #projectGrid .project-card{border:1px solid CanvasText}
+ .simple-doors #projectGrid .project-link{border:2px solid ButtonText}
+}
+body.high-contrast .simple-hero-content{background:#000!important}
+body.high-contrast .simple-doors #projectGrid .project-content{background:#fff!important}
+body.high-contrast .simple-doors #projectGrid .project-link{box-shadow:none!important}
