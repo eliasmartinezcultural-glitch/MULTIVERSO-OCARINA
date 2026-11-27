@@ -35,16 +35,29 @@ const doorSearchClear=document.getElementById("doorSearchClear");
 const doorSearchStatus=document.getElementById("doorSearchStatus");
 const doorCards=[...document.querySelectorAll("#projectGrid .project-card")];
 const normalizeText=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("es");
+const searchAliases={
+ "LIBRITO":"estudiar escuela tarea trabajo practico documento archivo hemeroteca noticia libro lectura autor fuente citar investigacion",
+ "OCARINA TV":"video pelicula documental entrevista historia mirar ver escuela familia cultura territorio",
+ "OCARINA WILD":"animal planta ave pez naturaleza fauna flora foto fotografia huella ambiente observar",
+ "¿SABÍAS QUE?":"dato curiosidad pregunta respuesta juego aprender descubrir escuela estudiante familia",
+ "CHAÑAR HUB":"telefono direccion numero contacto servicio tramite salud transporte comercio vecino lugar horario mapa",
+ "CÓDIGO CERO":"emergencia ayuda seguridad orientacion telefono numero urgente servicio oficial",
+ "YOUTUBE":"canal video estreno publicaciones recorridos seguir",
+ "RADIO ONLINE":"radio escuchar sonido musica señal online",
+ "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos"
+};
 const filterDoors=()=>{
  const query=normalizeText(doorSearch?.value.trim()||"");
  let visible=0;
  doorCards.forEach(card=>{
-  const match=!query||normalizeText(card.textContent).includes(query);
+  const name=card.dataset.roomOpen||"";
+  const searchable=normalizeText(card.textContent+" "+(searchAliases[name]||""));
+  const match=!query||searchable.includes(query);
   card.hidden=!match;
   if(match)visible++;
  });
  if(doorSearchClear)doorSearchClear.hidden=!query;
- if(doorSearchStatus)doorSearchStatus.textContent=query?(visible?visible+" "+(visible===1?"mundo encontrado.":"mundos encontrados."):"No encontramos una puerta con esa palabra. Probá con otra."):"Nueve mundos disponibles. Escribí una palabra para encontrar una puerta.";
+ if(doorSearchStatus)doorSearchStatus.textContent=query?(visible?visible+" "+(visible===1?"mundo encontrado.":"mundos encontrados."):"No encontramos una puerta con esa palabra. Probá con otra.") :"Buscá por necesidad o tema: tarea, teléfono, animales, fotos, trámites, historia, libros.";
 };
 doorSearch?.addEventListener("input",filterDoors);
 doorSearchClear?.addEventListener("click",()=>{doorSearch.value="";filterDoors();doorSearch.focus();});
