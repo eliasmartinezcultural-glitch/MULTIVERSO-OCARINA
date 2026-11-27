@@ -1,0 +1,29 @@
+/* 3.79 · Puentes útiles: una experiencia que deja algo en cada mundo */
+.world-room .room-close-form{height:0;min-height:0;padding:8px 10px 0;background:linear-gradient(180deg,var(--room-paper,#fffefa) 74%,transparent)}
+.world-room .room-close{width:50px;height:50px;min-width:50px;min-height:50px;padding:0;border:2px solid color-mix(in srgb,var(--room-accent),#fff 35%);border-radius:50%;background:var(--room-paper);color:var(--room-ink);font-size:2rem;font-weight:500;line-height:1;box-shadow:0 5px 18px #17271e20}
+.world-room .room-close:hover{background:var(--room-bg);filter:none;transform:rotate(5deg)}
+.world-room .room-close:active{transform:scale(.94)}
+.world-room .room-value-gift{position:relative;display:grid;grid-template-columns:54px minmax(0,1fr);gap:16px;margin:24px 0;padding:clamp(17px,3vw,26px);overflow:hidden;border:1px solid color-mix(in srgb,var(--room-accent),transparent 60%);border-radius:5px 22px 5px 22px;background:linear-gradient(135deg,var(--room-paper),color-mix(in srgb,var(--room-accent),var(--room-paper) 92%));box-shadow:0 12px 32px color-mix(in srgb,var(--room-deep),transparent 94%)}
+.world-room .room-value-gift:after{content:"";position:absolute;right:-42px;bottom:-100px;width:210px;height:210px;border:1px solid color-mix(in srgb,var(--room-accent),transparent 78%);border-radius:50%;box-shadow:0 0 0 18px color-mix(in srgb,var(--room-accent),transparent 94%),0 0 0 40px color-mix(in srgb,var(--room-accent),transparent 96%);pointer-events:none}
+.value-gift-mark{display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:var(--room-deep);color:#fff;font-size:1.45rem}
+.value-gift-copy{position:relative;z-index:1;min-width:0}
+.value-gift-copy>span{display:block;margin:2px 0 8px;color:var(--room-accent);font-size:.64rem;font-weight:900;letter-spacing:.14em}
+.value-gift-copy h3{margin:0 0 9px;color:var(--room-deep);font:clamp(1.28rem,3vw,1.8rem)/1.12 Georgia,"Times New Roman",serif}
+.value-gift-copy>p{max-width:66ch;margin:0 0 12px;color:var(--room-ink);font-size:.94rem;line-height:1.65}
+.value-gift-copy ul{display:grid;gap:7px;margin:12px 0 15px;padding:0;list-style:none}
+.value-gift-copy li{position:relative;padding-left:24px;color:var(--room-ink);font-size:.9rem;line-height:1.5}
+.value-gift-copy li:before{content:"✓";position:absolute;left:0;top:0;color:var(--room-accent);font-weight:950}
+.value-gift-copy .value-gift-note{margin:0;padding:12px 14px;border-left:3px solid var(--room-accent);background:color-mix(in srgb,var(--room-accent),var(--room-paper) 92%);font-size:.87rem}
+.world-room .room-complete{margin-top:26px}
+.world-room .room-complete-copy>span{content:"";letter-spacing:.13em}
+@media(max-width:680px){
+ .world-room .room-close-form{padding:8px 10px 0}
+ .world-room .room-close{width:48px;height:48px;min-width:48px;min-height:48px;font-size:1.9rem}
+ .world-room .room-value-gift{grid-template-columns:38px minmax(0,1fr);gap:11px;margin:18px 0;padding:15px 13px;border-radius:5px 17px 5px 17px}
+ .value-gift-mark{width:36px;height:36px;font-size:1.1rem}
+ .value-gift-copy>span{font-size:.58rem;letter-spacing:.1em}
+ .value-gift-copy>p{font-size:.88rem}
+ .value-gift-copy li{font-size:.86rem}
+}
+@media(prefers-reduced-motion:reduce){.world-room .room-close{transition:none}}
+@media(forced-colors:active){.world-room .room-value-gift{border:1px solid CanvasText}.value-gift-mark{border:1px solid CanvasText}}
