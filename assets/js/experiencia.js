@@ -44,7 +44,7 @@ const searchAliases={
  "CÓDIGO CERO":"emergencia ayuda seguridad orientacion telefono numero urgente servicio oficial",
  "YOUTUBE":"canal video estreno publicaciones recorridos seguir",
  "RADIO ONLINE":"radio escuchar sonido musica señal online",
- "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos"
+ "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos abuelo abuela adulto mayor mayores"
 };
 const filterDoors=()=>{
  const query=normalizeText(doorSearch?.value.trim()||"");
