@@ -26,7 +26,8 @@ document.querySelector("[data-reader-reset]")?.addEventListener("click",()=>{
  readerLevel=0;document.body.classList.remove("high-contrast");
  contrastButton?.setAttribute("aria-pressed","false");applyReaderSize();
 });
-accessMenu?.addEventListener("keydown",event=>{if(event.key==="Escape"){accessMenu.open=false;accessMenu.querySelector("summary")?.focus();}});\ndocument.addEventListener("pointerdown",event=>{if(accessMenu?.open&&!accessMenu.contains(event.target))accessMenu.open=false;});
+accessMenu?.addEventListener("keydown",event=>{if(event.key==="Escape"){accessMenu.open=false;accessMenu.querySelector("summary")?.focus();}});
+document.addEventListener("pointerdown",event=>{if(accessMenu?.open&&!accessMenu.contains(event.target))accessMenu.open=false;});
 applyReaderSize();
 // Buscador sencillo: encuentra puertas por nombre, función o descripción.
 const doorSearch=document.getElementById("doorSearch");
