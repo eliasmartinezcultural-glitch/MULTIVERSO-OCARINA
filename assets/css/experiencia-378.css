@@ -1,0 +1,69 @@
+/* MULTIVERSO OCARINA 3.78 · atmósfera editorial, calidez y detalle territorial */
+:root{
+ --o-paper:#fbf8ef;--o-ink:#263d32;--o-forest:#234b3b;--o-moss:#66846b;
+ --o-clay:#b87550;--o-line:#d9dfd1;--o-gold:#c9a66b;
+}
+body.simple-multiverse{background:var(--o-paper)}
+.simple-header{padding-inline:clamp(14px,3.5vw,42px)}
+.simple-brand{gap:10px;font-weight:900}
+.simple-logo{position:relative;box-shadow:0 5px 15px #173d3528}
+.simple-logo:after{content:"";position:absolute;inset:-4px;border:1px solid #77957e88;border-radius:50%}
+.simple-hero{position:relative;min-height:clamp(340px,43vw,510px)}
+.simple-hero:before{content:"";position:absolute;z-index:0;pointer-events:none;width:clamp(190px,28vw,360px);aspect-ratio:1;border:1px solid #f4ead14a;border-radius:50%;right:-7%;top:-24%;box-shadow:0 0 0 24px #f4ead10b,0 0 0 55px #f4ead108}
+.simple-hero-content{max-width:690px;border-radius:4px 24px 4px 24px}
+.simple-hero-content:after{content:"HISTORIAS · PERSONAS · TERRITORIO";display:block;margin-top:20px;padding-top:13px;border-top:1px solid #ffffff45;color:#d9e8d9;font-size:.68rem;font-weight:850;letter-spacing:.16em}
+.simple-hero h1{max-width:13ch}
+.simple-doors{position:relative;isolation:isolate}
+.simple-doors:before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:0;background-image:radial-gradient(#718c7020 .8px,transparent .8px);background-size:19px 19px;mask-image:linear-gradient(180deg,transparent,#000 14%,#000 85%,transparent)}
+.doors-intro{max-width:1180px;margin-inline:auto}
+.doors-intro .simple-eyebrow{display:inline-flex;align-items:center;gap:10px}
+.doors-intro .simple-eyebrow:before{content:"";display:inline-block;width:28px;height:1px;background:var(--o-clay)}
+.doors-intro h2{color:var(--o-forest)}
+.doors-intro p{max-width:48ch}
+.door-finder{max-width:1180px;margin-inline:auto}
+.simple-doors #projectGrid .project-card{border-radius:5px 22px 5px 22px;border-color:#d8ddcf;box-shadow:0 9px 26px #263d3210}
+.simple-doors #projectGrid .project-card:nth-child(3n+2){border-radius:22px 5px 22px 5px}
+.simple-doors #projectGrid .project-art{position:relative}
+.simple-doors #projectGrid .project-art:after{content:"";position:absolute;inset:12px;border:1px solid #fff8;pointer-events:none;box-shadow:inset 0 0 35px #162d2512}
+.simple-doors #projectGrid .project-content{border-top-width:4px}
+.simple-doors #projectGrid .project-content small{display:flex;align-items:center;gap:9px}
+.simple-doors #projectGrid .project-content small:after{content:"";display:inline-block;width:38px;height:1px;background:currentColor;opacity:.55}
+.simple-doors #projectGrid .project-content b{font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spacing:-.035em}
+.simple-doors #projectGrid .project-descriptor{font-weight:850}
+.simple-doors #projectGrid .project-tag{border:1px solid color-mix(in srgb,var(--accent),transparent 76%);letter-spacing:.12em}
+.simple-doors #projectGrid .project-link{min-width:148px;border-radius:4px 13px 4px 13px;letter-spacing:.04em}
+.doors-footnote{max-width:1180px;margin:22px auto 0;padding:14px 18px;border-left:3px solid var(--o-gold);background:#f1f0e5;color:#526b59}
+.simple-origin{background:radial-gradient(ellipse at 50% 0%,#3c6954 0,transparent 54%),linear-gradient(135deg,#173d35,#244f48 58%,#244d5d)}
+.origin-card{border-radius:5px 28px 5px 28px}
+.origin-card .simple-eyebrow{letter-spacing:.17em}
+.dedication-portrait{position:relative}
+.dedication-portrait:before,.dedication-portrait:after{content:"";position:absolute;z-index:0;pointer-events:none;border:1px solid #bd9e6c99;border-radius:50%;width:calc(100% + 28px);height:calc(100% + 28px);left:50%;top:50%;transform:translate(-50%,-50%)}
+.dedication-portrait:after{width:calc(100% + 48px);height:calc(100% + 48px);border-color:#bd9e6c40}
+.dedication-portrait img{position:relative;z-index:1}
+.dedication-portrait figcaption{position:relative;z-index:1}
+.dedication-signature{padding-top:15px;border-top:1px solid #d6dfd4}
+.simple-footer{padding-block:28px}
+.simple-footer .footer-mark{box-shadow:0 0 0 5px #dcebe11a,0 8px 20px #0003}
+.world-room{border-radius:5px 24px 5px 24px}
+.world-room .room-complete{border-radius:5px 17px 5px 17px}
+.world-room .room-complete-link,.world-room .room-actions button{border-radius:5px 12px 5px 12px}
+:where(a,button,input,summary):focus-visible{outline:3px solid #bd8058!important;outline-offset:3px!important}
+@media(max-width:680px){
+ .simple-header{padding:10px 12px;gap:8px}
+ .simple-brand{font-size:.78rem}
+ .simple-hero{min-height:clamp(320px,95vw,430px)}
+ .simple-hero-content{margin-inline:14px}
+ .simple-hero-content:after{font-size:.58rem;letter-spacing:.12em}
+ .simple-doors #projectGrid .project-card,.simple-doors #projectGrid .project-card:nth-child(3n+2){border-radius:5px 17px 5px 17px}
+ .simple-doors #projectGrid .project-art:after{inset:8px}
+ .simple-doors #projectGrid .project-link{min-width:0;border-radius:5px 12px 5px 12px}
+ .doors-footnote{margin-inline:0}
+ .origin-card{border-radius:5px 20px 5px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+ .simple-doors #projectGrid .project-card,.simple-doors #projectGrid .door-art-image{transition:none!important}
+}
+@media(forced-colors:active){
+ .simple-doors #projectGrid .project-card,.origin-card{border:1px solid CanvasText}
+ .simple-doors #projectGrid .project-art:after,.dedication-portrait:before,.dedication-portrait:after{display:none}
+}
