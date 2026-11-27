@@ -1,0 +1,18 @@
+/* 3.80 · Ocarina TV: encontrar una historia sin recorrer todo el archivo */
+.tv-experience .tv-catalog-tools{display:grid;gap:12px;align-items:start}
+.tv-experience .tv-catalog-search{display:grid;gap:6px;max-width:620px}
+.tv-experience .tv-search-label{color:var(--room-deep);font-size:.78rem;font-weight:850}
+.tv-experience #tvCatalogSearch{width:100%;min-height:50px;padding:12px 15px;border:1px solid color-mix(in srgb,var(--room-accent),#fff 35%);border-radius:9px;background:var(--room-paper,#fff);color:var(--room-ink);font:inherit;font-size:1rem}
+.tv-experience #tvCatalogSearch::placeholder{color:var(--room-muted,#667)}
+.tv-experience #tvCatalogSearch:focus-visible{outline:3px solid var(--room-accent);outline-offset:3px}
+.tv-experience .tv-catalog-status{min-height:1.3em;margin:0;color:var(--room-muted);font-size:.8rem;line-height:1.4}
+.tv-experience .video-choice[hidden]{display:none!important}
+.tv-experience .tv-filters button[aria-pressed="true"]{outline:2px solid var(--room-accent);outline-offset:2px}
+@media(max-width:680px){
+ .tv-experience .tv-catalog-search{max-width:none}
+ .tv-experience #tvCatalogSearch{min-height:52px;font-size:16px}
+ .tv-experience .tv-catalog-status{font-size:.82rem}
+}
+@media(forced-colors:active){
+ .tv-experience #tvCatalogSearch{border:1px solid CanvasText}
+}
