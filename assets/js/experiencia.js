@@ -42,13 +42,13 @@ const doorSearchStatus=document.getElementById("doorSearchStatus");
 const doorCards=[...document.querySelectorAll("#projectGrid .project-card")];
 const normalizeText=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("es");
 const searchAliases={
- "LIBRITO":"estudiar escuela tarea trabajo practico documento archivo hemeroteca noticia libro lectura autor fuente citar investigacion ficha aula imprimir pdf mapa estadistica normativa carta organica",
- "OCARINA TV":"video pelicula documental entrevista historia mirar ver escuela familia cultura territorio",
- "OCARINA WILD":"animal planta ave pez naturaleza fauna flora foto fotografia huella ambiente observar especie insecto arbol arbusto mamifero invertebrado cuidado habitat",
+ "LIBRITO":"estudiar escuela tarea trabajo practico documento archivo hemeroteca noticia libro lectura autor fuente citar investigacion ficha aula imprimir pdf mapa estadistica normativa carta organica aprender educacion conocimiento descubrir",
+ "OCARINA TV":"video pelicula documental entrevista historia mirar ver escuela familia cultura territorio aprender conocimiento descubrir",
+ "OCARINA WILD":"animal planta ave pez naturaleza fauna flora foto fotografia huella ambiente observar especie insecto arbol arbusto mamifero invertebrado cuidado habitat aprender conocimiento descubrir",
  "¿SABÍAS QUE?":"dato curiosidad pregunta respuesta juego aprender descubrir escuela estudiante familia fundacion 1973 1969 riego 1966 historia fuente",
  "CHAÑAR HUB":"telefono direccion numero contacto servicio tramite salud transporte comercio vecino lugar horario mapa hospital farmacia alojamiento dormir comer restaurante compras correo municipio orientacion orientar comunidad aprender",
  "CÓDIGO CERO":"emergencia ayuda seguridad orientacion orientar telefono numero urgente servicio oficial ambulancia bomberos policia defensa civil violencia siniestro vial aprender",
- "YOUTUBE":"canal video estreno publicaciones recorridos seguir suscribirse suscripcion",
+ "YOUTUBE":"canal video estreno publicaciones recorridos seguir suscribirse suscripcion aprender descubrir",
  "RADIO ONLINE":"radio escuchar sonido musica señal online",
  "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos abuelo abuela adulto mayor mayores instagram facebook"
 };
@@ -76,6 +76,7 @@ document.querySelectorAll("[data-door-shortcut]").forEach(button=>button.addEven
  document.getElementById("projectGrid")?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
 })); 
 doorSearch?.addEventListener("keydown",event=>{if(event.key==="Escape"&&doorSearch.value){doorSearch.value="";filterDoors();}});
+filterDoors();
 async function copyText(value){
  if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}
  const field=document.createElement("textarea");
