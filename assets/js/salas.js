@@ -19,7 +19,7 @@ const rooms={
 };
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 async function copyText(value){
- if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}
+ try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}}catch(error){/* Se intenta el método alternativo si el permiso moderno no está disponible. */}
  const field=document.createElement("textarea");field.value=value;field.setAttribute("readonly","");
  field.style.position="fixed";field.style.opacity="0";field.style.pointerEvents="none";
  document.body.append(field);field.select();let copied=false;
