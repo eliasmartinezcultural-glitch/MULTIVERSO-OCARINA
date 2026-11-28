@@ -1,6 +1,6 @@
 # MULTIVERSO OCARINA
 
-**Versión de la experiencia: 3.84**  
+**Versión de la experiencia: 3.85**  
 **Portal central de Ocarina Producciones · San Patricio del Chañar, Neuquén, Argentina**
 
 > Historias, personas y territorio.  
@@ -103,6 +103,14 @@ Antes de publicar una modificación:
 - [ ] La versión de portada, recursos y documentación coincide.
 
 ## Registro de mantenimiento
+
+### Versión 3.85 — 27 de noviembre de 2026
+
+- Cada sala incorpora una acción para compartir su enlace directo. El enlace conserva el identificador del mundo y permite abrir esa experiencia desde otro dispositivo.
+- Se utiliza el menú nativo de compartir cuando el navegador lo ofrece; en caso contrario se intenta copiar el enlace y se informa el resultado.
+- El acceso al proyecto completo se mantiene como alternativa. Compartir una sala no sustituye ni altera los enlaces originales.
+
+
 
 ### Versión 3.84 — 27 de noviembre de 2026
 
