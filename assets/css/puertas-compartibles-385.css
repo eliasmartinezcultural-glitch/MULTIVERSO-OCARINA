@@ -1,0 +1,8 @@
+/* 3.85 · Compartir el mundo actual, no solamente la portada */
+.room-share-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;margin-top:12px;padding:10px 14px;border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:.84rem;font-weight:800;cursor:pointer}
+.room-share-link:hover{background:color-mix(in srgb,currentColor 8%,transparent)}
+.room-share-link:focus-visible{outline:3px solid var(--room-accent,#a34e2c);outline-offset:3px}
+.room-share-link:disabled{opacity:.6;cursor:wait}
+.room-share-status{display:block;min-height:1.35em;margin-top:6px;font-size:.75rem;line-height:1.4}
+@media(max-width:560px){.room-share-link{width:100%;min-height:48px}}
+@media(forced-colors:active){.room-share-link{border:1px solid ButtonText}}
