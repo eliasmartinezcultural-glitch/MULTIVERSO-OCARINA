@@ -78,7 +78,7 @@ document.querySelectorAll("[data-door-shortcut]").forEach(button=>button.addEven
 doorSearch?.addEventListener("keydown",event=>{if(event.key==="Escape"&&doorSearch.value){doorSearch.value="";filterDoors();}});
 filterDoors();
 async function copyText(value){
- if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}
+ try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}}catch(error){/* Se intenta el método alternativo si el permiso moderno no está disponible. */}
  const field=document.createElement("textarea");
  field.value=value;field.setAttribute("readonly","");
  field.style.position="fixed";field.style.opacity="0";field.style.pointerEvents="none";
