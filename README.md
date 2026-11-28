@@ -1,6 +1,6 @@
 # MULTIVERSO OCARINA
 
-**Versión de la experiencia: 3.86**  
+**Versión de la experiencia: 3.87**  
 **Portal central de Ocarina Producciones · San Patricio del Chañar, Neuquén, Argentina**
 
 > Historias, personas y territorio.  
@@ -103,6 +103,14 @@ Antes de publicar una modificación:
 - [ ] La versión de portada, recursos y documentación coincide.
 
 ## Registro de mantenimiento
+
+### Versión 3.87 — 27 de noviembre de 2026
+
+- Al abrir una sala, el foco del teclado se ubica en el control de cierre para facilitar la orientación inmediata.
+- Al pasar de un mundo a otro sin cerrar la sala, el foco se desplaza al título del nuevo mundo, evitando que el usuario quede en un elemento que ya fue reemplazado.
+- Se conserva el cierre mediante Escape, el botón de cierre y la restauración del foco al punto desde donde se ingresó.
+
+
 
 ### Versión 3.86 — 27 de noviembre de 2026
 
