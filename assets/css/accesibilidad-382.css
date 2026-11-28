@@ -1,0 +1,16 @@
+/* 3.82 · Accesibilidad práctica para lectura cómoda y controles claros */
+.accessibility-note{margin:0;color:#52665a;font-size:.82rem;line-height:1.5}
+.accessibility-panel>strong{font-size:.95rem;letter-spacing:.08em}
+.accessibility-panel button{min-height:50px;font-size:.95rem}
+.accessibility-size button{min-height:54px;font-size:1.15rem}
+.simple-doors #projectGrid .project-link{min-height:50px;display:inline-flex;align-items:center;justify-content:center}
+.door-search-line input{min-height:54px;font-size:16px}
+.simple-doors :where(a,button),.header-actions :where(a,button,summary){touch-action:manipulation}
+.simple-doors :where(a,button):focus-visible,.header-actions :where(a,button,summary):focus-visible{outline:3px solid #a34e2c;outline-offset:3px}
+@media(max-width:680px){
+ .accessibility-note{font-size:.88rem}
+ .accessibility-panel button{min-height:52px}
+ .simple-doors #projectGrid .project-link{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.accessibility-panel *{transition:none!important}}
+@media(forced-colors:active){.accessibility-panel button,.simple-doors #projectGrid .project-link{border:1px solid ButtonText}}
