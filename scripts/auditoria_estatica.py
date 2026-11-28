@@ -16,9 +16,37 @@ class PageAudit(HTMLParser):
         self.fragments = []
         self.local_refs = []
         self.external_blank = []
+        self.html_lang = None
+        self.title_count = 0
+        self.h1_count = 0
+        self.main_count = 0
+        self.image_without_alt = []
+        self.controls_without_name = []
+        self.label_targets = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "html":
+            self.html_lang = attrs.get("lang")
+        if tag == "title":
+            self.title_count += 1
+        if tag == "h1":
+            self.h1_count += 1
+        if tag == "main":
+            self.main_count += 1
+        if tag == "label" and attrs.get("for"):
+            self.label_targets.add(attrs["for"])
+        if tag == "img" and "alt" not in attrs:
+            self.image_without_alt.append(attrs.get("src", "(imagen sin src)"))
+        if tag in ("input", "select", "textarea"):
+            if attrs.get("type", "").lower() != "hidden":
+                has_name = bool(attrs.get("aria-label") or attrs.get("aria-labelledby") or attrs.get("title"))
+                if attrs.get("id") and attrs.get("id") in self.label_targets:
+                    has_name = True
+                if not has_name and not attrs.get("id"):
+                    self.controls_without_name.append(tag)
+                elif not has_name:
+                    self.controls_without_name.append(f"{tag}#{attrs['id']}")
         ident = attrs.get("id")
         if ident:
             if ident in self.ids:
@@ -55,6 +83,19 @@ for page in pages:
     except Exception as exc:
         errors.append(f"No se pudo leer {page.relative_to(ROOT)}: {exc}")
         continue
+
+    if not audit.html_lang:
+        errors.append(f"Falta lang en <html> en {page.relative_to(ROOT)}")
+    if audit.title_count != 1:
+        errors.append(f"Se esperaba exactamente un <title> en {page.relative_to(ROOT)}")
+    if audit.h1_count != 1:
+        errors.append(f"Se esperaba exactamente un encabezado principal <h1> en {page.relative_to(ROOT)}")
+    if audit.main_count < 1:
+        errors.append(f"Falta el landmark <main> en {page.relative_to(ROOT)}")
+    for image in audit.image_without_alt:
+        errors.append(f"Imagen sin atributo alt en {page.relative_to(ROOT)}: {image}")
+    for control in audit.controls_without_name:
+        errors.append(f"Control sin nombre accesible en {page.relative_to(ROOT)}: {control}")
 
     for ident in sorted(audit.duplicates):
         errors.append(f"ID duplicado en {page.relative_to(ROOT)}: {ident}")
