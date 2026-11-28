@@ -114,14 +114,14 @@ Antes de publicar una modificación:
 
 
 
-### Estado documentado — 27 de noviembre de 2026
+### Antecedentes de mantenimiento — versiones anteriores
 
-- Versión funcional elevada a 3.83: las preferencias de lectura y contraste se guardan localmente cuando el navegador lo permite; se ampliaron controles táctiles y se aclaró la identificación de teléfonos de emergencia. La disponibilidad local del 911 se marca expresamente como no confirmada por las fuentes provinciales consultadas.
+- En la versión 3.83: las preferencias de lectura y contraste se guardan localmente cuando el navegador lo permite; se ampliaron controles táctiles y se aclaró la identificación de teléfonos de emergencia. La disponibilidad local del 911 se marca expresamente como no confirmada por las fuentes provinciales consultadas.
 
 - Se verificó el repositorio público, la rama principal `main` y los permisos de administración/escritura.
-- Se constató que la experiencia declara la versión 3.81 en `index.html`, en sus referencias de recursos y en `assets/js/version.js`.
+- En una auditoría anterior se constató que la experiencia todavía declaraba 3.81; esa línea base se actualizó posteriormente.
 - Se detectó que esta documentación estaba atrasada y declaraba 3.62.
-- Esta actualización corrige la documentación y agrega criterios de mantenimiento y control de calidad. **No implica por sí sola cambios en el código de la experiencia ni certifica pruebas de navegador.**
+- La documentación de esta etapa registró la corrección del README y agregó criterios de mantenimiento y control de calidad. **Este antecedente no certifica pruebas de navegador.**
 
 ## Identidad y propósito
 
