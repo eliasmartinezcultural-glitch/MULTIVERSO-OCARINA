@@ -1,0 +1,87 @@
+name: Calidad del portal
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    name: Revisar sintaxis y enlaces locales
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Comprobar sintaxis JavaScript
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in assets/js/*.js; do
+            echo "Revisando $file"
+            node --check "$file"
+          done
+      - name: Comprobar portada, recursos y navegación
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit
+
+          root = Path(".")
+          page = root / "index.html"
+          errors = []
+
+          class Audit(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.ids = set()
+                  self.duplicates = set()
+                  self.fragments = []
+                  self.assets = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  ident = attrs.get("id")
+                  if ident:
+                      if ident in self.ids:
+                          self.duplicates.add(ident)
+                      self.ids.add(ident)
+                  href = attrs.get("href", "")
+                  if href.startswith("#") and len(href) > 1:
+                      self.fragments.append(href[1:])
+                  for key in ("src", "href"):
+                      value = attrs.get(key, "")
+                      path = urlsplit(value).path
+                      if path.startswith("assets/"):
+                          self.assets.append(path)
+
+          audit = Audit()
+          audit.feed(page.read_text(encoding="utf-8"))
+
+          for path in sorted(set(audit.assets)):
+              if not (root / path).is_file():
+                  errors.append(f"Recurso local inexistente: {path}")
+
+          for ident in sorted(audit.duplicates):
+              errors.append(f"ID HTML duplicado: {ident}")
+
+          for fragment in sorted(set(audit.fragments)):
+              if fragment not in audit.ids:
+                  errors.append(f"Destino interno inexistente: #{fragment}")
+
+          if errors:
+              print("\n".join("ERROR: " + item for item in errors))
+              raise SystemExit(1)
+
+          print(f"OK: {len(set(audit.assets))} recursos locales, {len(audit.ids)} IDs y {len(set(audit.fragments))} destinos internos revisados.")
+          PY
