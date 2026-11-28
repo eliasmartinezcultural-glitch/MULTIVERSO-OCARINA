@@ -1,6 +1,6 @@
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, unquote
 import re
 import sys
 
@@ -23,9 +23,17 @@ class PageAudit(HTMLParser):
         self.image_without_alt = []
         self.controls_without_name = []
         self.label_targets = set()
+        self.meta = {}
+        self.whatsapp_links = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "meta":
+            key = attrs.get("property") or attrs.get("name")
+            if key:
+                self.meta[key] = attrs.get("content", "")
+        if tag == "a" and attrs.get("href", "").startswith("https://wa.me/"):
+            self.whatsapp_links.append(attrs["href"])
         if tag == "html":
             self.html_lang = attrs.get("lang")
         if tag == "title":
@@ -137,6 +145,53 @@ if found != expected:
     errors.append("El catálogo de proyectos no coincide exactamente con los nueve mundos esperados.")
 if len(found) != len(set(found)):
     errors.append("Hay nombres de mundos duplicados en proyectos.js.")
+
+# The public entry point must carry reliable social metadata and a real WhatsApp share URL.
+index_path = ROOT / "index.html"
+if index_path.is_file():
+    index_html = index_path.read_text(encoding="utf-8")
+    index_audit = PageAudit()
+    index_audit.feed(index_html)
+
+    for key in ("og:title", "og:description", "og:image", "twitter:card", "twitter:image"):
+        if not index_audit.meta.get(key):
+            errors.append(f"Falta metadato social obligatorio en index.html: {key}")
+
+    if index_audit.meta.get("twitter:card") != "summary_large_image":
+        errors.append("La tarjeta de Twitter/X debe usar summary_large_image.")
+
+    og_image = index_audit.meta.get("og:image", "")
+    if og_image and not og_image.lower().endswith((".jpg", ".jpeg", ".png")):
+        errors.append("La imagen de vista previa social debe ser JPG, JPEG o PNG; no usar SVG.")
+    if og_image:
+        image_path = urlsplit(og_image).path
+        marker = "/MULTIVERSO-OCARINA/"
+        if marker in image_path:
+            local_image = ROOT / image_path.split(marker, 1)[1]
+            if not local_image.is_file():
+                errors.append(f"La imagen de vista previa social no existe en el repositorio: {local_image.relative_to(ROOT)}")
+
+    if not any("MULTIVERSO-OCARINA" in unquote(link) for link in index_audit.whatsapp_links):
+        errors.append("Falta un enlace de WhatsApp que comparta la URL pública del Multiverso.")
+
+    if not re.search(r"Elías Martínez\s*<span>\s*· Fundador\s*</span>", index_html):
+        errors.append("La dedicatoria debe conservar la firma exacta «Elías Martínez · Fundador».")
+
+    dedication_css = ROOT / "assets/css/dedicatoria-estable.css"
+    if not dedication_css.is_file():
+        errors.append("Falta la hoja de estilos estable de la dedicatoria.")
+    else:
+        css_text = dedication_css.read_text(encoding="utf-8")
+        caption_rule = re.search(r"\.dedication-portrait\s+figcaption\s*\{([^}]*)\}", css_text)
+        if not caption_rule or not re.search(r"position\s*:\s*static", caption_rule.group(1)):
+            errors.append("El epígrafe de la foto debe permanecer en el flujo normal para evitar superposiciones.")
+
+    version_meta = re.search(r'name="application-version"\s+content="([^"]+)"', index_html)
+    version_js = ROOT / "assets/js/version.js"
+    version_source = version_js.read_text(encoding="utf-8") if version_js.is_file() else ""
+    version_code = re.search(r'const VERSION="([^"]+)"', version_source)
+    if not version_meta or not version_code or version_meta.group(1) != version_code.group(1):
+        errors.append("La versión declarada en HTML y JavaScript debe coincidir.")
 
 if errors:
     print("\n".join("ERROR: " + item for item in errors))
