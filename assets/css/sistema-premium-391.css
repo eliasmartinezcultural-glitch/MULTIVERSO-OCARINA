@@ -1,0 +1,181 @@
+/* MULTIVERSO OCARINA 3.91 · SISTEMA VISUAL PREMIUM
+   Capa de presentación: editorial contemporánea, museografía digital y territorio.
+   No modifica contenido, enlaces ni comportamiento funcional. */
+:root{
+ --lux-ink:#192d29;--lux-forest:#234b3d;--lux-deep:#142b29;
+ --lux-paper:#f8f5ec;--lux-paper-2:#eee9dc;--lux-gold:#c6a36b;
+ --lux-muted:#68776d;--lux-line:#d9dfd3;
+ --lux-serif:Georgia,"Times New Roman",serif;
+ --lux-sans:"DM Sans",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body.simple-multiverse{background:var(--lux-paper);color:var(--lux-ink);font-family:var(--lux-sans);letter-spacing:-.012em}
+.simple-header{
+ min-height:76px;padding-inline:clamp(18px,5vw,76px);
+ background:rgba(248,245,236,.91);border-bottom:1px solid #c9d2c5;
+ box-shadow:0 8px 30px rgba(22,45,37,.055);backdrop-filter:blur(18px) saturate(140%);
+}
+.simple-brand{gap:13px;color:var(--lux-ink);font-size:.78rem;letter-spacing:.16em}
+.simple-logo{width:38px;height:38px;background:linear-gradient(145deg,#173c32,#47715a);color:#f7edd8;font-family:var(--lux-serif);box-shadow:0 5px 18px #173c3230}
+.header-actions{gap:9px}
+.header-actions :where(.simple-about,.portal-share-button,.portal-whatsapp-button,.accessibility-menu>summary){
+ min-height:42px;padding:10px 15px;border-radius:3px 13px 3px 13px;
+ border:1px solid #cbd3c7;background:rgba(255,254,249,.82);color:#294b3d;
+ font-size:.72rem;font-weight:800;letter-spacing:.025em;transition:background .2s,border-color .2s,transform .2s;
+}
+.header-actions :where(a,button,summary):hover{background:#e8ecdf;border-color:#9eae9c;transform:translateY(-1px)}
+.simple-hero{min-height:clamp(480px,62vw,720px);background:#183d38}
+.simple-hero::after{background:linear-gradient(90deg,rgba(10,29,27,.66),rgba(12,32,29,.2) 72%),linear-gradient(0deg,rgba(9,27,25,.48),transparent 58%)}
+.hero-landscape{filter:saturate(.82) contrast(1.08);transform:scale(1.012)}
+.simple-hero-content{
+ width:min(720px,calc(100% - 24px));max-width:720px;margin-left:clamp(12px,5vw,76px);
+ padding:clamp(28px,5vw,58px);border:1px solid rgba(236,222,191,.38);
+ border-left:3px solid var(--lux-gold);border-radius:2px 22px 2px 22px;
+ background:linear-gradient(135deg,rgba(17,44,39,.94),rgba(26,58,49,.86));
+ box-shadow:0 28px 90px rgba(3,18,16,.35);backdrop-filter:blur(12px);
+}
+.simple-eyebrow{color:#d6b77f;font-size:.65rem;letter-spacing:.2em;font-weight:850}
+.simple-hero h1{max-width:12ch;margin:22px 0 18px;color:#fff9ec;font-family:var(--lux-serif);font-size:clamp(3.1rem,7.1vw,6.3rem);font-weight:500;line-height:.98;letter-spacing:-.055em}
+.simple-hero h1 em{color:#dfc18b;font-style:italic;font-weight:400}
+.simple-hero-content p{max-width:43ch;color:#e5e8dc;font-size:clamp(1rem,1.45vw,1.16rem);line-height:1.8}
+.simple-hero-content:after{margin-top:26px;padding-top:17px;color:#d8c49b;border-color:#ffffff32;font-size:.62rem;letter-spacing:.2em}
+.territory-ribbon{min-height:72px;padding:17px clamp(14px,4vw,52px);background:#1a3933;border-top:1px solid #ffffff20;border-bottom:1px solid #c4a36b}
+.territory-ribbon strong{color:#e1c38e;font-size:.61rem;letter-spacing:.16em}
+.territory-ribbon-path span{padding:7px 12px;border:1px solid #ffffff35;border-radius:2px 10px 2px 10px;color:#f1eee4;font-size:.61rem;letter-spacing:.1em}
+.simple-doors{padding:clamp(58px,7vw,100px) clamp(16px,5vw,76px) clamp(68px,8vw,110px);background:linear-gradient(180deg,#f8f5ec 0%,#f0eee4 100%)}
+.doors-intro{max-width:1180px;margin:0 auto 34px}
+.doors-intro .simple-eyebrow{color:#9a7848;font-size:.65rem;letter-spacing:.2em}
+.doors-intro h2{margin:14px 0 10px;color:#203f34;font-family:var(--lux-serif);font-size:clamp(2.5rem,5vw,4.3rem);font-weight:500;letter-spacing:-.05em;line-height:1.02}
+.doors-intro p{max-width:54ch;color:#65746a;font-size:1.04rem;line-height:1.75}
+.door-finder{
+ max-width:1180px;margin:0 auto 42px;padding:clamp(20px,3vw,30px);
+ border:1px solid #d5dacc;border-radius:3px 18px 3px 18px;
+ background:rgba(255,254,248,.82);box-shadow:0 16px 42px rgba(32,61,48,.065);
+}
+.door-finder>label,.door-quick-paths>span{color:#8a7657;font-size:.62rem;font-weight:900;letter-spacing:.16em}
+.door-search-line{min-height:58px;border:1px solid #d5ddcf;border-radius:3px 12px 3px 12px;background:#fffefa}
+.door-search-line input{font:1rem var(--lux-sans);color:#203d33}
+.door-search-line input::placeholder{color:#929b8f}
+.door-search-line:focus-within{outline:3px solid #c6a36b45;border-color:#a88d60}
+#doorSearchStatus{color:#788278;font-size:.8rem}
+.door-quick-paths{gap:9px}
+.door-quick-paths button{
+ min-height:40px;padding:8px 14px;border:1px solid #d3d9ce;border-radius:2px 12px 2px 12px;
+ background:#f5f3e9;color:#345443;font-size:.76rem;font-weight:750;transition:all .2s;
+}
+.door-quick-paths button:hover,.door-quick-paths button[aria-pressed=true]{background:#244b3c;color:#fff8e9;border-color:#244b3c}
+.simple-doors #projectGrid.doors-grid{max-width:1180px;gap:clamp(20px,3vw,34px)}
+.simple-doors #projectGrid .project-card{
+ grid-template-rows:clamp(230px,34vw,410px) auto!important;
+ border:1px solid #d4d9ce;border-radius:3px 22px 3px 22px;
+ background:#fffdf7;box-shadow:0 12px 35px rgba(24,53,42,.075);
+ transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s;
+}
+.simple-doors #projectGrid .project-card:nth-child(even){border-radius:22px 3px 22px 3px}
+.simple-doors #projectGrid .project-card:hover{
+ transform:translateY(-5px);border-color:#b6a077;box-shadow:0 25px 60px rgba(24,53,42,.14)
+}
+.simple-doors #projectGrid .project-art{background:#dce3d8}
+.simple-doors #projectGrid .project-art:before{background:linear-gradient(180deg,transparent 42%,rgba(9,26,22,.42));opacity:1}
+.simple-doors #projectGrid .project-art:after{inset:15px;border:1px solid rgba(255,249,231,.65);background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.08));opacity:1}
+.simple-doors #projectGrid .door-art-image{filter:saturate(.88) contrast(1.045);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
+.simple-doors #projectGrid .project-card:hover .door-art-image{transform:scale(1.045);filter:saturate(1.04) contrast(1.04)}
+.simple-doors #projectGrid .project-content{
+ gap:11px;padding:clamp(24px,4vw,43px)!important;
+ border-top:1px solid #e5e4d9;background:linear-gradient(135deg,#fffefa,#f5f4eb)!important;
+}
+.simple-doors #projectGrid .project-content small{color:#9a7848;font-size:.65rem;letter-spacing:.2em}
+.simple-doors #projectGrid .project-content b{
+ color:#203d32;font-family:var(--lux-serif);font-size:clamp(2.15rem,4.5vw,3.45rem);
+ font-weight:500;letter-spacing:-.055em;line-height:1;
+}
+.simple-doors #projectGrid .project-descriptor{color:#536c5b;font-size:1rem;font-weight:800;letter-spacing:.005em}
+.simple-doors #projectGrid .project-story{max-width:66ch;color:#66746a;font-size:1rem;line-height:1.8}
+.simple-doors #projectGrid .project-highlights{color:#526c5a;font-size:.82rem;font-weight:750;letter-spacing:.015em}
+.simple-doors #projectGrid .project-highlights:before{color:#b18b51}
+.simple-doors #projectGrid .project-tag{
+ padding:8px 12px;border:1px solid #ded8c8;border-radius:2px 10px 2px 10px;
+ background:#f3efe3;color:#7b684a;font-size:.61rem;letter-spacing:.15em;
+}
+.simple-doors #projectGrid .project-link{
+ min-width:168px;min-height:52px;margin-top:8px;padding:13px 23px;
+ border:1px solid #244b3b;border-radius:2px 13px 2px 13px;
+ background:#244b3b;color:#fff9ed;box-shadow:0 5px 0 #173629;
+ font-size:.78rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase;
+ transition:transform .2s,background .2s,box-shadow .2s;
+}
+.simple-doors #projectGrid .project-card:hover .project-link{background:#b08d58;border-color:#b08d58;color:#172e27;box-shadow:0 5px 0 #80653e}
+.doors-footnote{max-width:1180px;margin:30px auto 0;padding:18px 22px;border-left:2px solid #b9955c;background:#e9e8dc;color:#5c705f;font-size:.85rem}
+.simple-origin{padding:clamp(58px,8vw,110px) 16px;background:radial-gradient(ellipse at 50% 0%,#3b6954 0,transparent 55%),linear-gradient(135deg,#122f2a,#1c443a 62%,#1d414b)}
+.origin-card{border:1px solid #d2c29f;border-radius:3px 26px 3px 26px;background:#fbf8ef;box-shadow:0 28px 80px rgba(5,21,18,.22)}
+.origin-card h2{font-family:var(--lux-serif);font-weight:500;letter-spacing:-.045em}
+.origin-card blockquote{border-left-color:#b9955c;border-radius:0 2px 14px 2px;background:#eeeee4}
+.simple-footer{padding:36px 18px;background:#142f2a;color:#e9e6d9;border-top:1px solid #c5a16b}
+.simple-footer :where(p,small,a){color:inherit}
+.simple-footer a:hover{color:#e3c58f}
+.world-room{
+ border:1px solid #bca77e;border-radius:3px 22px 3px 22px;
+ box-shadow:0 35px 110px rgba(4,18,15,.52);backdrop-filter:blur(18px);
+}
+.world-room .room-hero{border-bottom:1px solid color-mix(in srgb,var(--room-accent),transparent 76%)}
+.world-room .room-heading h2{font-family:var(--lux-serif);font-weight:500;letter-spacing:-.05em}
+.world-room .room-art{border-radius:3px 22px 3px 22px;box-shadow:0 18px 44px rgba(10,28,22,.1)}
+.world-room .room-art-symbol{border-radius:3px 18px 3px 18px}
+.world-room .room-complete,.world-room .room-actions button,.world-room .room-complete-link{
+ border-radius:3px 12px 3px 12px;letter-spacing:.025em
+}
+.room-close{border-radius:2px 50% 50% 50%;border-color:#c2a574;box-shadow:0 8px 24px rgba(12,34,27,.14)}
+.accessibility-panel{border:1px solid #c9b88f;border-radius:3px 15px 3px 15px;box-shadow:0 20px 50px rgba(20,42,33,.16)}
+:where(a,button,input,summary):focus-visible{outline:3px solid #b38c52!important;outline-offset:4px!important;box-shadow:0 0 0 6px #fff9!important}
+@media(min-width:1100px){
+ .simple-doors #projectGrid .project-card:nth-child(odd) .project-content{padding-left:clamp(40px,7vw,86px)!important}
+ .simple-doors #projectGrid .project-card:nth-child(even) .project-content{padding-right:clamp(40px,7vw,86px)!important}
+}
+@media(max-width:760px){
+ .simple-header{min-height:66px;padding:8px 12px}
+ .simple-brand{font-size:.67rem;letter-spacing:.11em;gap:8px}
+ .simple-logo{width:32px;height:32px;font-size:1.25rem}
+ .header-actions{gap:5px}
+ .header-actions :where(.simple-about,.portal-share-button,.portal-whatsapp-button,.accessibility-menu>summary){min-height:40px;padding:8px 9px;font-size:.65rem}
+ .simple-hero{min-height:clamp(430px,112vw,590px)}
+ .simple-hero-content{margin:0 12px;padding:25px 22px}
+ .simple-hero h1{font-size:clamp(2.65rem,11vw,4.4rem)}
+ .simple-hero-content p{font-size:.98rem;line-height:1.7}
+ .simple-hero-content:after{font-size:.53rem;letter-spacing:.12em}
+ .territory-ribbon{padding:13px 10px}
+ .territory-ribbon strong{font-size:.53rem}
+ .territory-ribbon-path{gap:5px}
+ .territory-ribbon-path span{padding:5px 7px;font-size:.54rem}
+ .simple-doors{padding:48px 13px 64px}
+ .doors-intro h2{font-size:clamp(2.25rem,9vw,3.2rem)}
+ .doors-intro p{font-size:.95rem}
+ .door-finder{margin-bottom:26px;padding:18px 15px}
+ .door-quick-paths{gap:7px}
+ .door-quick-paths button{min-height:42px;padding:8px 10px;font-size:.69rem}
+ .simple-doors #projectGrid.doors-grid{gap:19px}
+ .simple-doors #projectGrid .project-card,.simple-doors #projectGrid .project-card:nth-child(even){grid-template-rows:clamp(205px,62vw,285px) auto!important;border-radius:3px 17px 3px 17px}
+ .simple-doors #projectGrid .project-art:after{inset:9px}
+ .simple-doors #projectGrid .project-content{gap:9px;padding:22px 19px 24px!important}
+ .simple-doors #projectGrid .project-content b{font-size:2.15rem}
+ .simple-doors #projectGrid .project-story{font-size:.94rem;line-height:1.68}
+ .simple-doors #projectGrid .project-link{width:100%;min-height:52px}
+ .simple-origin{padding:48px 12px 60px}
+ .origin-card{padding:24px 18px}
+}
+@media(max-width:380px){
+ .simple-brand{max-width:112px;overflow:hidden}
+ .header-actions{gap:4px}
+ .simple-hero-content{margin:0 8px;padding:22px 17px}
+ .simple-hero h1{font-size:2.55rem}
+ .territory-ribbon strong:last-child{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media(forced-colors:active){
+ .simple-doors #projectGrid .project-card,.origin-card,.world-room{border:1px solid CanvasText}
+ .simple-doors #projectGrid .project-art:after{display:none}
+}
+body.high-contrast .simple-hero-content{background:#000!important}
+body.high-contrast .simple-doors #projectGrid .project-content{background:#fff!important}
