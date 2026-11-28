@@ -46,27 +46,36 @@ const searchAliases={
  "OCARINA TV":"video pelicula documental entrevista historia mirar ver escuela familia cultura territorio",
  "OCARINA WILD":"animal planta ave pez naturaleza fauna flora foto fotografia huella ambiente observar especie insecto arbol arbusto mamifero invertebrado cuidado habitat",
  "¿SABÍAS QUE?":"dato curiosidad pregunta respuesta juego aprender descubrir escuela estudiante familia fundacion 1973 1969 riego 1966 historia fuente",
- "CHAÑAR HUB":"telefono direccion numero contacto servicio tramite salud transporte comercio vecino lugar horario mapa hospital farmacia alojamiento dormir comer restaurante compras correo municipio",
- "CÓDIGO CERO":"emergencia ayuda seguridad orientacion telefono numero urgente servicio oficial ambulancia bomberos policia defensa civil violencia siniestro vial",
+ "CHAÑAR HUB":"telefono direccion numero contacto servicio tramite salud transporte comercio vecino lugar horario mapa hospital farmacia alojamiento dormir comer restaurante compras correo municipio orientacion orientar comunidad aprender",
+ "CÓDIGO CERO":"emergencia ayuda seguridad orientacion orientar telefono numero urgente servicio oficial ambulancia bomberos policia defensa civil violencia siniestro vial aprender",
  "YOUTUBE":"canal video estreno publicaciones recorridos seguir suscribirse suscripcion",
  "RADIO ONLINE":"radio escuchar sonido musica señal online",
  "OCARINA SOCIAL":"foto fotografia imagen redes publicaciones compartir comunidad familia recuerdos abuelo abuela adulto mayor mayores instagram facebook"
 };
 const filterDoors=()=>{
  const query=normalizeText(doorSearch?.value.trim()||"");
+ const terms=query.split(/\\s+/).filter(Boolean);
  let visible=0;
  doorCards.forEach(card=>{
   const name=card.dataset.roomOpen||"";
   const searchable=normalizeText(card.textContent+" "+(searchAliases[name]||""));
-  const match=!query||searchable.includes(query);
+  const match=!terms.length||terms.every(term=>searchable.includes(term));
   card.hidden=!match;
+  card.setAttribute("aria-hidden",String(!match));
   if(match)visible++;
  });
  if(doorSearchClear)doorSearchClear.hidden=!query;
- if(doorSearchStatus)doorSearchStatus.textContent=query?(visible?visible+" "+(visible===1?"mundo encontrado.":"mundos encontrados."):"No encontramos una puerta con esa palabra. Probá con otra.") :"Buscá por necesidad o tema: tarea, teléfono, animales, fotos, trámites, historia, libros.";
+ if(doorSearchStatus)doorSearchStatus.textContent=query?(visible?visible+" "+(visible===1?"mundo encontrado.":"mundos encontrados.")+" Podés cambiar la búsqueda o limpiar para ver los nueve.":"No encontramos una puerta con todas esas palabras. Probá con una sola idea, como «animales», «historia» o «teléfono».") :"Buscá por tema o necesidad: escuela, datos, trámites, fotos, historias.";
+ document.querySelectorAll("[data-door-shortcut]").forEach(button=>button.setAttribute("aria-pressed",String(normalizeText(button.dataset.doorShortcut)===query)));
 };
 doorSearch?.addEventListener("input",filterDoors);
 doorSearchClear?.addEventListener("click",()=>{doorSearch.value="";filterDoors();doorSearch.focus();});
+document.querySelectorAll("[data-door-shortcut]").forEach(button=>button.addEventListener("click",()=>{
+ doorSearch.value=button.dataset.doorShortcut||"";
+ filterDoors();
+ document.getElementById("projectGrid")?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+})); 
+doorSearch?.addEventListener("keydown",event=>{if(event.key==="Escape"&&doorSearch.value){doorSearch.value="";filterDoors();}});
 async function copyText(value){
  if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(value);return true;}
  const field=document.createElement("textarea");
