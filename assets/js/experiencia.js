@@ -6,7 +6,11 @@ const shareStatus=document.getElementById("portalShareStatus");
 const portalUrl=()=>location.origin+location.pathname;
 const root=document.documentElement;
 const accessMenu=document.querySelector(".accessibility-menu");
-let readerLevel=0;
+const READER_PREFS_KEY="ocarina-reader-preferences-v1";
+const readReaderPreferences=()=>{try{const saved=JSON.parse(localStorage.getItem(READER_PREFS_KEY)||"{}");return{level:Number.isInteger(saved.level)?Math.max(0,Math.min(2,saved.level)):0,contrast:saved.contrast===true};}catch(error){return{level:0,contrast:false};}};
+const saveReaderPreferences=()=>{try{localStorage.setItem(READER_PREFS_KEY,JSON.stringify({level:readerLevel,contrast:document.body.classList.contains("high-contrast")}));}catch(error){/* La lectura sigue funcionando aunque el navegador bloquee el almacenamiento. */}};
+const initialReaderPreferences=readReaderPreferences();
+let readerLevel=initialReaderPreferences.level;
 const readerButtons=[...document.querySelectorAll("[data-reader-size]")];
 const contrastButton=document.querySelector("[data-reader-contrast]");
 const applyReaderSize=()=>{
@@ -14,17 +18,19 @@ const applyReaderSize=()=>{
  root.classList.toggle("reader-extra-large",readerLevel===2);
  const status=document.getElementById("readerStatus");if(status)status.textContent=readerLevel===0?"Tamaño de lectura normal.":readerLevel===1?"Texto ampliado.":"Texto muy ampliado.";
 };
+document.body.classList.toggle("high-contrast",initialReaderPreferences.contrast);
+contrastButton?.setAttribute("aria-pressed",String(initialReaderPreferences.contrast));
 readerButtons.forEach(button=>button.addEventListener("click",()=>{
  readerLevel=button.dataset.readerSize==="up"?Math.min(2,readerLevel+1):Math.max(0,readerLevel-1);
- applyReaderSize();
+ applyReaderSize();saveReaderPreferences();
 }));
 contrastButton?.addEventListener("click",()=>{
  const enabled=document.body.classList.toggle("high-contrast");
- contrastButton.setAttribute("aria-pressed",String(enabled));
+ contrastButton.setAttribute("aria-pressed",String(enabled));saveReaderPreferences();
 });
 document.querySelector("[data-reader-reset]")?.addEventListener("click",()=>{
  readerLevel=0;document.body.classList.remove("high-contrast");
- contrastButton?.setAttribute("aria-pressed","false");applyReaderSize();
+ contrastButton?.setAttribute("aria-pressed","false");applyReaderSize();saveReaderPreferences();
 });
 accessMenu?.addEventListener("keydown",event=>{if(event.key==="Escape"){accessMenu.open=false;accessMenu.querySelector("summary")?.focus();}});
 document.addEventListener("pointerdown",event=>{if(accessMenu?.open&&!accessMenu.contains(event.target))accessMenu.open=false;});
