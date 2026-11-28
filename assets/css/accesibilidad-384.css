@@ -1,0 +1,12 @@
+/* 3.84 · Recorridos rápidos: accesibles, táctiles y sin competir con las nueve puertas */
+.door-quick-paths{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:16px 0 22px;padding:14px 0;border-top:1px solid rgba(47,74,58,.14);border-bottom:1px solid rgba(47,74,58,.14)}
+.door-quick-paths>span{flex-basis:100%;color:#52665a;font-size:.68rem;font-weight:850;letter-spacing:.09em}
+.door-quick-paths button{min-height:44px;padding:10px 15px;border:1px solid rgba(47,74,58,.28);border-radius:999px;background:#fffdf7;color:#294c3b;font:inherit;font-size:.88rem;font-weight:750;cursor:pointer;touch-action:manipulation}
+.door-quick-paths button:hover{background:#edf3e9;border-color:#557a5d}
+.door-quick-paths button[aria-pressed="true"]{background:#294c3b;color:#fff;border-color:#294c3b}
+.door-quick-paths button:focus-visible{outline:3px solid #a34e2c;outline-offset:3px}
+#projectGrid .project-card[hidden]{display:none!important}
+@media(max-width:680px){.door-quick-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.door-quick-paths>span{grid-column:1/-1}.door-quick-paths button{min-height:48px;padding:9px 10px;font-size:.82rem}}
+@media(max-width:360px){.door-quick-paths{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.door-quick-paths *{scroll-behavior:auto!important;transition:none!important}}
+@media(forced-colors:active){.door-quick-paths button{border:1px solid ButtonText}.door-quick-paths button[aria-pressed="true"]{outline:2px solid Highlight}}
