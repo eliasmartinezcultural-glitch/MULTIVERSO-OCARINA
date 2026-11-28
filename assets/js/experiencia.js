@@ -54,7 +54,7 @@ const searchAliases={
 };
 const filterDoors=()=>{
  const query=normalizeText(doorSearch?.value.trim()||"");
- const terms=query.split(/\\s+/).filter(Boolean);
+ const terms=query.split(/\s+/).filter(Boolean);
  let visible=0;
  doorCards.forEach(card=>{
   const name=card.dataset.roomOpen||"";
